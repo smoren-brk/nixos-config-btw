@@ -2,15 +2,23 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   hardware.bluetooth = {
     enable = true;
@@ -39,15 +47,16 @@
   # Set your time zone.
   time.timeZone = "Europe/Belgrade";
 
-
   users.users.jx = {
     isNormalUser = true;
     description = "JX";
-    extraGroups = [ "wheel" ];
+    extraGroups = [
+      "wheel"
+      "doas"
+    ];
     shell = pkgs.zsh;
     home = "/home/jx";
   };
-
 
   programs.firefox.enable = true;
   programs.zsh.enable = true;
@@ -62,8 +71,11 @@
 
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
-    doas
+    bat
+    btop
+    btrfs-progs
     discord-ptb
+    eza
     fastfetch
     fzf
     gamescope
@@ -80,27 +92,40 @@
     nerd-fonts.fira-code
     nerd-fonts.hasklug
     nerd-fonts.iosevka
+    nixfmt-rfc-style
     odin
     pavucontrol
+    prettier
     python3
+    ripgrep
     rofi
     slurp
     swappy
+    tealdeer
     transmission_4-gtk
+    tree
     tree-sitter
     waybar
     yazi
     zathura
+    zathuraPkgs.zathura_cb
+    zathuraPkgs.zathura_djvu
+    zathuraPkgs.zathura_pdf_mupdf
+    zathuraPkgs.zathura_pdf_poppler
+    zathuraPkgs.zathura_ps
     zoxide
   ];
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+  security.doas = {
+    enable = true;
+    extraRules = [
+      {
+        groups = [ "doas" ];
+        runAs = "root";
+        persist = true;
+      }
+    ];
+  };
 
   services.openssh.enable = true;
   services.blueman.enable = true;
@@ -114,4 +139,3 @@
   system.stateVersion = "26.05"; # Did you read the comment?
 
 }
-
