@@ -46,9 +46,6 @@
     extraGroups = [ "wheel" ];
     shell = pkgs.zsh;
     home = "/home/jx";
-    packages = with pkgs; [
-        discord-ptb
-    ];
   };
 
 
@@ -66,6 +63,7 @@
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     doas
+    discord-ptb
     fastfetch
     fzf
     gamescope
