@@ -16,7 +16,6 @@
     fzf
     gamescope
     gcc
-    ghostty
     grim
     home-manager
     hyprpaper
@@ -44,7 +43,6 @@
     waybar
     wl-clipboard-rs
     yazi
-    zathura
     zathuraPkgs.zathura_cb
     zathuraPkgs.zathura_djvu
     zathuraPkgs.zathura_pdf_mupdf

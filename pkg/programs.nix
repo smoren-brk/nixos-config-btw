@@ -8,6 +8,8 @@
     neovim = {
       enable = true;
       defaultEditor = true;
+      viAlias = true;
+      vimAlias = true;
     };
 
     steam = {
@@ -27,8 +29,6 @@
 
       shellAliases = {
         ls = "eza --icons --group-directories-first --oneline";
-        vim = "nvim";
-        gti = "git";
       };
 
       promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
