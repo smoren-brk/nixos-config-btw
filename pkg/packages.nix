@@ -1,0 +1,57 @@
+{
+  pkgs,
+  ...
+}:
+
+{
+  nixpkgs.config.allowUnfree = true;
+  environment.systemPackages = with pkgs; [
+    bat
+    btop
+    btrfs-progs
+    cargo
+    discord-ptb
+    eza
+    fastfetch
+    fzf
+    gamescope
+    gcc
+    ghostty
+    grim
+    home-manager
+    hyprpaper
+    imv
+    killall
+    mpv
+    nerd-fonts._0xproto
+    nerd-fonts.fira-code
+    nerd-fonts.hasklug
+    nerd-fonts.iosevka
+    nixfmt
+    odin
+    ols
+    pavucontrol
+    prettier
+    python3
+    ripgrep
+    rofi
+    slurp
+    swappy
+    tealdeer
+    transmission_4-gtk
+    tree
+    tree-sitter
+    waybar
+    wl-clipboard-rs
+    yazi
+    zathura
+    zathuraPkgs.zathura_cb
+    zathuraPkgs.zathura_djvu
+    zathuraPkgs.zathura_pdf_mupdf
+    zathuraPkgs.zathura_pdf_poppler
+    zathuraPkgs.zathura_ps
+    zoxide
+    zsh-powerlevel10k
+  ];
+
+}
