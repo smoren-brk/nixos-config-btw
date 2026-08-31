@@ -91,6 +91,7 @@
     odin
     ols
     pavucontrol
+    zsh-powerlevel10k
     prettier
     python3
     ripgrep
