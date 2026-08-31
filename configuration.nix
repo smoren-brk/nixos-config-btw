@@ -16,8 +16,8 @@
   ];
 
   imports = [
-    # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./programs.nix
   ];
 
   hardware.bluetooth = {
@@ -63,22 +63,12 @@
     home = "/home/jx";
   };
 
-  programs.firefox.enable = true;
-  programs.zsh.enable = true;
-  programs.hyprland.enable = true;
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-    localNetworkGameTransfers.openFirewall = true;
-    gamescopeSession.enable = true;
-  };
-
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     bat
     btop
     btrfs-progs
+    cargo
     discord-ptb
     eza
     fastfetch
@@ -121,6 +111,14 @@
     zathuraPkgs.zathura_ps
     zoxide
   ];
+
+  environment.variables = {
+    BROWSER = "firefox";
+    TERM = "ghostty";
+    EDITOR = "nvim";
+    PAGER = "nvim +Man!";
+    MANPAGER = "nvim +Man!";
+  };
 
   security.doas = {
     enable = true;
