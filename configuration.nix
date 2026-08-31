@@ -88,6 +88,7 @@
     ghostty
     git
     grim
+    hyprpaper
     imv
     killall
     mpv
@@ -96,7 +97,7 @@
     nerd-fonts.fira-code
     nerd-fonts.hasklug
     nerd-fonts.iosevka
-    nixfmt-rfc-style
+    nixfmt
     odin
     ols
     pavucontrol
