@@ -3,7 +3,11 @@
 {
   programs = {
     firefox.enable = true;
-    hyprland.enable = true;
+
+    hyprland = {
+      withUWSM = true;
+      enable = true;
+    };
 
     neovim = {
       enable = true;
@@ -29,6 +33,7 @@
 
       shellAliases = {
         ls = "eza --icons --group-directories-first --oneline";
+        ff = "fastfetch";
       };
 
       promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";

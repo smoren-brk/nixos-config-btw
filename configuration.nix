@@ -75,6 +75,8 @@
     EDITOR = "nvim";
     PAGER = "nvim +Man!";
     MANPAGER = "nvim +Man!";
+    NIXOS_OZONE_WL = "1";
+    XDG_CURRENT_DESKTOP = "Hyprland";
   };
 
   security = {
@@ -100,11 +102,13 @@
     pipewire = {
       enable = true;
       pulse.enable = true;
+      wireplumber.enable = true;
     };
   };
 
   xdg.portal = {
     enable = true;
+    wlr.enable = true;
     xdgOpenUsePortal = true;
     config = {
       common.default = [ "hyprland" ];

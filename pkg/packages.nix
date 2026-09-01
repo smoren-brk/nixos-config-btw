@@ -10,7 +10,6 @@
     btop
     btrfs-progs
     cargo
-    discord-ptb
     eza
     fastfetch
     fzf
@@ -42,6 +41,7 @@
     transmission_4-gtk
     tree
     tree-sitter
+    vesktop
     waybar
     wl-clipboard-rs
     xdg-desktop-portal-hyprland
