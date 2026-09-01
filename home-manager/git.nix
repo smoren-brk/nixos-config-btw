@@ -7,6 +7,7 @@
 
   programs.git = {
     enable = true;
+    package = null;
 
     settings = {
       user = {
@@ -23,11 +24,6 @@
 
       interactive = {
         diffFilter = "delta --color-only";
-      };
-
-      delta = {
-        navigate = true;
-        dark = true;
       };
 
       advice = {

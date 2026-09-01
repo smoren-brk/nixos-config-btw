@@ -16,7 +16,9 @@
     fzf
     gamescope
     gcc
+    git
     grim
+    ghostty
     home-manager
     hyprpaper
     imv
@@ -42,7 +44,9 @@
     tree-sitter
     waybar
     wl-clipboard-rs
+    xdg-desktop-portal-hyprland
     yazi
+    zathura
     zathuraPkgs.zathura_cb
     zathuraPkgs.zathura_djvu
     zathuraPkgs.zathura_pdf_mupdf

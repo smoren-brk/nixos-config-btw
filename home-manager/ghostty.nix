@@ -7,11 +7,13 @@
 
   programs.ghostty = {
     enable = true;
+    package = null;
+
     enableZshIntegration = true;
-    systemd.enable = true;
+    systemd.enable = false;
 
     themes = {
-      custom-theme = {
+      jx = {
         background = "161616";
         cursor-color = "f2f4f8";
         foreground = "f2f4f8";
@@ -35,13 +37,12 @@
         ];
         selection-background = "3d3d3d";
       };
+    };
 
-      settings = {
-        font-family = "0xProto Nerd Font";
-        theme = "custom-theme";
-        quit-after-last-window-closed = false;
-      };
-
+    settings = {
+      font-family = "0xProto Nerd Font";
+      theme = "jx";
+      quit-after-last-window-closed = false;
     };
   };
 

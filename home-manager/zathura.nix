@@ -6,6 +6,7 @@
 {
   programs.zathura = {
     enable = true;
+    package = null;
 
     options = {
       adjust-open = "best-fit";

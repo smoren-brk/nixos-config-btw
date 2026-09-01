@@ -77,15 +77,19 @@
     MANPAGER = "nvim +Man!";
   };
 
-  security.doas = {
-    enable = true;
-    extraRules = [
-      {
-        groups = [ "doas" ];
-        runAs = "root";
-        persist = true;
-      }
-    ];
+  security = {
+    rtkit.enable = true;
+
+    doas = {
+      enable = true;
+      extraRules = [
+        {
+          groups = [ "doas" ];
+          runAs = "root";
+          persist = true;
+        }
+      ];
+    };
   };
 
   services = {
@@ -97,6 +101,18 @@
       enable = true;
       pulse.enable = true;
     };
+  };
+
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+    config = {
+      common.default = [ "hyprland" ];
+      hyprland.default = [ "hyprland" ];
+    };
+    extraPortals = [
+      pkgs.xdg-desktop-portal-hyprland
+    ];
   };
 
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
