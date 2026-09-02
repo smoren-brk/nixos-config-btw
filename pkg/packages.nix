@@ -15,24 +15,21 @@
     fzf
     gamescope
     gcc
+    ghostty
     git
     grim
-    ghostty
     home-manager
     hyprpaper
     imv
     killall
     mpv
-    nerd-fonts._0xproto
-    nerd-fonts.fira-code
-    nerd-fonts.hasklug
-    nerd-fonts.iosevka
     nixfmt
     odin
     ols
     pavucontrol
     prettier
     python3
+    quickshell
     ripgrep
     rofi
     slurp
@@ -54,6 +51,19 @@
     zathuraPkgs.zathura_ps
     zoxide
     zsh-powerlevel10k
+    quickshell
+  ];
+
+  fonts.packages = with pkgs; [
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-color-emoji
+    liberation_ttf
+    fira-code-symbols
+    nerd-fonts._0xproto
+    nerd-fonts.fira-code
+    nerd-fonts.hasklug
+    nerd-fonts.iosevka
   ];
 
 }
