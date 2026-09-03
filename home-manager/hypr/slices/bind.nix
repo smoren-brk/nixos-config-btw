@@ -38,21 +38,6 @@
         ];
       }
 
-      # Screenshots
-      {
-        _args = [
-          "SUPER + S"
-          (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("grim -g \\"$(slurp)\\" - | swappy -f -")'')
-        ];
-      }
-
-      {
-        _args = [
-          "SUPER + SHIFT + S"
-          (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("grim -g \\"$(slurp)\\" - | swappy -f -")'')
-        ];
-      }
-
       {
         _args = [
           "SUPER + P"

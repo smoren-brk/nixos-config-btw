@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+PROFILE="/nix/var/nix/profiles/system"
+
+mapfile -t generations < <(
+    nix-env --list-generations \
+        --profile "$PROFILE" |
+    awk '{print $1}' |
+    tail -n 2
+)
+
+if [[ ${#generations[@]} -ne 2 ]]; then
+    echo "Could not find two system generations." >&2
+    exit 1
+fi
+
+old="${generations[0]}"
+new="${generations[1]}"
+
+echo "Comparing generation $old → $new"
+echo
+
+nix store diff-closures \
+    "$PROFILE-${old}-link" \
+    "$PROFILE-${new}-link"

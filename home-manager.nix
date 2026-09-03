@@ -3,7 +3,18 @@
 }:
 
 {
-  home.stateVersion = "26.11";
+  home = {
+    stateVersion = "26.11";
+
+    file."bin" = {
+      source = ./home-manager/bin;
+      recursive = true;
+    };
+
+    sessionPath = [
+      "$HOME/bin"
+    ];
+  };
 
   imports = [
     ./home-manager/ghostty.nix

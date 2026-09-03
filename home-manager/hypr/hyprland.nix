@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./plugins/plugins.nix
     ./slices/bind.nix
     ./slices/decoration.nix
     ./slices/general.nix
@@ -16,6 +17,8 @@
 
     configType = "lua";
   };
+
+  xdg.configFile."hypr/plugins/split-monitor-workspaces".source = ./plugins/split-monitor-workspaces;
 
   services.hyprpaper = {
     enable = true;
