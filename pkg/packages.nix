@@ -1,6 +1,5 @@
-{
-  pkgs,
-  ...
+{ pkgs
+, ...
 }:
 
 {
@@ -56,15 +55,15 @@
   ];
 
   fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-color-emoji
-    liberation_ttf
     fira-code-symbols
+    liberation_ttf
     nerd-fonts._0xproto
     nerd-fonts.fira-code
     nerd-fonts.hasklug
     nerd-fonts.iosevka
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-color-emoji
   ];
 
 }

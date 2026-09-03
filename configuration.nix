@@ -2,11 +2,10 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{
-  config,
-  lib,
-  pkgs,
-  ...
+{ config
+, lib
+, pkgs
+, ...
 }:
 
 {
@@ -44,7 +43,7 @@
 
   boot = {
     loader = {
-      systemd-boot.enable = true;
+      limine.enable = true;
       efi.canTouchEfiVariables = true;
       grub.device = "/dev/nvme0n1p1";
     };
