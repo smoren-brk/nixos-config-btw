@@ -30,6 +30,8 @@
     prettier
     python3
     quickshell
+    quickshell
+    qutebrowser
     ripgrep
     rofi
     slurp
@@ -51,7 +53,6 @@
     zathuraPkgs.zathura_ps
     zoxide
     zsh-powerlevel10k
-    quickshell
   ];
 
   fonts.packages = with pkgs; [

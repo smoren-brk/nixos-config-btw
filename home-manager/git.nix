@@ -4,7 +4,6 @@
 }:
 
 {
-
   programs.git = {
     enable = true;
     package = null;

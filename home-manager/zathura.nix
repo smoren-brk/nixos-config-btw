@@ -20,7 +20,6 @@
       recolor-darkcolor = "#E0E0E0";
       recolor-reverse-video = true;
       recolor-keephue = true;
-
       render-loading = false;
     };
 
