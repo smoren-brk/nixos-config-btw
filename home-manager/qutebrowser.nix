@@ -1,6 +1,5 @@
-{
-  pkgs,
-  ...
+{ pkgs
+, ...
 }:
 
 {
@@ -34,12 +33,6 @@
     };
 
     settings = {
-      aliases = {
-        q = "quit";
-        w = "session-save";
-        wq = "quit --save";
-      };
-
       downloads.location.directory = "~/user/dl";
 
       tabs.show = "multiple";
@@ -47,12 +40,12 @@
       url.default_page = "ddg.gg";
       url.start_pages = [ "ddg.gg" ];
 
-      fonts.default_family = "\"Source Code Pro\"";
+      fonts.default_family = "Source Code Pro";
       fonts.default_size = "11pt";
-      fonts.completion.entry = "11pt \"Source Code Pro\"";
-      fonts.debug_console = "11pt \"Source Code Pro\"";
+      fonts.completion.entry = "11pt Source Code Pro";
+      fonts.debug_console = "11pt Source Code Pro";
       fonts.prompts = "default_size sans-serif";
-      fonts.statusbar = "11pt \"Source Code Pro\"";
+      fonts.statusbar = "11pt Source Code Pro";
 
       colors.webpage.bg = "#282828";
     };
