@@ -1,15 +1,21 @@
-{ ... }:
+{ lib, ... }:
 
 {
   wayland.windowManager.hyprland = {
-    extraConfig = ''
-      hl.curve("overshoot", {
-          type = "bezier",
-          points = {{0.1, 0.9}, {0.15, 1.05}}
-      })
-    '';
-
     settings = {
+      curve = {
+        _args = [
+          "overshoot"
+          {
+            type = "bezier";
+            points = [
+              (lib.generators.mkLuaInline "{ 0.1, 0.9 }")
+              (lib.generators.mkLuaInline "{ 0.15, 1.05 }")
+            ];
+          }
+        ];
+      };
+
       config = {
         decoration = {
           blur = {

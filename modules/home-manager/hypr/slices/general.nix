@@ -23,8 +23,7 @@
       };
 
       misc = {
-        swallow_regex =
-          "^(Alacritty|kitty|footclient|foot|com.mitchellh.ghostty|org.gnome.Nautilus)$";
+        swallow_regex = "^(Alacritty|kitty|footclient|foot|com.mitchellh.ghostty|org.gnome.Nautilus)$";
         enable_swallow = true;
       };
 

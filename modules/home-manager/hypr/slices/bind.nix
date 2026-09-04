@@ -41,7 +41,7 @@
       {
         _args = [
           "SUPER + P"
-          (lib.generators.mkLuaInline ''hl.dsp.workspace.toggle_special()'')
+          (lib.generators.mkLuaInline "hl.dsp.workspace.toggle_special()")
         ];
       }
 
@@ -55,7 +55,7 @@
       {
         _args = [
           "SUPER + Tab"
-          (lib.generators.mkLuaInline ''hl.dsp.window.cycle_next()'')
+          (lib.generators.mkLuaInline "hl.dsp.window.cycle_next()")
         ];
       }
 
@@ -80,7 +80,7 @@
       {
         _args = [
           "SUPER + Q"
-          (lib.generators.mkLuaInline ''hl.dsp.window.close()'')
+          (lib.generators.mkLuaInline "hl.dsp.window.close()")
         ];
       }
 
@@ -135,7 +135,7 @@
       {
         _args = [
           "SUPER + SHIFT + Q"
-          (lib.generators.mkLuaInline ''hl.dsp.exit()'')
+          (lib.generators.mkLuaInline "hl.dsp.exit()")
         ];
       }
 
@@ -241,7 +241,7 @@
       {
         _args = [
           "SUPER + mouse:272"
-          (lib.generators.mkLuaInline ''hl.dsp.window.drag()'')
+          (lib.generators.mkLuaInline "hl.dsp.window.drag()")
           {
             mouse = true;
           }
@@ -251,7 +251,7 @@
       {
         _args = [
           "SUPER + mouse:273"
-          (lib.generators.mkLuaInline ''hl.dsp.window.resize()'')
+          (lib.generators.mkLuaInline "hl.dsp.window.resize()")
           {
             mouse = true;
           }
@@ -260,4 +260,3 @@
     ];
   };
 }
-

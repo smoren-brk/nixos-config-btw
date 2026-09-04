@@ -12,7 +12,10 @@
           };
           float = true;
           center = true;
-          size = [ "45%" "60%" ];
+          size = [
+            "45%"
+            "60%"
+          ];
         }
 
         # Picture-in-Picture
@@ -23,7 +26,10 @@
           };
           float = true;
           center = true;
-          size = [ "60%" "60%" ];
+          size = [
+            "60%"
+            "60%"
+          ];
         }
 
         # btoppy
@@ -133,4 +139,3 @@
     };
   };
 }
-
