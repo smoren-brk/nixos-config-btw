@@ -1,6 +1,5 @@
-{
-  pkgs,
-  ...
+{ pkgs
+, ...
 }:
 
 {
@@ -23,6 +22,7 @@
     imv
     killall
     mpv
+    nix-search-tv
     nixfmt
     odin
     ols

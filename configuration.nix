@@ -102,6 +102,7 @@
     blueman.enable = true;
     openssh.enable = true;
     xserver.xkb.layout = "us";
+    getty.autologinUser = "jx";
 
     pipewire = {
       enable = true;
