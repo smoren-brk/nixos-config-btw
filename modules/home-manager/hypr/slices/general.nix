@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 
 {
   wayland.windowManager.hyprland.settings = {
@@ -26,7 +26,17 @@
         swallow_regex = "^(Alacritty|kitty|footclient|foot|com.mitchellh.ghostty|org.gnome.Nautilus)$";
         enable_swallow = true;
       };
+    };
 
+    on = {
+      _args = [
+        "hyprland.start"
+        (lib.generators.mkLuaInline ''
+          function()
+            hl.exec_cmd("qs")
+          end
+        '')
+      ];
     };
   };
 }

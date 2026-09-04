@@ -1,6 +1,5 @@
-{
-  split-monitor-workspaces,
-  ...
+{ split-monitor-workspaces
+, ...
 }:
 
 {

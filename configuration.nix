@@ -1,9 +1,8 @@
-{
-  config,
-  lib,
-  pkgs,
-  split-monitor-workspaces,
-  ...
+{ config
+, lib
+, pkgs
+, split-monitor-workspaces
+, ...
 }:
 
 {
@@ -100,8 +99,8 @@
   };
 
   services = {
-    openssh.enable = true;
     blueman.enable = true;
+    openssh.enable = true;
     xserver.xkb.layout = "us";
 
     pipewire = {
