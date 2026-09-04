@@ -1,5 +1,7 @@
-{ pkgs
-, ...
+{
+  pkgs,
+  split-monitor-workspaces,
+  ...
 }:
 
 {

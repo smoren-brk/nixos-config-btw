@@ -40,7 +40,23 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "split-monitor-workspaces": "split-monitor-workspaces"
+      }
+    },
+    "split-monitor-workspaces": {
+      "locked": {
+        "lastModified": 1788539534,
+        "narHash": "sha256-+uVW3oPo7zSTErQzWjNmsMasTveCfVDyWNpz7EoqGM8=",
+        "owner": "smoren-brk",
+        "repo": "split-monitor-workspaces",
+        "rev": "44ff5d3c17c330299be5678f2e2d77d120b4973b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "smoren-brk",
+        "repo": "split-monitor-workspaces",
+        "type": "github"
       }
     }
   },

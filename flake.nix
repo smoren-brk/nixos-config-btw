@@ -6,19 +6,33 @@
 
     home-manager = {
       url = "github:nix-community/home-manager/master";
-      # url = "path:/home/jx/code/nix/home-manager/";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-  };
 
-  outputs = { nixpkgs, home-manager, ... }: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-
-      modules = [
-        ./configuration.nix
-        home-manager.nixosModules.home-manager
-      ];
+    split-monitor-workspaces = {
+      url = "github:smoren-brk/split-monitor-workspaces";
     };
   };
+
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      split-monitor-workspaces,
+      ...
+    }:
+    {
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+
+        specialArgs = {
+          inherit split-monitor-workspaces;
+        };
+
+        modules = [
+          ./configuration.nix
+          home-manager.nixosModules.home-manager
+        ];
+      };
+    };
 }

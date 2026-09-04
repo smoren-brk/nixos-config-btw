@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  split-monitor-workspaces,
   ...
 }:
 
@@ -17,7 +18,15 @@
     ./modules/pkg/programs.nix
   ];
 
-  home-manager.users.jx = import ./modules/home-manager.nix;
+  home-manager.users.jx = {
+    imports = [
+      ./modules/home-manager.nix
+    ];
+
+    _module.args = {
+      inherit split-monitor-workspaces;
+    };
+  };
 
   hardware.bluetooth = {
     enable = true;

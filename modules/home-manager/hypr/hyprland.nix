@@ -1,4 +1,7 @@
-{ ... }:
+{
+  split-monitor-workspaces,
+  ...
+}:
 
 {
   imports = [
@@ -18,7 +21,8 @@
     configType = "lua";
   };
 
-  xdg.configFile."hypr/plugins/split-monitor-workspaces".source = ./plugins/split-monitor-workspaces;
+  xdg.configFile."hypr/plugins/split-monitor-workspaces".source =
+    split-monitor-workspaces.lib.luaPackage;
 
   services.hyprpaper = {
     enable = true;
