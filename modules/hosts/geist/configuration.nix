@@ -56,7 +56,7 @@
   };
 
   networking = {
-    hostName = "nixos";
+    hostName = "geist";
     networkmanager.enable = true;
   };
 
