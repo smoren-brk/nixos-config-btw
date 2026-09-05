@@ -15,13 +15,7 @@
   };
 
   outputs =
-    {
-      nixpkgs,
-      home-manager,
-      split-monitor-workspaces,
-      ...
-    }:
-    {
+    { nixpkgs, home-manager, split-monitor-workspaces, ... }: {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
@@ -30,7 +24,7 @@
         };
 
         modules = [
-          ./configuration.nix
+          ./modules/hosts/geist/configuration.nix
           home-manager.nixosModules.home-manager
         ];
       };

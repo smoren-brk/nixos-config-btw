@@ -12,14 +12,14 @@
   ];
 
   imports = [
-    ./modules/hardware-configuration.nix
-    ./modules/pkg/packages.nix
-    ./modules/pkg/programs.nix
+    ./hardware-configuration.nix
+    ./pkg/packages.nix
+    ./pkg/programs.nix
   ];
 
   home-manager.users.jx = {
     imports = [
-      ./modules/home-manager.nix
+      ./home-manager.nix
     ];
 
     _module.args = {
