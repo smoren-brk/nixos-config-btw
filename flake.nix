@@ -16,7 +16,7 @@
 
   outputs =
     { nixpkgs, home-manager, split-monitor-workspaces, ... }: {
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.geist = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
         specialArgs = {
