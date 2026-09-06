@@ -23,7 +23,7 @@ Scope {
             }
 
             implicitWidth: 60
-            color: "#131217"
+            color: "#161616"
 
             ColumnLayout {
                 anchors.fill: parent

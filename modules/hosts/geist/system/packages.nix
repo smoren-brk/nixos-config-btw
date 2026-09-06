@@ -2,7 +2,7 @@
 
 let
   vendoredPackages = [
-    raito.packages.${pkgs.system}.default
+    raito.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   systemUtils = [

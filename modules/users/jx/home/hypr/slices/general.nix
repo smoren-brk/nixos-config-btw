@@ -34,6 +34,8 @@
         (lib.generators.mkLuaInline ''
           function()
             hl.exec_cmd("qs")
+            hl.exec_cmd("hyprpaper")
+            hl.exec_cmd("raito systray")
           end
         '')
       ];
