@@ -1,10 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  modulesPath,
-  ...
-}:
+{ config, lib, pkgs, modulesPath, ... }:
 
 {
   imports = [
@@ -26,6 +20,12 @@
   fileSystems."/" = {
     device = "/dev/disk/by-label/NIXROOT";
     fsType = "btrfs";
+    options = [
+      "noatime"
+      "compress=zstd"
+      "ssd"
+      "space_cache=v2"
+    ];
   };
 
   fileSystems."/boot" = {

@@ -9,18 +9,18 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    split-monitor-workspaces = {
-      url = "github:smoren-brk/split-monitor-workspaces";
-    };
+    split-monitor-workspaces.url = "github:smoren-brk/split-monitor-workspaces";
+    raito.url = "github:smoren-brk/raito";
   };
 
   outputs =
-    { nixpkgs, home-manager, split-monitor-workspaces, ... }: {
+    { nixpkgs, home-manager, split-monitor-workspaces, raito, ... }: {
       nixosConfigurations.geist = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
         specialArgs = {
           inherit split-monitor-workspaces;
+          inherit raito;
         };
 
         modules = [

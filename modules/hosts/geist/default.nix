@@ -1,9 +1,4 @@
-{ config
-, lib
-, pkgs
-, split-monitor-workspaces
-, ...
-}:
+{ config, lib, pkgs, system, split-monitor-workspaces, raito, ... }:
 
 {
   nix.settings.experimental-features = [
