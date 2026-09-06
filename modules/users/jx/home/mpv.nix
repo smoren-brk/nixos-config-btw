@@ -28,7 +28,7 @@
       audio-file-auto = "fuzzy";
       audio-pitch-correction = true;
       volume-max = 150;
-      volume = 75;
+      volume = 100;
 
       osc = false;
     };
