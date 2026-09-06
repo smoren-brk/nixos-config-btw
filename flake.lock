@@ -53,6 +53,21 @@
         "type": "github"
       }
     },
+    "orthos": {
+      "locked": {
+        "lastModified": 1788709642,
+        "narHash": "sha256-U7YeyJ2pQlzH+9JBaTQ5fY4uKk2qKBCHLonY3MEmRcM=",
+        "owner": "smoren-brk",
+        "repo": "neovim-orthos",
+        "rev": "cada3b3a0434862df9d7b01218e0504f5b5fe413",
+        "type": "github"
+      },
+      "original": {
+        "owner": "smoren-brk",
+        "repo": "neovim-orthos",
+        "type": "github"
+      }
+    },
     "raito": {
       "inputs": {
         "nixpkgs": "nixpkgs_2"
@@ -75,6 +90,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
+        "orthos": "orthos",
         "raito": "raito",
         "split-monitor-workspaces": "split-monitor-workspaces"
       }

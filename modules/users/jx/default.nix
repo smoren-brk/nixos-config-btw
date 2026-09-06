@@ -1,7 +1,4 @@
-{ pkgs
-, split-monitor-workspaces
-, ...
-}:
+{ pkgs, split-monitor-workspaces, orthos, ... }:
 
 {
   home = {
@@ -22,6 +19,7 @@
     ./home/git.nix
     ./home/hypr/hyprland.nix
     ./home/mpv.nix
+    ./home/neovim.nix
     ./home/quickshell/qs.nix
     ./home/qutebrowser.nix
     ./home/zathura.nix

@@ -20,8 +20,7 @@
     configType = "lua";
   };
 
-  xdg.configFile."hypr/plugins/split-monitor-workspaces".source =
-    split-monitor-workspaces.lib.luaPackage;
+  xdg.configFile."hypr/plugins/split-monitor-workspaces".source = split-monitor-workspaces.lib.luaPackage;
 
   services.hyprpaper = {
     enable = true;
