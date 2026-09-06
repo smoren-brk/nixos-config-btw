@@ -6,27 +6,6 @@
 }:
 
 {
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
-
-  imports = [
-    ./hardware-configuration.nix
-    ./pkg/packages.nix
-    ./pkg/programs.nix
-  ];
-
-  home-manager.users.jx = {
-    imports = [
-      ./home-manager.nix
-    ];
-
-    _module.args = {
-      inherit split-monitor-workspaces;
-    };
-  };
-
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;

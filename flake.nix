@@ -24,7 +24,7 @@
         };
 
         modules = [
-          ./modules/hosts/geist/configuration.nix
+          ./modules/hosts/geist/default.nix
           home-manager.nixosModules.home-manager
         ];
       };
