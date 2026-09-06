@@ -54,6 +54,10 @@
         bindkey "^[[1;5C" forward-word
         bindkey "^[[1;5D" backward-word
 
+        if [ -z "$\{WAYLAND_DISPLAY\}" ] && [ "$\{XDG_VTNR\}" -eq 1 ]; then
+            start-hyprland
+        fi
+
         eval "$(zoxide init zsh --cmd cd)"
         eval "$(fzf --zsh)"
       '';
