@@ -74,8 +74,10 @@
       extraRules = [
         {
           groups = [ "doas" ];
-          runAs = "root";
+          keepEnv = true;
           persist = true;
+          runAs = "root";
+          users = [ "jx" ];
         }
       ];
     };

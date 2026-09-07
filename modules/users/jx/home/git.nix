@@ -14,6 +14,10 @@
         name = "Jovan Djokic-Sumarac";
       };
 
+      safe = {
+        directory = "/home/jx/config/";
+      };
+
       core = {
         compression = 9;
         editor = "nvim";

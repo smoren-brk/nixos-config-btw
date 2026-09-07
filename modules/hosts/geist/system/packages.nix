@@ -11,6 +11,7 @@ let
     pkgs.btrfs-progs
     pkgs.eza
     pkgs.fastfetch
+    pkgs.microfetch
     pkgs.fzf
     pkgs.killall
     pkgs.ripgrep
@@ -28,8 +29,8 @@ let
     pkgs.python3
     pkgs.tree-sitter
     pkgs.odin
-    pkgs.ols # Odin language server
-    pkgs.nix-search-tv # Search Nix packages from the terminal
+    pkgs.ols
+    pkgs.nix-search-tv
   ];
 
   waylandUtils = [
@@ -39,31 +40,31 @@ let
     pkgs.swappy
     pkgs.wl-clipboard-rs
     pkgs.xdg-desktop-portal-hyprland
-    pkgs.rofi # App launcher
-    pkgs.quickshell # Launcher/shell (duplicate removed)
-    pkgs.waybar # Status bar
-    pkgs.hyprpaper # Wallpaper setter
+    pkgs.rofi
+    pkgs.quickshell
+    pkgs.waybar
+    pkgs.hyprpaper
   ];
 
   guiApps = [
     pkgs.qutebrowser
-    pkgs.vesktop # Discord client
+    pkgs.vesktop
     pkgs.transmission_4-gtk
     pkgs.mpv
-    pkgs.imv # Image viewer
-    pkgs.pavucontrol # Audio volume control
-    pkgs.zathura # Document viewer
+    pkgs.imv
+    pkgs.pavucontrol
+    pkgs.zathura
     pkgs.zathuraPkgs.zathura_cb
     pkgs.zathuraPkgs.zathura_djvu
     pkgs.zathuraPkgs.zathura_pdf_mupdf
     pkgs.zathuraPkgs.zathura_pdf_poppler
     pkgs.zathuraPkgs.zathura_ps
-    pkgs.yazi # Terminal file manager (TUI)
+    pkgs.yazi
   ];
 
   shellStuff = [
-    pkgs.ghostty # Terminal emulator
-    pkgs.zsh-powerlevel10k # Zsh prompt theme
+    pkgs.ghostty
+    pkgs.zsh-powerlevel10k
   ];
 
 
