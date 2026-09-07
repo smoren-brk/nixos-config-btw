@@ -5,71 +5,72 @@ let
     raito.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
-  systemUtils = [
-    pkgs.bat
-    pkgs.btop
-    pkgs.btrfs-progs
-    pkgs.eza
-    pkgs.fastfetch
-    pkgs.microfetch
-    pkgs.fzf
-    pkgs.killall
-    pkgs.ripgrep
-    pkgs.tealdeer
-    pkgs.tree
-    pkgs.zoxide
+  systemUtils = with pkgs; [
+    bat
+    btop
+    btrfs-progs
+    eza
+    fastfetch
+    fzf
+    killall
+    microfetch
+    ripgrep
+    tealdeer
+    tree
+    zoxide
   ];
 
-  devTools = [
-    pkgs.cargo
-    pkgs.gcc
-    pkgs.git
-    pkgs.nixfmt
-    pkgs.prettier
-    pkgs.python3
-    pkgs.tree-sitter
-    pkgs.odin
-    pkgs.ols
-    pkgs.nix-search-tv
+  devTools = with pkgs; [
+    cargo
+    codex
+    gcc
+    git
+    nix-search-tv
+    nixfmt
+    odin
+    ols
+    prettier
+    python3
+    tree-sitter
   ];
 
-  waylandUtils = [
-    pkgs.gamescope
-    pkgs.grim
-    pkgs.slurp
-    pkgs.swappy
-    pkgs.wl-clipboard-rs
-    pkgs.xdg-desktop-portal-hyprland
-    pkgs.rofi
-    pkgs.quickshell
-    pkgs.waybar
-    pkgs.hyprpaper
+  waylandUtils = with pkgs; [
+    gamescope
+    grim
+    hyprpaper
+    quickshell
+    rofi
+    slurp
+    swappy
+    waybar
+    wl-clipboard-rs
+    xdg-desktop-portal-hyprland
   ];
 
-  guiApps = [
-    pkgs.qutebrowser
-    pkgs.vesktop
-    pkgs.transmission_4-gtk
-    pkgs.mpv
-    pkgs.imv
-    pkgs.pavucontrol
-    pkgs.zathura
-    pkgs.zathuraPkgs.zathura_cb
-    pkgs.zathuraPkgs.zathura_djvu
-    pkgs.zathuraPkgs.zathura_pdf_mupdf
-    pkgs.zathuraPkgs.zathura_pdf_poppler
-    pkgs.zathuraPkgs.zathura_ps
-    pkgs.yazi
+  guiApps = with pkgs; [
+    imv
+    mpv
+    pavucontrol
+    qutebrowser
+    transmission_4-gtk
+    vesktop
+    yazi
+    zathura
+    zathuraPkgs.zathura_cb
+    zathuraPkgs.zathura_djvu
+    zathuraPkgs.zathura_pdf_mupdf
+    zathuraPkgs.zathura_pdf_poppler
+    zathuraPkgs.zathura_ps
   ];
 
-  shellStuff = [
-    pkgs.ghostty
-    pkgs.zsh-powerlevel10k
+  shellStuff = with pkgs; [
+    ghostty
+    zsh-powerlevel10k
   ];
 
 
-  misc = [
-    pkgs.home-manager
+  misc = with pkgs; [
+    home-manager
   ];
 
 in

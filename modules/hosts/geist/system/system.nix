@@ -104,8 +104,8 @@
       common.default = [ "hyprland" ];
       hyprland.default = [ "hyprland" ];
     };
-    extraPortals = [
-      pkgs.xdg-desktop-portal-hyprland
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-hyprland
     ];
   };
 

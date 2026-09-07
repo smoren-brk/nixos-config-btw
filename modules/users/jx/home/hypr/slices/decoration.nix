@@ -23,7 +23,7 @@
             special = true;
           };
 
-          rounding = 8;
+          rounding = 20;
         };
       };
 

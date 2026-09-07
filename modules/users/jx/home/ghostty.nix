@@ -42,6 +42,9 @@
       font-family = "0xProto Nerd Font";
       theme = "jx";
       quit-after-last-window-closed = false;
+      background-opacity = 0.8;
+      window-padding-x = 20;
+      window-padding-y = 20;
     };
   };
 
