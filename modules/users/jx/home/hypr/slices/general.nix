@@ -16,7 +16,7 @@
       };
 
       general = {
-        gaps_out = 10;
+        gaps_out = 15;
 
         layout = "scrolling";
         border_size = 0;
@@ -35,7 +35,6 @@
           function()
             hl.exec_cmd("qs")
             hl.exec_cmd("hyprpaper")
-            hl.exec_cmd("raito systray")
           end
         '')
       ];
