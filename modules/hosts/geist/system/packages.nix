@@ -39,7 +39,6 @@ let
     grim
     hyprpaper
     quickshell
-    rofi
     slurp
     swappy
     waybar

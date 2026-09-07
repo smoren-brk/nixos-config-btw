@@ -20,7 +20,7 @@
       {
         _args = [
           "SUPER + D"
-          (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("rofi -show run")'')
+          (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("qs ipc call launcher toggle")'')
         ];
       }
 
