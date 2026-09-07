@@ -26,6 +26,13 @@
 
       {
         _args = [
+          "SUPER + S"
+          (lib.generators.mkLuaInline ''hl.dsp.exec_cmd([[sh -c 'region=$(slurp) && grim -g "$region" - | wl-copy --type image/png']])'')
+        ];
+      }
+
+      {
+        _args = [
           "SUPER + W"
           (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("firefox")'')
         ];
