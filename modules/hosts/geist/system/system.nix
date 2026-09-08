@@ -25,15 +25,17 @@
   };
 
   virtualisation.docker = {
-    enable = true;
-    rootless.enable = true;
+    enable = false;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
   };
 
   boot = {
     loader = {
       limine.enable = true;
       efi.canTouchEfiVariables = true;
-      grub.device = "/dev/nvme0n1p1";
     };
     kernelPackages = pkgs.linuxPackages_latest;
   };

@@ -54,6 +54,7 @@ let
     transmission_4-gtk
     vesktop
     yazi
+    yt-dlp
     zathura
     zathuraPkgs.zathura_cb
     zathuraPkgs.zathura_djvu

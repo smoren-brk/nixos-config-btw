@@ -48,15 +48,17 @@
         "sharehistory"
       ];
 
+      loginShellInit = ''
+        if [[ -z "$WAYLAND_DISPLAY" && "$XDG_VTNR" == 1 ]] && uwsm check may-start; then
+          exec uwsm start -e -D Hyprland hyprland.desktop
+        fi
+      '';
+
       interactiveShellInit = ''
         bindkey '^H' backward-kill-word
         bindkey '^[[3;5~' kill-word
         bindkey "^[[1;5C" forward-word
         bindkey "^[[1;5D" backward-word
-
-        if [ -z "$\{WAYLAND_DISPLAY\}" ] && [ "$\{XDG_VTNR\}" -eq 1 ]; then
-            start-hyprland
-        fi
 
         eval "$(zoxide init zsh --cmd cd)"
         eval "$(fzf --zsh)"
