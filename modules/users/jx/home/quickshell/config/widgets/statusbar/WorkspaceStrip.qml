@@ -17,6 +17,12 @@ Item {
     }
     property int previousActivePosition: activePosition
     property real starRotation: 0
+    readonly property int activeWorkspaceId: workspaces.find(workspace => workspace.active)?.id ?? -1
+
+    onActiveWorkspaceIdChanged: {
+        if (activeWorkspaceId >= 0)
+            shimmerAnimation.restart();
+    }
 
     implicitWidth: workspaceRow.width + 8
     implicitHeight: 32
@@ -30,7 +36,70 @@ Item {
     Rectangle {
         anchors.fill: parent
         radius: height / 2
-        color: Theme.selectedSurfaceColor
+        color: Theme.panelSurfaceColor
+    }
+
+    Canvas {
+        id: trail
+        anchors.fill: parent
+        clip: true
+
+        property var motes: []
+        property real previousX: 0
+        readonly property int lifetime: 380
+
+        function record(x: real) {
+            const now = Date.now();
+            const steps = Math.max(1, Math.ceil(Math.abs(x - previousX) / 3));
+            for (let step = 1; step <= steps; step++) {
+                motes.push({
+                    x: previousX + (x - previousX) * step / steps + highlight.width / 2,
+                    born: now,
+                    phase: Math.random() * Math.PI * 2
+                });
+            }
+            motes = motes.slice(-160);
+            previousX = x;
+            fadeTimer.start();
+            requestPaint();
+        }
+
+        onPaint: {
+            const context = getContext("2d");
+            context.clearRect(0, 0, width, height);
+            const now = Date.now();
+            for (const mote of motes) {
+                const age = (now - mote.born) / lifetime;
+                if (age >= 1)
+                    continue;
+                const fade = Math.pow(1 - age, 2);
+                const y = height / 2;
+                context.globalAlpha = fade * 0.12;
+                context.fillStyle = Theme.accentHoverColor;
+                context.beginPath();
+                context.arc(mote.x, y, 3 + 7 * (1 - age), 0, Math.PI * 2);
+                context.fill();
+
+                const sparkle = 0.5 + 0.5 * Math.sin(age * Math.PI * 6 + mote.phase);
+                context.globalAlpha = fade * sparkle * 0.8;
+                context.fillStyle = "white";
+                context.fillRect(mote.x - 0.7, y + Math.sin(mote.phase) * 7 - 0.7, 1.4, 1.4);
+            }
+            context.globalAlpha = 1;
+        }
+
+        Timer {
+            id: fadeTimer
+            interval: 16
+            repeat: true
+            onTriggered: {
+                const now = Date.now();
+                trail.motes = trail.motes.filter(mote => now - mote.born < trail.lifetime);
+                trail.requestPaint();
+                if (trail.motes.length === 0)
+                    stop();
+            }
+        }
     }
 
     Rectangle {
@@ -43,6 +112,50 @@ Item {
         height: 26
         radius: height / 2
         color: Theme.accentHoverColor
+
+        onXChanged: {
+            if (slideAnimation.running)
+                trail.record(x);
+        }
+
+        Canvas {
+            id: shimmer
+            anchors.fill: parent
+            property real progress: 1
+
+            onProgressChanged: requestPaint()
+            onPaint: {
+                const context = getContext("2d");
+                context.clearRect(0, 0, width, height);
+                if (progress <= 0 || progress >= 1)
+                    return;
+
+                const center = -width + progress * width * 3;
+                const band = width * 0.55;
+                const gradient = context.createLinearGradient(center - band, 0, center + band, height);
+                gradient.addColorStop(0, "transparent");
+                gradient.addColorStop(0.5, "rgba(255, 255, 255, 0.6)");
+                gradient.addColorStop(1, "transparent");
+
+                context.save();
+                context.beginPath();
+                context.arc(width / 2, height / 2, width / 2, 0, Math.PI * 2);
+                context.clip();
+                context.fillStyle = gradient;
+                context.fillRect(0, 0, width, height);
+                context.restore();
+            }
+
+            NumberAnimation {
+                id: shimmerAnimation
+                target: shimmer
+                property: "progress"
+                from: 0
+                to: 1
+                duration: 550
+                easing.type: Easing.InOutQuad
+            }
+        }
 
         Text {
             anchors.centerIn: parent
@@ -62,8 +175,13 @@ Item {
 
         Behavior on x {
             NumberAnimation {
+                id: slideAnimation
                 duration: 250
                 easing.type: Easing.OutCubic
+                onRunningChanged: {
+                    if (running)
+                        trail.previousX = highlight.x;
+                }
             }
         }
 
@@ -99,7 +217,9 @@ Item {
                     text: Icons.inactiveWorkspace
                     color: delegate.modelData.urgent
                             ? Theme.dangerColor
-                            : Theme.mutedTextColor
+                            : delegate.modelData.toplevels.values.length > 0
+                                ? Theme.accentHoverColor
+                                : Theme.mutedTextColor
                     font.family: Typography.symbolIconFontFamily
                     font.pixelSize: 18
                     scale: 0.6
