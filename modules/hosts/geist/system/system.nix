@@ -66,6 +66,10 @@
     MANPAGER = "nvim +Man!";
     NIXOS_OZONE_WL = "1";
     XDG_CURRENT_DESKTOP = "Hyprland";
+    HYPRCURSOR_THEME = "Bibata-Modern-Ice";
+    HYPRCURSOR_SIZE = 24;
+    XCURSOR_THEME = "Bibata-Modern-Ice";
+    XCURSOR_SIZE = 24;
   };
 
   security = {

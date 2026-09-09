@@ -65,6 +65,8 @@ let
 
   shellStuff = with pkgs; [
     ghostty
+    gnutar
+    unzip
     zsh-powerlevel10k
   ];
 
