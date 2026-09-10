@@ -15,15 +15,11 @@
   };
 
   outputs =
-    { nixpkgs, home-manager, split-monitor-workspaces, raito, orthos, ... }: {
+    inputs@{ nixpkgs, home-manager, ... }: {
       nixosConfigurations.geist = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
-        specialArgs = {
-          inherit split-monitor-workspaces;
-          inherit raito;
-          inherit orthos;
-        };
+        specialArgs = inputs;
 
         modules = [
           ./modules/hosts/geist/default.nix
