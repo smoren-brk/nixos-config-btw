@@ -1,7 +1,8 @@
-{ pkgs, raito, ... }:
+{ pkgs, qml-niri, raito, ... }:
 
 let
   vendoredPackages = [
+    qml-niri.packages.${pkgs.stdenv.hostPlatform.system}.quickshell
     raito.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
@@ -38,21 +39,20 @@ let
     gamescope
     grim
     hyprpaper
-    quickshell
     slurp
     swappy
-    waybar
     wl-clipboard-rs
     xdg-desktop-portal-hyprland
+    xwayland-satellite
   ];
 
   guiApps = with pkgs; [
+    discord-canary
     imv
     mpv
     pavucontrol
     qutebrowser
     transmission_4-gtk
-    vesktop
     yazi
     yt-dlp
     zathura

@@ -1,23 +1,20 @@
 import QtQuick
 import "../../components/theme"
-import Quickshell.Hyprland
+import "../../services"
 
 Item {
     id: root
 
     required property string outputName
 
-    readonly property var workspaces: Hyprland.workspaces.values
-        .filter(workspace => workspace.monitor?.name === outputName
-            && !workspace.name.startsWith("special:"))
-        .sort((left, right) => left.id - right.id)
+    readonly property var workspaces: NiriService.workspacesForOutput(outputName)
     readonly property int activePosition: {
-        const position = workspaces.findIndex(workspace => workspace.active);
+        const position = workspaces.findIndex(workspace => workspace.isActive);
         return Math.max(0, position);
     }
     property int previousActivePosition: activePosition
     property real starRotation: 0
-    readonly property int activeWorkspaceId: workspaces.find(workspace => workspace.active)?.id ?? -1
+    readonly property real activeWorkspaceId: workspaces.find(workspace => workspace.isActive)?.id ?? -1
 
     onActiveWorkspaceIdChanged: {
         if (activeWorkspaceId >= 0)
@@ -104,7 +101,7 @@ Item {
 
     Rectangle {
         id: highlight
-        visible: root.workspaces.length > 0
+        visible: root.activeWorkspaceId >= 0
 
         x: workspaceRow.x + root.activePosition * (26 + workspaceRow.spacing)
         anchors.verticalCenter: parent.verticalCenter
@@ -213,11 +210,11 @@ Item {
 
                 Text {
                     anchors.centerIn: parent
-                    visible: !delegate.modelData.active
+                    visible: !delegate.modelData.isActive
                     text: Icons.inactiveWorkspace
-                    color: delegate.modelData.urgent
+                    color: delegate.modelData.isUrgent
                             ? Theme.dangerColor
-                            : delegate.modelData.toplevels.values.length > 0
+                            : delegate.modelData.activeWindowId > 0
                                 ? Theme.accentHoverColor
                                 : Theme.mutedTextColor
                     font.family: Typography.symbolIconFontFamily
@@ -235,7 +232,7 @@ Item {
                 MouseArea {
                     anchors.fill: parent
                     cursorShape: Qt.PointingHandCursor
-                    onClicked: delegate.modelData.activate()
+                    onClicked: NiriService.activateWorkspace(delegate.modelData.id)
                 }
             }
         }

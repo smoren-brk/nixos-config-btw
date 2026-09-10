@@ -1,7 +1,7 @@
 pragma Singleton
 import Quickshell
 import Quickshell.Io
-import Quickshell.Hyprland
+import "../../services"
 
 Singleton {
     id: root
@@ -9,7 +9,7 @@ Singleton {
     property string outputName: ""
 
     function show(): void {
-        outputName = Hyprland.focusedMonitor?.name || Quickshell.screens[0]?.name || "";
+        outputName = NiriService.focusedOutput || Quickshell.screens[0]?.name || "";
         visible = true;
     }
     function toggleForOutput(name: string): void {

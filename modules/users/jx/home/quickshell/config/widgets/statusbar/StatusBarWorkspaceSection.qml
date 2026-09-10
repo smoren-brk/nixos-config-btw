@@ -1,17 +1,15 @@
 import QtQuick
 import "../../components/theme"
-import Quickshell.Hyprland
+import "../../services"
 
 Item {
     id: root
 
     required property string outputName
 
-    readonly property var outputWorkspaces: Hyprland.workspaces.values
-        .filter(workspace => workspace.monitor?.name === outputName
-            && !workspace.name.startsWith("special:"))
+    readonly property var outputWorkspaces: NiriService.workspacesForOutput(outputName)
     readonly property var activeWorkspace: outputWorkspaces
-        .find(workspace => workspace.active)
+        .find(workspace => workspace.isActive)
 
     function japaneseNumber(value: int): string {
         const digits = ["〇", "一", "二", "三", "四", "五", "六", "七", "八", "九"];
@@ -49,10 +47,7 @@ Item {
             height: 26
             anchors.verticalCenter: parent.verticalCenter
             text: root.activeWorkspace
-                ? root.activeWorkspace.name
-                    && root.activeWorkspace.name !== root.activeWorkspace.id.toString()
-                        ? root.activeWorkspace.name
-                        : root.japaneseNumber(root.activeWorkspace.id)
+                ? root.activeWorkspace.name || root.japaneseNumber(root.activeWorkspace.index)
                 : "Desktop"
             color: Theme.primaryTextColor
             font.family: Typography.bodyFontFamily

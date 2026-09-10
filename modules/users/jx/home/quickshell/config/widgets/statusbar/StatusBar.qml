@@ -37,19 +37,12 @@ PanelWindow {
         right: true
     }
 
-    margins {
-        left: 15
-        right: 15
-    }
-
     WlrLayershell.layer: WlrLayer.Top
     WlrLayershell.namespace: "qqq-bar"
 
     Rectangle {
         anchors.fill: parent
         color: Theme.shellBackgroundColor
-        bottomLeftRadius: 20
-        bottomRightRadius: 20
 
         Text {
             anchors.centerIn: parent

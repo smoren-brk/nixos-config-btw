@@ -9,6 +9,8 @@
       enable = true;
     };
 
+    niri.enable = true;
+
     neovim = {
       enable = true;
       defaultEditor = true;
@@ -50,7 +52,7 @@
 
       loginShellInit = ''
         if [[ -z "$WAYLAND_DISPLAY" && "$XDG_VTNR" == 1 ]] && uwsm check may-start; then
-          exec uwsm start -e -D Hyprland hyprland.desktop
+          exec niri
         fi
       '';
 
