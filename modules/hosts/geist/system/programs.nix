@@ -52,7 +52,7 @@
 
       loginShellInit = ''
         if [[ -z "$WAYLAND_DISPLAY" && "$XDG_VTNR" == 1 ]] && uwsm check may-start; then
-          exec niri
+          exec niri-session
         fi
       '';
 
