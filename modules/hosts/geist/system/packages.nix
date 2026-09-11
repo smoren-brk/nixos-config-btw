@@ -47,7 +47,7 @@ let
   ];
 
   guiApps = with pkgs; [
-    discord-canary
+    discord
     imv
     mpv
     pavucontrol
