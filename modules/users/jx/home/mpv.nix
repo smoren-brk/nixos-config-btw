@@ -11,7 +11,6 @@
     bindings = {
       LEFT = "no-osd seek -2 exact";
       RIGHT = "no-osd seek 2 exact";
-      c = "script-message osc-visibility cycle";
     };
 
     config = {
@@ -29,8 +28,6 @@
       audio-pitch-correction = true;
       volume-max = 150;
       volume = 100;
-
-      osc = false;
     };
 
   };
