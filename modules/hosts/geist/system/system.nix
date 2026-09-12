@@ -85,7 +85,6 @@
 
   services = {
     blueman.enable = true;
-    openssh.enable = true;
     xserver.xkb.layout = "us";
     getty.autologinUser = "jx";
 
@@ -102,7 +101,6 @@
     config = {
       common.default = [ "gnome" "gtk" ];
       niri.default = [ "gnome" "gtk" ];
-      hyprland.default = [ "hyprland" ];
     };
     extraPortals = with pkgs; [
       xdg-desktop-portal-gnome

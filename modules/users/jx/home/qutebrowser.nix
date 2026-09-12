@@ -13,16 +13,17 @@
       pm = "https://mail.proton.me/u/0/inbox";
       aa = "https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20";
       "13" = "https://1337x.to/";
+      mn = "https://mynixos.com/";
     };
 
     keyBindings = {
       normal = {
-        "M" = "hint links spawn mpv {hint-url}";
-        "Z" = "hint links spawn ghostty -e youtube-dl {hint-url}";
-        "t" = "set-cmd-text -s :open -t";
-        "xb" = "config-cycle statusbar.show always never";
-        "xt" = "config-cycle tabs.show always never";
-        "xx" = "config-cycle statusbar.show always never ;; config-cycle tabs.show always never";
+        M = "hint links spawn mpv {hint-url}";
+        Z = "hint links spawn ghostty -e youtube-dl {hint-url}";
+        t = "set-cmd-text -s :open -t";
+        xb = "config-cycle statusbar.show always never";
+        xt = "config-cycle tabs.show always never";
+        xx = "config-cycle statusbar.show always never ;; config-cycle tabs.show always never";
       };
     };
 
@@ -31,6 +32,7 @@
       re = "https://www.reddit.com/r/{}";
       yt = "https://www.youtube.com/results?search_query={}";
       "13" = "https://1337x.to/search/{}/1/";
+      mn = "https://mynixos.com/search?q={}";
     };
 
     settings = {
@@ -49,6 +51,7 @@
       fonts.statusbar = "11pt Source Code Pro";
 
       colors.webpage.bg = "#282828";
+      colors.webpage.darkmode.enabled = true;
     };
   };
 }

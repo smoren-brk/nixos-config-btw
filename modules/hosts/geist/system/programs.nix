@@ -4,11 +4,6 @@
   programs = {
     firefox.enable = true;
 
-    hyprland = {
-      withUWSM = true;
-      enable = true;
-    };
-
     niri.enable = true;
 
     neovim = {
@@ -52,7 +47,7 @@
 
       loginShellInit = ''
         if [[ -z "$WAYLAND_DISPLAY" && "$XDG_VTNR" == 1 ]] && uwsm check may-start; then
-          exec niri-session
+          exec niri
         fi
       '';
 

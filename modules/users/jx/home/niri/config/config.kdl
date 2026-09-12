@@ -17,9 +17,19 @@ input {
     trackpoint {
         off
     }
-    mouse {}
+    mouse {
+        accel-profile "flat"
+    }
 
     focus-follows-mouse
+}
+
+cursor {
+    xcursor-theme "breeze_cursors"
+    xcursor-size 24
+
+    hide-when-typing
+    hide-after-inactive-ms 1000
 }
 
 output "DP-1" {
@@ -86,13 +96,12 @@ spawn-at-startup "hyprpaper"
 spawn-at-startup "raito systray"
 
 hotkey-overlay {
-    // skip-at-startup
+    skip-at-startup
 }
 
 prefer-no-csd
 
 screenshot-path "~/user/media/screenshots/%Y-%m-%d_%H-%M-%S.png"
-// screenshot-path null
 
 animations { }
 
@@ -129,7 +138,7 @@ binds {
 
     Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+D hotkey-overlay-title="Toggle the Launcher" { spawn "qs" "ipc" "call" "launcher" "toggle"; }
-    Mod+W hotkey-overlay-title="Open Firefox" { spawn "firefox"; }
+    Mod+W hotkey-overlay-title="Open browser" { spawn "qutebrowser"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }

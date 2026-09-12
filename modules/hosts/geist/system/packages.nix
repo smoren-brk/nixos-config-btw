@@ -52,6 +52,7 @@ let
     mpv
     pavucontrol
     qutebrowser
+    spotify
     transmission_4-gtk
     yazi
     yt-dlp
@@ -64,6 +65,7 @@ let
   ];
 
   shellStuff = with pkgs; [
+    bitwarden-cli
     ghostty
     gnutar
     unzip

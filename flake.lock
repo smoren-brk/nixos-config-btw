@@ -25,11 +25,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789136855,
-        "narHash": "sha256-82D7ADWE8erhfALj3dqxAOeQaoa+Bwlsdcp9v2m/ExM=",
+        "lastModified": 1789150619,
+        "narHash": "sha256-Vsgv5atXkGWOOdLOL8oQLnZSGt1h140synPfFdwbyjU=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "d0fd95e15e0c3baf565a9fd4bc352321e2564ea3",
+        "rev": "e4345d5ae8aa1def34378d2a60ac5e6e4c8fd7c1",
         "type": "github"
       },
       "original": {
@@ -104,11 +104,11 @@
     },
     "orthos": {
       "locked": {
-        "lastModified": 1788709642,
+        "lastModified": 1789152038,
         "narHash": "sha256-U7YeyJ2pQlzH+9JBaTQ5fY4uKk2qKBCHLonY3MEmRcM=",
         "owner": "smoren-brk",
         "repo": "neovim-orthos",
-        "rev": "cada3b3a0434862df9d7b01218e0504f5b5fe413",
+        "rev": "523027e8682261ac07c415ce15d9bcaa4f57d5b9",
         "type": "github"
       },
       "original": {
@@ -188,23 +188,7 @@
         "orthos": "orthos",
         "qml-niri": "qml-niri",
         "quickshell": "quickshell",
-        "raito": "raito",
-        "split-monitor-workspaces": "split-monitor-workspaces"
-      }
-    },
-    "split-monitor-workspaces": {
-      "locked": {
-        "lastModified": 1788539534,
-        "narHash": "sha256-+uVW3oPo7zSTErQzWjNmsMasTveCfVDyWNpz7EoqGM8=",
-        "owner": "smoren-brk",
-        "repo": "split-monitor-workspaces",
-        "rev": "44ff5d3c17c330299be5678f2e2d77d120b4973b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "smoren-brk",
-        "repo": "split-monitor-workspaces",
-        "type": "github"
+        "raito": "raito"
       }
     },
     "treefmt-nix": {

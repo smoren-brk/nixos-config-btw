@@ -1,4 +1,4 @@
-{ config, lib, pkgs, system, split-monitor-workspaces, raito, orthos, ... }:
+{ config, lib, pkgs, system, raito, orthos, ... }:
 
 {
   nix.settings.experimental-features = [
@@ -19,7 +19,6 @@
     ];
 
     _module.args = {
-      inherit split-monitor-workspaces;
       inherit orthos;
     };
   };
