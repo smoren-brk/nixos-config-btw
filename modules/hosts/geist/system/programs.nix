@@ -3,8 +3,12 @@
 {
   programs = {
     firefox.enable = true;
-
     niri.enable = true;
+
+    ssh = {
+        startAgent = true;
+        agentTimeout = "8h";
+    };
 
     neovim = {
       enable = true;
