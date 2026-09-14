@@ -25,6 +25,7 @@
     ./home/niri/niri.nix
     ./home/quickshell/qs.nix
     ./home/qutebrowser.nix
+    ./home/ssh.nix
     ./home/zathura.nix
   ];
 }

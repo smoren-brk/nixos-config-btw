@@ -16,7 +16,7 @@
       wallpaper = [
         {
           monitor = "";
-          path = "/home/jx/user/dl/nix-wave.png";
+          path = "/home/jx/user/dl/zelda.jpg";
         }
       ];
     };

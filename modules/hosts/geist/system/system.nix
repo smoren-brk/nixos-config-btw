@@ -1,8 +1,9 @@
-{ config
-, lib
-, pkgs
-, split-monitor-workspaces
-, ...
+{
+  config,
+  lib,
+  pkgs,
+  split-monitor-workspaces,
+  ...
 }:
 
 {
@@ -93,14 +94,23 @@
       pulse.enable = true;
       wireplumber.enable = true;
     };
+    gnome = {
+      gcr-ssh-agent.enable = false;
+    };
   };
 
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
     config = {
-      common.default = [ "gnome" "gtk" ];
-      niri.default = [ "gnome" "gtk" ];
+      common.default = [
+        "gnome"
+        "gtk"
+      ];
+      niri.default = [
+        "gnome"
+        "gtk"
+      ];
     };
     extraPortals = with pkgs; [
       xdg-desktop-portal-gnome
