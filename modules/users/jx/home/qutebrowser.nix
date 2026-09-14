@@ -14,6 +14,7 @@
       aa = "https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20";
       "13" = "https://1337x.to/";
       mn = "https://mynixos.com/";
+      wa = "https://web.whatsapp.com/";
     };
 
     keyBindings = {
