@@ -23,11 +23,6 @@
     raito.url = "github:smoren-brk/raito";
     orthos.url = "github:smoren-brk/neovim-orthos";
 
-    topowall = {
-      url = "github:gonzalezerik/topowall";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     torlink = {
       url = "github:baairon/torlink";
       inputs.nixpkgs.follows = "nixpkgs";

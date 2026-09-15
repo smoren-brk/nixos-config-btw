@@ -35,6 +35,7 @@
         ls = "eza --icons --group-directories-first --oneline";
         ff = "fastfetch";
         ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";
+        next-gen = "doas nixos-rebuild switch --flake . && doas ~/bin/diff-generations";
       };
 
       promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";

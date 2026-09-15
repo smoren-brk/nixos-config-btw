@@ -189,28 +189,7 @@
         "qml-niri": "qml-niri",
         "quickshell": "quickshell",
         "raito": "raito",
-        "topowall": "topowall",
         "torlink": "torlink"
-      }
-    },
-    "topowall": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1789502319,
-        "narHash": "sha256-v7Hlng+KWltNtUK9CuOvYL8y4+yKuQ0mYnSN235USds=",
-        "owner": "gonzalezerik",
-        "repo": "topowall",
-        "rev": "a03a6e82b5bd6f37718a9d3496294a483a45c5c4",
-        "type": "github"
-      },
-      "original": {
-        "owner": "gonzalezerik",
-        "repo": "topowall",
-        "type": "github"
       }
     },
     "torlink": {
