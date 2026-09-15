@@ -13,23 +13,23 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     qml-niri = {
       url = "github:imiric/qml-niri/main";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.quickshell.follows = "quickshell";
     };
+
     raito.url = "github:smoren-brk/raito";
     orthos.url = "github:smoren-brk/neovim-orthos";
+
     topowall = {
       url = "github:gonzalezerik/topowall";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     torlink = {
       url = "github:baairon/torlink";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    wallr = {
-      url = "github:programmersd21/wallr";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

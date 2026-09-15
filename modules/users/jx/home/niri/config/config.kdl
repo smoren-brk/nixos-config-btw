@@ -55,7 +55,6 @@ output "DP-2" {
 
 layout {
     gaps 10
-    always-center-single-column
 
     preset-column-widths {
         proportion 0.33333
@@ -92,8 +91,6 @@ layout {
 }
 
 spawn-at-startup "qs"
-spawn-at-startup "wallr set /home/jx/user/walls/uw-pp.png"
-spawn-at-startup "raito systray"
 
 hotkey-overlay {
     skip-at-startup

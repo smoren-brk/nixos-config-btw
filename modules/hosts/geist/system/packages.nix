@@ -4,7 +4,6 @@
   raito,
   topowall,
   torlink,
-  wallr,
   ...
 }:
 
@@ -14,9 +13,6 @@ let
     raito.packages.${pkgs.stdenv.hostPlatform.system}.default
     topowall.packages.${pkgs.stdenv.hostPlatform.system}.default
     torlink.packages.${pkgs.stdenv.hostPlatform.system}.default
-    (wallr.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (old: {
-      nativeBuildInputs = (old.nativeBuildInputs or [ ]) ++ [ pkgs.rustPlatform.bindgenHook ];
-    }))
   ];
 
   systemUtils = with pkgs; [
