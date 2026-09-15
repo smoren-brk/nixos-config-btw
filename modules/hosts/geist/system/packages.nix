@@ -30,6 +30,7 @@ let
     tealdeer
     tree
     zoxide
+    xdg-user-dirs
   ];
 
   devTools = with pkgs; [
