@@ -1,4 +1,12 @@
-{ config, lib, pkgs, system, raito, orthos, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  system,
+  raito,
+  orthos,
+  ...
+}:
 
 {
   nix.settings.experimental-features = [

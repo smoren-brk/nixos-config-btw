@@ -6,8 +6,8 @@
     niri.enable = true;
 
     ssh = {
-        startAgent = true;
-        agentTimeout = "8h";
+      startAgent = true;
+      agentTimeout = "8h";
     };
 
     neovim = {

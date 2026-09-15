@@ -1,9 +1,20 @@
-{ pkgs, qml-niri, raito, ... }:
+{
+  pkgs,
+  qml-niri,
+  raito,
+  topowall,
+  wallr,
+  ...
+}:
 
 let
   vendoredPackages = [
     qml-niri.packages.${pkgs.stdenv.hostPlatform.system}.quickshell
     raito.packages.${pkgs.stdenv.hostPlatform.system}.default
+    topowall.packages.${pkgs.stdenv.hostPlatform.system}.default
+    (wallr.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (old: {
+      nativeBuildInputs = (old.nativeBuildInputs or [ ]) ++ [ pkgs.rustPlatform.bindgenHook ];
+    }))
   ];
 
   systemUtils = with pkgs; [
@@ -38,7 +49,6 @@ let
   waylandUtils = with pkgs; [
     gamescope
     grim
-    hyprpaper
     slurp
     swappy
     wl-clipboard-rs
@@ -72,7 +82,6 @@ let
     zsh-powerlevel10k
   ];
 
-
   misc = with pkgs; [
     home-manager
   ];
@@ -81,7 +90,8 @@ in
 {
   nixpkgs.config.allowUnfree = true;
 
-  environment.systemPackages = vendoredPackages ++ systemUtils ++ devTools ++ waylandUtils ++ guiApps ++ shellStuff ++ misc;
+  environment.systemPackages =
+    vendoredPackages ++ systemUtils ++ devTools ++ waylandUtils ++ guiApps ++ shellStuff ++ misc;
 
   fonts.packages = with pkgs; [
     fira-code-symbols

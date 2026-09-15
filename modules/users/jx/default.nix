@@ -1,4 +1,9 @@
-{ pkgs, split-monitor-workspaces, orthos, ... }:
+{
+  pkgs,
+  split-monitor-workspaces,
+  orthos,
+  ...
+}:
 
 {
   home = {

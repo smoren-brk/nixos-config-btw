@@ -92,7 +92,7 @@ layout {
 }
 
 spawn-at-startup "qs"
-spawn-at-startup "hyprpaper"
+spawn-at-startup "wallr set /home/jx/user/walls/uw-pp.png"
 spawn-at-startup "raito systray"
 
 hotkey-overlay {

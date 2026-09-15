@@ -9,18 +9,5 @@
     systemd.enable = false;
   };
 
-  services.hyprpaper = {
-    enable = true;
-    package = null;
-    settings = {
-      wallpaper = [
-        {
-          monitor = "";
-          path = "/home/jx/user/dl/zelda.jpg";
-        }
-      ];
-    };
-  };
-
   xdg.configFile."niri".source = ./config;
 }

@@ -20,10 +20,19 @@
     };
     raito.url = "github:smoren-brk/raito";
     orthos.url = "github:smoren-brk/neovim-orthos";
+    topowall = {
+      url = "github:gonzalezerik/topowall";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    wallr = {
+      url = "github:programmersd21/wallr";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
-    inputs@{ nixpkgs, home-manager, ... }: {
+    inputs@{ nixpkgs, home-manager, ... }:
+    {
       nixosConfigurations.geist = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
