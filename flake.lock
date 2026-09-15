@@ -122,11 +122,11 @@
     },
     "orthos": {
       "locked": {
-        "lastModified": 1789174033,
-        "narHash": "sha256-U7YeyJ2pQlzH+9JBaTQ5fY4uKk2qKBCHLonY3MEmRcM=",
+        "lastModified": 1789490549,
+        "narHash": "sha256-BeIGM3Bdu/uuHnE/z9BMRZYi/kKgEPsPsHbOv0z3W0o=",
         "owner": "smoren-brk",
         "repo": "neovim-orthos",
-        "rev": "9207f2e3035ac542730f17390c2dc6863dbbcb0d",
+        "rev": "84901a1f04ed2940dd83f43128020f3ea73a0980",
         "type": "github"
       },
       "original": {
@@ -294,11 +294,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1789466527,
-        "narHash": "sha256-nmsUNTmm2Rb9lRcYe8yofqUhEjmFA0LzZWkr9iKnVPw=",
+        "lastModified": 1789488904,
+        "narHash": "sha256-l9bp4FcTVpAsjIya7trkea4BUWDsgLsYCo51G88+tsw=",
         "owner": "programmersd21",
         "repo": "wallr",
-        "rev": "bf12d47c51337eeb823c2c7c3886e635f4934e59",
+        "rev": "7099ab604faa68dc89f175809c2a0a338bc03e7d",
         "type": "github"
       },
       "original": {
