@@ -24,6 +24,10 @@
       url = "github:gonzalezerik/topowall";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    torlink = {
+      url = "github:baairon/torlink";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     wallr = {
       url = "github:programmersd21/wallr";
       inputs.nixpkgs.follows = "nixpkgs";

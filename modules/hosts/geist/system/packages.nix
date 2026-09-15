@@ -3,6 +3,7 @@
   qml-niri,
   raito,
   topowall,
+  torlink,
   wallr,
   ...
 }:
@@ -12,6 +13,7 @@ let
     qml-niri.packages.${pkgs.stdenv.hostPlatform.system}.quickshell
     raito.packages.${pkgs.stdenv.hostPlatform.system}.default
     topowall.packages.${pkgs.stdenv.hostPlatform.system}.default
+    torlink.packages.${pkgs.stdenv.hostPlatform.system}.default
     (wallr.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (old: {
       nativeBuildInputs = (old.nativeBuildInputs or [ ]) ++ [ pkgs.rustPlatform.bindgenHook ];
     }))

@@ -208,6 +208,7 @@
         "quickshell": "quickshell",
         "raito": "raito",
         "topowall": "topowall",
+        "torlink": "torlink",
         "wallr": "wallr"
       }
     },
@@ -264,6 +265,26 @@
       "original": {
         "owner": "gonzalezerik",
         "repo": "topowall",
+        "type": "github"
+      }
+    },
+    "torlink": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1789447956,
+        "narHash": "sha256-pc7/H81yVwksBUwgHz5UjlAp3whvmAKP028XgvJkBto=",
+        "owner": "baairon",
+        "repo": "torlink",
+        "rev": "0eef299d91bfb2cea1ea6bd7fb0a191e467b2151",
+        "type": "github"
+      },
+      "original": {
+        "owner": "baairon",
+        "repo": "torlink",
         "type": "github"
       }
     },
