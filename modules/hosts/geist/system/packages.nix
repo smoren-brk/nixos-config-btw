@@ -52,7 +52,6 @@ let
     slurp
     swappy
     wl-clipboard-rs
-    xdg-desktop-portal-hyprland
     xwayland-satellite
   ];
 
