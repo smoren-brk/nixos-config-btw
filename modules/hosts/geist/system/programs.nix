@@ -10,12 +10,6 @@
       agentTimeout = "8h";
     };
 
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-      vimAlias = true;
-    };
-
     steam = {
       enable = true;
       remotePlay.openFirewall = true;

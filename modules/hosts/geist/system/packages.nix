@@ -81,6 +81,7 @@ let
 
   misc = with pkgs; [
     home-manager
+    youtube-tui
   ];
 
 in

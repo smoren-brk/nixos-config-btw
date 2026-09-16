@@ -20,7 +20,6 @@
     ./home/ghostty.nix
     ./home/git.nix
     ./home/mpv.nix
-    ./home/neovim.nix
     ./home/niri/niri.nix
     ./home/quickshell/qs.nix
     ./home/qutebrowser.nix

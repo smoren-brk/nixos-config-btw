@@ -3,6 +3,11 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    import-tree.url = "github:denful/import-tree";
+
+    raito.url = "github:smoren-brk/raito";
+    orthos.url = "github:smoren-brk/neovim-orthos";
 
     home-manager = {
       url = "github:nix-community/home-manager/master";
@@ -20,9 +25,6 @@
       inputs.quickshell.follows = "quickshell";
     };
 
-    raito.url = "github:smoren-brk/raito";
-    orthos.url = "github:smoren-brk/neovim-orthos";
-
     torlink = {
       url = "github:baairon/torlink";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,17 +32,32 @@
   };
 
   outputs =
-    inputs@{ nixpkgs, home-manager, ... }:
-    {
-      nixosConfigurations.geist = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+    inputs:
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } (
+      { config, ... }: {
+        systems = [ "x86_64-linux" ];
 
-        specialArgs = inputs;
-
-        modules = [
-          ./modules/hosts/geist/default.nix
-          home-manager.nixosModules.home-manager
+        imports = [
+          inputs.flake-parts.flakeModules.modules
+          (inputs.import-tree ./features)
         ];
-      };
-    };
+
+        flake.nixosConfigurations.geist = inputs.nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = inputs;
+
+          modules = [
+            ./modules/hosts/geist/default.nix
+            inputs.home-manager.nixosModules.home-manager
+            config.flake.modules.nixos.neovim
+
+            {
+              home-manager.users.jx.imports = [
+                config.flake.modules.homeManager.neovim
+              ];
+            }
+          ];
+        };
+      }
+    );
 }
