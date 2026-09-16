@@ -1,6 +1,5 @@
 {
   pkgs,
-  qml-niri,
   raito,
   torlink,
   ...
@@ -8,7 +7,6 @@
 
 let
   vendoredPackages = [
-    qml-niri.packages.${pkgs.stdenv.hostPlatform.system}.quickshell
     raito.packages.${pkgs.stdenv.hostPlatform.system}.default
     torlink.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
@@ -76,7 +74,6 @@ let
     ghostty
     gnutar
     unzip
-    zsh-powerlevel10k
   ];
 
   misc = with pkgs; [

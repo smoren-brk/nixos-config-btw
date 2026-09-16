@@ -55,7 +55,6 @@
       "wheel"
       "doas"
     ];
-    shell = pkgs.zsh;
     home = "/home/jx";
   };
 
@@ -64,7 +63,6 @@
     TERM = "ghostty";
     TERMINAL = "ghostty";
     NIXOS_OZONE_WL = "1";
-    XDG_CURRENT_DESKTOP = "niri";
   };
 
   security = {
@@ -97,25 +95,6 @@
     gnome = {
       gcr-ssh-agent.enable = false;
     };
-  };
-
-  xdg.portal = {
-    enable = true;
-    xdgOpenUsePortal = true;
-    config = {
-      common.default = [
-        "gnome"
-        "gtk"
-      ];
-      niri.default = [
-        "gnome"
-        "gtk"
-      ];
-    };
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gnome
-      xdg-desktop-portal-gtk
-    ];
   };
 
   system.stateVersion = "26.11"; # Did you read the comment?

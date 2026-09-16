@@ -39,7 +39,7 @@
 
         imports = [
           inputs.flake-parts.flakeModules.modules
-          (inputs.import-tree ./features)
+          (inputs.import-tree ./aspects)
         ];
 
         flake.nixosConfigurations.geist = inputs.nixpkgs.lib.nixosSystem {
@@ -47,13 +47,16 @@
           specialArgs = inputs;
 
           modules = [
-            ./modules/hosts/geist/default.nix
+            ./hosts/geist/default.nix
             inputs.home-manager.nixosModules.home-manager
             config.flake.modules.nixos.neovim
+            config.flake.modules.nixos.zsh
+            config.flake.modules.nixos.niri
 
             {
               home-manager.users.jx.imports = [
                 config.flake.modules.homeManager.neovim
+                config.flake.modules.homeManager.niri
               ];
             }
           ];
