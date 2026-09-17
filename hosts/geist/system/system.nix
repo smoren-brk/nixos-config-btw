@@ -9,14 +9,6 @@
 {
   hardware.i2c.enable = true;
 
-  virtualisation.docker = {
-    enable = false;
-    rootless = {
-      enable = true;
-      setSocketVariable = true;
-    };
-  };
-
   boot = {
     loader = {
       limine.enable = true;

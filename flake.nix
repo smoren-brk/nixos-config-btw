@@ -50,6 +50,7 @@
             inputs.home-manager.nixosModules.home-manager
             audio
             bluetooth
+            docker
             fonts
             git
             neovim
