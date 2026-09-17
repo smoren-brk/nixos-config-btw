@@ -1,18 +1,22 @@
-{ pkgs, ... }:
+{ config, ... }:
 
 {
-  users.users.jx = {
-    isNormalUser = true;
-    description = "JX";
-    home = "/home/jx";
-    shell = pkgs.zsh;
-    extraGroups = [
-      "wheel"
-      "doas"
-    ];
+  flake.modules.nixos.jx = { pkgs, ... }: {
+    users.users.jx = {
+      isNormalUser = true;
+      description = "JX";
+      home = "/home/jx";
+      shell = pkgs.zsh;
+      extraGroups = [
+        "wheel"
+        "doas"
+      ];
+    };
+
+    home-manager.users.jx.imports = builtins.attrValues config.flake.modules.homeManager;
   };
 
-  home-manager.users.jx = { config, ... }: {
+  flake.modules.homeManager.jx = { config, ... }: {
     home = {
       stateVersion = "26.11";
 

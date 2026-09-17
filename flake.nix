@@ -32,28 +32,14 @@
 
   outputs =
     inputs:
-    inputs.flake-parts.lib.mkFlake { inherit inputs; } (
-      { config, ... }: {
-        systems = [ "x86_64-linux" ];
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = [ "x86_64-linux" ];
 
-        imports = [
-          inputs.flake-parts.flakeModules.modules
-          (inputs.import-tree ./aspects)
-        ];
-
-        flake.nixosConfigurations.geist = inputs.nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-
-          modules = [
-            ./hosts/geist/default.nix
-            inputs.home-manager.nixosModules.home-manager
-
-            {
-              home-manager.users.jx.imports =
-                builtins.attrValues config.flake.modules.homeManager;
-            }
-          ] ++ builtins.attrValues config.flake.modules.nixos;
-        };
-      }
-    );
+      imports = [
+        inputs.flake-parts.flakeModules.modules
+        (inputs.import-tree ./aspects)
+        (inputs.import-tree ./hosts)
+        (inputs.import-tree ./users)
+      ];
+    };
 }
