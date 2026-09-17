@@ -51,6 +51,9 @@
             inputs.home-manager.nixosModules.home-manager
             config.flake.modules.nixos.neovim
             config.flake.modules.nixos.zsh
+            config.flake.modules.nixos.audio
+            config.flake.modules.nixos.bluetooth
+            config.flake.modules.nixos.fonts
             config.flake.modules.nixos.niri
             config.flake.modules.nixos.quickshell
 

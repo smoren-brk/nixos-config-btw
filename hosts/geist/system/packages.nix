@@ -55,7 +55,6 @@ let
     discord
     imv
     mpv
-    pavucontrol
     qutebrowser
     spotify
     transmission_4-gtk
@@ -87,17 +86,4 @@ in
 
   environment.systemPackages =
     vendoredPackages ++ systemUtils ++ devTools ++ waylandUtils ++ guiApps ++ shellStuff ++ misc;
-
-  fonts.packages = with pkgs; [
-    fira-code-symbols
-    liberation_ttf
-    nerd-fonts._0xproto
-    nerd-fonts.fira-code
-    nerd-fonts.hasklug
-    nerd-fonts.iosevka
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-color-emoji
-  ];
-
 }
