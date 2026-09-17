@@ -1,13 +1,13 @@
 { inputs, ... }:
 
 {
-  flake.modules.nixos.neovim = { pkgs, ... }: {
+  flake.modules.nixos.git = { pkgs, ... }: {
     environment.systemPackages = with pkgs; [
       git
     ];
   };
 
-  flake.modules.homeManager.neovim = { config, ... }: {
+  flake.modules.homeManager.git = { config, ... }: {
     programs.git = {
       enable = true;
       package = null;

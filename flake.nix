@@ -48,18 +48,20 @@
           modules = with config.flake.modules.nixos; [
             ./hosts/geist/default.nix
             inputs.home-manager.nixosModules.home-manager
-            neovim
-            zsh
             audio
             bluetooth
             fonts
+            git
+            neovim
             niri
             quickshell
+            zsh
 
             {
               home-manager.users.jx.imports = with config.flake.modules.homeManager; [
-                niri
+                git
                 neovim
+                niri
                 quickshell
               ];
             }
