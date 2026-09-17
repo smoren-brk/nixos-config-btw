@@ -38,8 +38,6 @@
       imports = [
         inputs.flake-parts.flakeModules.modules
         (inputs.import-tree ./aspects)
-        (inputs.import-tree ./hosts)
-        (inputs.import-tree ./users)
       ];
     };
 }
