@@ -46,22 +46,22 @@
           system = "x86_64-linux";
           specialArgs = inputs;
 
-          modules = [
+          modules = with config.flake.modules.nixos; [
             ./hosts/geist/default.nix
             inputs.home-manager.nixosModules.home-manager
-            config.flake.modules.nixos.neovim
-            config.flake.modules.nixos.zsh
-            config.flake.modules.nixos.audio
-            config.flake.modules.nixos.bluetooth
-            config.flake.modules.nixos.fonts
-            config.flake.modules.nixos.niri
-            config.flake.modules.nixos.quickshell
+            neovim
+            zsh
+            audio
+            bluetooth
+            fonts
+            niri
+            quickshell
 
             {
-              home-manager.users.jx.imports = [
-                config.flake.modules.homeManager.neovim
-                config.flake.modules.homeManager.niri
-                config.flake.modules.homeManager.quickshell
+              home-manager.users.jx.imports = with config.flake.modules.homeManager; [
+                neovim
+                niri
+                quickshell
               ];
             }
           ];
