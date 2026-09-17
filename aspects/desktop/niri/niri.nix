@@ -1,5 +1,3 @@
-{ inputs, ... }:
-
 {
   flake.modules.nixos.niri = { pkgs, ... }: {
     programs.niri = {
@@ -26,9 +24,6 @@
     };
 
     environment = {
-      systemPackages = [
-        inputs.qml-niri.packages.${pkgs.stdenv.hostPlatform.system}.quickshell
-      ];
       variables = {
         XDG_CURRENT_DESKTOP = "niri";
       };

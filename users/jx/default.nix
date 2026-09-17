@@ -20,7 +20,6 @@
     ./home/ghostty.nix
     ./home/git.nix
     ./home/mpv.nix
-    ./home/quickshell/qs.nix
     ./home/qutebrowser.nix
     ./home/ssh.nix
     ./home/zathura.nix

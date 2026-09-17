@@ -52,11 +52,13 @@
             config.flake.modules.nixos.neovim
             config.flake.modules.nixos.zsh
             config.flake.modules.nixos.niri
+            config.flake.modules.nixos.quickshell
 
             {
               home-manager.users.jx.imports = [
                 config.flake.modules.homeManager.neovim
                 config.flake.modules.homeManager.niri
+                config.flake.modules.homeManager.quickshell
               ];
             }
           ];
