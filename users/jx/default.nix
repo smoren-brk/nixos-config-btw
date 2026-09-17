@@ -17,10 +17,7 @@
 
   imports = [
     ./home/ghostty.nix
-    ./home/mpv.nix
-    ./home/qutebrowser.nix
     ./home/ssh.nix
-    ./home/zathura.nix
   ];
 
   manual.manpages.enable = false;

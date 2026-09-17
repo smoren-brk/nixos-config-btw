@@ -36,29 +36,11 @@ let
 
   waylandUtils = with pkgs; [
     awww
-    gamescope
     grim
     slurp
     swappy
     wl-clipboard-rs
     xwayland-satellite
-  ];
-
-  guiApps = with pkgs; [
-    discord
-    imv
-    mpv
-    qutebrowser
-    spotify
-    transmission_4-gtk
-    yazi
-    yt-dlp
-    zathura
-    zathuraPkgs.zathura_cb
-    zathuraPkgs.zathura_djvu
-    zathuraPkgs.zathura_pdf_mupdf
-    zathuraPkgs.zathura_pdf_poppler
-    zathuraPkgs.zathura_ps
   ];
 
   shellStuff = with pkgs; [
@@ -70,7 +52,6 @@ let
 
   misc = with pkgs; [
     home-manager
-    youtube-tui
   ];
 
 in
@@ -78,5 +59,5 @@ in
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages =
-    vendoredPackages ++ systemUtils ++ devTools ++ waylandUtils ++ guiApps ++ shellStuff ++ misc;
+    vendoredPackages ++ systemUtils ++ devTools ++ waylandUtils ++ shellStuff ++ misc;
 }

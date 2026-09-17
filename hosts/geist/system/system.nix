@@ -35,7 +35,6 @@
   };
 
   environment.variables = {
-    BROWSER = "firefox";
     TERM = "ghostty";
     TERMINAL = "ghostty";
     NIXOS_OZONE_WL = "1";

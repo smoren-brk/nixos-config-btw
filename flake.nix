@@ -48,22 +48,31 @@
           modules = with config.flake.modules.nixos; [
             ./hosts/geist/default.nix
             inputs.home-manager.nixosModules.home-manager
+            apps
             audio
             bluetooth
             docker
+            firefox
             fonts
+            gaming
             git
+            mpv
             neovim
             niri
             quickshell
+            qutebrowser
+            zathura
             zsh
 
             {
               home-manager.users.jx.imports = with config.flake.modules.homeManager; [
                 git
+                mpv
                 neovim
                 niri
                 quickshell
+                qutebrowser
+                zathura
               ];
             }
           ];
