@@ -11,14 +11,6 @@ let
     torlink.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
-  devTools = with pkgs; [
-    cargo
-    codex
-    gcc
-    odin
-    python3
-  ];
-
   waylandUtils = with pkgs; [
     awww
     grim
@@ -29,7 +21,5 @@ let
   ];
 in
 {
-  nixpkgs.config.allowUnfree = true;
-
-  environment.systemPackages = vendoredPackages ++ devTools ++ waylandUtils;
+  environment.systemPackages = vendoredPackages ++ waylandUtils;
 }

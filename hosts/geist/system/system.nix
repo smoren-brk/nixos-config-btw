@@ -1,10 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  split-monitor-workspaces,
-  ...
-}:
+{ pkgs, ... }:
 
 {
   hardware.i2c.enable = true;
@@ -17,39 +11,17 @@
     kernelPackages = pkgs.linuxPackages_latest;
   };
 
-  networking = {
-    hostName = "geist";
-    networkmanager.enable = true;
-  };
+  networking.hostName = "geist";
 
   time.timeZone = "Europe/Belgrade";
 
   users.users.jx = {
     isNormalUser = true;
     description = "JX";
-    extraGroups = [
-      "wheel"
-      "doas"
-    ];
     home = "/home/jx";
   };
 
   environment.variables.NIXOS_OZONE_WL = "1";
-
-  security = {
-    doas = {
-      enable = true;
-      extraRules = [
-        {
-          groups = [ "doas" ];
-          keepEnv = true;
-          persist = true;
-          runAs = "root";
-          users = [ "jx" ];
-        }
-      ];
-    };
-  };
 
   services = {
     xserver.xkb.layout = "us";

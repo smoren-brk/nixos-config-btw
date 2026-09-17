@@ -1,18 +1,4 @@
 {
-  config,
-  lib,
-  pkgs,
-  system,
-  raito,
-  ...
-}:
-
-{
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
-
   imports = [
     ./system/hardware.nix
     ./system/packages.nix
@@ -24,5 +10,4 @@
       ./../../users/jx/default.nix
     ];
   };
-
 }
