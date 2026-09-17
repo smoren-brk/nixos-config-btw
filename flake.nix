@@ -7,7 +7,6 @@
     import-tree.url = "github:denful/import-tree";
 
     raito.url = "github:smoren-brk/raito";
-    orthos.url = "github:smoren-brk/neovim-orthos";
 
     home-manager = {
       url = "github:nix-community/home-manager/master";
@@ -59,8 +58,8 @@
 
             {
               home-manager.users.jx.imports = with config.flake.modules.homeManager; [
-                neovim
                 niri
+                neovim
                 quickshell
               ];
             }

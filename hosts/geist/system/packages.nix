@@ -19,8 +19,6 @@ let
     fastfetch
     fzf
     killall
-    microfetch
-    ripgrep
     tealdeer
     tree
     zoxide
@@ -31,14 +29,9 @@ let
     cargo
     codex
     gcc
-    git
     nix-search-tv
-    nixfmt
     odin
-    ols
-    prettier
     python3
-    tree-sitter
   ];
 
   waylandUtils = with pkgs; [

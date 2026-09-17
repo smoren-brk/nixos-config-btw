@@ -40,8 +40,8 @@
       systemd.enable = false;
     };
 
-    xdg.configFile."niri".source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/config/aspects/desktop/niri/_config";
+    xdg.configFile."niri".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/config/aspects/desktop/niri/_config";
 
   };
 }

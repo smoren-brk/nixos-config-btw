@@ -43,11 +43,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789482455,
-        "narHash": "sha256-pD3qVlQ4mUCFoTWrYtxecpSitQMsgJvJIN0FUIDZoEU=",
+        "lastModified": 1789652175,
+        "narHash": "sha256-OVgwnH7e/GlJRscTPXnJ8wwy6Mh+hk0MedEw360o8U8=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "efa3ccb4c3cc90d832eab232976379058fa75aa3",
+        "rev": "f2785222a14e90f8c5ad2ff62474ce88453c3421",
         "type": "github"
       },
       "original": {
@@ -150,21 +150,6 @@
         "type": "github"
       }
     },
-    "orthos": {
-      "locked": {
-        "lastModified": 1789490549,
-        "narHash": "sha256-BeIGM3Bdu/uuHnE/z9BMRZYi/kKgEPsPsHbOv0z3W0o=",
-        "owner": "smoren-brk",
-        "repo": "neovim-orthos",
-        "rev": "84901a1f04ed2940dd83f43128020f3ea73a0980",
-        "type": "github"
-      },
-      "original": {
-        "owner": "smoren-brk",
-        "repo": "neovim-orthos",
-        "type": "github"
-      }
-    },
     "qml-niri": {
       "inputs": {
         "flake-parts": "flake-parts_2",
@@ -235,7 +220,6 @@
         "home-manager": "home-manager",
         "import-tree": "import-tree",
         "nixpkgs": "nixpkgs",
-        "orthos": "orthos",
         "qml-niri": "qml-niri",
         "quickshell": "quickshell",
         "raito": "raito",

@@ -2,7 +2,6 @@
   config,
   pkgs,
   split-monitor-workspaces,
-  orthos,
   ...
 }:
 
@@ -18,7 +17,6 @@
 
   imports = [
     ./home/ghostty.nix
-    ./home/git.nix
     ./home/mpv.nix
     ./home/qutebrowser.nix
     ./home/ssh.nix

@@ -4,7 +4,6 @@
   pkgs,
   system,
   raito,
-  orthos,
   ...
 }:
 
@@ -25,10 +24,6 @@
     imports = [
       ./../../users/jx/default.nix
     ];
-
-    _module.args = {
-      inherit orthos;
-    };
   };
 
 }
