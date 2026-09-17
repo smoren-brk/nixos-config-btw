@@ -1,5 +1,3 @@
-{ inputs, ... }:
-
 {
   flake.modules.nixos.neovim = { pkgs, ... }: {
     programs.neovim = {

@@ -1,5 +1,3 @@
-{ inputs, ... }:
-
 {
   flake.modules.nixos.git = { pkgs, ... }: {
     environment.systemPackages = with pkgs; [
@@ -7,7 +5,7 @@
     ];
   };
 
-  flake.modules.homeManager.git = { config, ... }: {
+  flake.modules.homeManager.git = {
     programs.git = {
       enable = true;
       package = null;

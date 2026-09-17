@@ -1,13 +1,26 @@
+{ pkgs, ... }:
+
 {
   imports = [
-    ./system/hardware.nix
-    ./system/packages.nix
-    ./system/system.nix
+    ./hardware.nix
+    ../../users/jx.nix
   ];
 
-  home-manager.users.jx = {
-    imports = [
-      ./../../users/jx/default.nix
-    ];
+  boot = {
+    loader = {
+      limine.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+    kernelPackages = pkgs.linuxPackages_latest;
   };
+
+  networking.hostName = "geist";
+  time.timeZone = "Europe/Belgrade";
+
+  services = {
+    xserver.xkb.layout = "us";
+    getty.autologinUser = "jx";
+  };
+
+  system.stateVersion = "26.11";
 }

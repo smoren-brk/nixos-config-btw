@@ -4,10 +4,6 @@
       zsh-powerlevel10k
     ];
 
-    users.users.jx = {
-      shell = pkgs.zsh;
-    };
-
     programs = {
       zsh = {
         enable = true;
