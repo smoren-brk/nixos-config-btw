@@ -92,7 +92,7 @@ layout {
 
 spawn-at-startup "qs"
 spawn-at-startup "awww-daemon"
-spawn-sh-at-startup "sleep 1 && awww img ~/user/walls/uw-pp.png"
+spawn-sh-at-startup "sleep 1 && awww img ~/user/walls/ae86.png"
 
 hotkey-overlay {
     skip-at-startup
