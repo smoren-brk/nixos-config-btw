@@ -16,7 +16,6 @@
   imports = [
     ./system/hardware.nix
     ./system/packages.nix
-    ./system/programs.nix
     ./system/system.nix
   ];
 

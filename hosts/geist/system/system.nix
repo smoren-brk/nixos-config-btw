@@ -34,11 +34,7 @@
     home = "/home/jx";
   };
 
-  environment.variables = {
-    TERM = "ghostty";
-    TERMINAL = "ghostty";
-    NIXOS_OZONE_WL = "1";
-  };
+  environment.variables.NIXOS_OZONE_WL = "1";
 
   security = {
     doas = {
@@ -58,10 +54,6 @@
   services = {
     xserver.xkb.layout = "us";
     getty.autologinUser = "jx";
-
-    gnome = {
-      gcr-ssh-agent.enable = false;
-    };
   };
 
   system.stateVersion = "26.11"; # Did you read the comment?

@@ -15,11 +15,6 @@
     };
   };
 
-  imports = [
-    ./home/ghostty.nix
-    ./home/ssh.nix
-  ];
-
   manual.manpages.enable = false;
   programs.man.enable = false;
 

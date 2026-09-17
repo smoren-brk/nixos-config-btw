@@ -45,37 +45,15 @@
           system = "x86_64-linux";
           specialArgs = inputs;
 
-          modules = with config.flake.modules.nixos; [
+          modules = [
             ./hosts/geist/default.nix
             inputs.home-manager.nixosModules.home-manager
-            apps
-            audio
-            bluetooth
-            docker
-            firefox
-            fonts
-            gaming
-            git
-            mpv
-            neovim
-            niri
-            quickshell
-            qutebrowser
-            zathura
-            zsh
 
             {
-              home-manager.users.jx.imports = with config.flake.modules.homeManager; [
-                git
-                mpv
-                neovim
-                niri
-                quickshell
-                qutebrowser
-                zathura
-              ];
+              home-manager.users.jx.imports =
+                builtins.attrValues config.flake.modules.homeManager;
             }
-          ];
+          ] ++ builtins.attrValues config.flake.modules.nixos;
         };
       }
     );
