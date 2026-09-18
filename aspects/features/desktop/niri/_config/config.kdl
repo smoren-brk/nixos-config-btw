@@ -62,6 +62,8 @@ layout {
         proportion 0.66667
     }
 
+    always-center-single-column
+
     default-column-width { proportion 0.5; }
 
     focus-ring {
@@ -103,6 +105,15 @@ prefer-no-csd
 screenshot-path "~/user/media/screenshots/%Y-%m-%d_%H-%M-%S.png"
 
 animations { }
+
+// Quickshell supplies rounded blur regions for its visible panels.
+layer-rule {
+    match namespace="^qqq-"
+    background-effect {
+        blur true
+        xray false
+    }
+}
 
 window-rule {
     match app-id=r#"^com\.mitchellh\.ghostty$"#

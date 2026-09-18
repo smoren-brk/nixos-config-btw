@@ -233,11 +233,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789447956,
-        "narHash": "sha256-pc7/H81yVwksBUwgHz5UjlAp3whvmAKP028XgvJkBto=",
+        "lastModified": 1789761304,
+        "narHash": "sha256-283uQx0tOneGP3k19KnGL3mkb9SldTEI9HWmcsuJvNM=",
         "owner": "baairon",
         "repo": "torlink",
-        "rev": "0eef299d91bfb2cea1ea6bd7fb0a191e467b2151",
+        "rev": "eb25a516377171aead56a2ef7218e2b2110633a9",
         "type": "github"
       },
       "original": {
