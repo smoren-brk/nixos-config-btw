@@ -51,7 +51,7 @@
     };
 
     xdg.configFile."niri".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/config/aspects/system/desktop/niri/_config";
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/config/aspects/features/desktop/niri/_config";
 
   };
 }

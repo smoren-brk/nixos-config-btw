@@ -20,7 +20,7 @@
     home = {
       stateVersion = "26.11";
 
-      file."bin/diff-generations".source = ../system/_scripts/diff-generations;
+      file."bin/diff-generations".source = ./_scripts/diff-generations;
     };
 
     manual.manpages.enable = false;

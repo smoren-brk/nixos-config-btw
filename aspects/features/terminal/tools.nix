@@ -3,6 +3,7 @@
     environment.systemPackages = with pkgs; [
       bat
       bitwarden-cli
+      broot
       btop
       btrfs-progs
       eza
@@ -15,6 +16,7 @@
       tealdeer
       tree
       unzip
+      vifm
       xdg-user-dirs
       zoxide
     ];

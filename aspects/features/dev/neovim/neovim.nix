@@ -19,6 +19,6 @@
 
   flake.modules.homeManager.neovim = { config, ... }: {
     xdg.configFile."nvim".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/config/aspects/system/dev/neovim/_config";
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/config/aspects/features/dev/neovim/_config";
   };
 }

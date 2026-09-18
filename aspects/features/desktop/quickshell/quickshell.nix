@@ -14,6 +14,6 @@
     };
 
     xdg.configFile."quickshell".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/config/aspects/system/desktop/quickshell/_config";
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/config/aspects/features/desktop/quickshell/_config";
   };
 }
