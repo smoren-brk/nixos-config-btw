@@ -46,7 +46,7 @@
       };
 
       settings = {
-        font-family = "Hasklug Nerd Font Mono";
+        font-family = "Hasklug Nerd Font";
         theme = "jx";
         quit-after-last-window-closed = false;
         background-opacity = 0.7;
