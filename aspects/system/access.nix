@@ -15,7 +15,7 @@
 
     services.displayManager = {
       enable = true;
-      cosmic-greeter = {
+      ly = {
         enable = true;
       };
     };
