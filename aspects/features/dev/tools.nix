@@ -5,6 +5,7 @@
       codex
       gcc
       odin
+      pkgconf
       python3
     ];
   };
