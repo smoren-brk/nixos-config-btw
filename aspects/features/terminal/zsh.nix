@@ -32,12 +32,6 @@
           "sharehistory"
         ];
 
-        loginShellInit = ''
-          if [[ -z "$WAYLAND_DISPLAY" && "$XDG_VTNR" == 1 ]] ; then
-            exec niri
-          fi
-        '';
-
         interactiveShellInit = ''
           bindkey '^H' backward-kill-word
           bindkey '^[[3;5~' kill-word

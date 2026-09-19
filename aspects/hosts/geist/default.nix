@@ -21,11 +21,11 @@
 
         services = {
           xserver.xkb.layout = "us";
-          getty.autologinUser = "jx";
         };
 
         system.stateVersion = "26.11";
       })
-    ] ++ builtins.attrValues config.flake.modules.nixos;
+    ]
+    ++ builtins.attrValues config.flake.modules.nixos;
   };
 }
