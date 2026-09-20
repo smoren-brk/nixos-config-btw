@@ -94,6 +94,7 @@ layout {
 
 spawn-at-startup "qs"
 spawn-at-startup "awww-daemon"
+spawn-sh-at-startup "oniri --tiling-layout"
 spawn-sh-at-startup "sleep 1 && awww img ~/user/walls/boat_topdown.png"
 
 hotkey-overlay {

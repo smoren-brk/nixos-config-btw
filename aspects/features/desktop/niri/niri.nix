@@ -1,3 +1,5 @@
+{ inputs, ... }:
+
 {
   flake.modules.nixos.niri = { pkgs, ... }: {
     programs.niri = {
@@ -6,6 +8,7 @@
 
     environment = {
       systemPackages = with pkgs; [
+        inputs.oniri.packages.${pkgs.stdenv.hostPlatform.system}.default
         awww
         grim
         slurp
