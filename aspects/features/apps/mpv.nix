@@ -1,7 +1,7 @@
 {
   flake.modules.nixos.mpv = { pkgs, ... }: {
     environment.systemPackages = with pkgs; [
-      mpv
+      (mpv.override { scripts = [ mpvScripts.mpris ]; })
     ];
   };
 
