@@ -7,7 +7,12 @@
     import-tree.url = "github:denful/import-tree";
 
     raito.url = "github:smoren-brk/raito";
-    oniri.url = "github:smoren-brk/oniri";
+    oniri.url = "github:Antiz96/oniri";
+
+    niri = {
+      url = "github:niri-wm/niri";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager/master";

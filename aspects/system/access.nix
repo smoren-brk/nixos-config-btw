@@ -5,7 +5,7 @@
       extraRules = [
         {
           groups = [ "doas" ];
-          keepEnv = true;
+          keepEnv = false;
           persist = true;
           runAs = "root";
           users = [ "jx" ];

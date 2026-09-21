@@ -43,11 +43,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789867870,
-        "narHash": "sha256-sOag/7DTqw4tXLI7UxjrZxPGV+dlTe6zFtJn0VSkgFM=",
+        "lastModified": 1789978077,
+        "narHash": "sha256-p/e37FfVifxJQJM7OiiVbUXdpj6eXmOJk34TKLKyYe4=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "d2a22a3659a6ae99847ea9176114f6957b8ac62e",
+        "rev": "a26f7158fbc4aa740fcc7fa79a01e1ed29910bc2",
         "type": "github"
       },
       "original": {
@@ -69,6 +69,26 @@
       "original": {
         "owner": "denful",
         "repo": "import-tree",
+        "type": "github"
+      }
+    },
+    "niri": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1789974527,
+        "narHash": "sha256-z2NJYe1zfVoFQKbkowMtBEr+m8al8oT3JVimA9N9Xow=",
+        "owner": "niri-wm",
+        "repo": "niri",
+        "rev": "8be4c6df68ddef2afd4ccdde7f27dbc782c30603",
+        "type": "github"
+      },
+      "original": {
+        "owner": "niri-wm",
+        "repo": "niri",
         "type": "github"
       }
     },
@@ -171,15 +191,15 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1789906146,
-        "narHash": "sha256-MTC+gcBK0mVDh2Hw4ltpAvrrkiuQs3sHx1Sg8BQ6EBw=",
-        "owner": "smoren-brk",
+        "lastModified": 1789981212,
+        "narHash": "sha256-63cvYy0IKGEPSwae+SKBBW/CFfQzd68TQD8mc27DTyg=",
+        "owner": "Antiz96",
         "repo": "oniri",
-        "rev": "019930cc8b3810ae0e137adac587c025468394b1",
+        "rev": "83f24c0849bd7c9fc004cd27afd4d827ffcc797c",
         "type": "github"
       },
       "original": {
-        "owner": "smoren-brk",
+        "owner": "Antiz96",
         "repo": "oniri",
         "type": "github"
       }
@@ -217,11 +237,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789461462,
-        "narHash": "sha256-J1n+c46qiTmV6gNDqndbhrfDR2R47QLXQNFrf1idTvM=",
+        "lastModified": 1789967089,
+        "narHash": "sha256-872tMDDYdjR983q7v2yDlnKOEBSPp5FXDdWF2q87gik=",
         "ref": "refs/heads/master",
-        "rev": "c6a516096dd84d5255b409482eb4bf740b952f88",
-        "revCount": 860,
+        "rev": "fae96f1a5b7f53de9b7e40e5b53c0b7a2e97b1d7",
+        "revCount": 861,
         "type": "git",
         "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
       },
@@ -253,6 +273,7 @@
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "import-tree": "import-tree",
+        "niri": "niri",
         "nixpkgs": "nixpkgs",
         "oniri": "oniri",
         "qml-niri": "qml-niri",

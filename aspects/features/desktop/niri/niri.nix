@@ -4,6 +4,9 @@
   flake.modules.nixos.niri = { pkgs, ... }: {
     programs.niri = {
       enable = true;
+      package = inputs.niri.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (_: {
+        doCheck = false;
+      });
     };
 
     environment = {
