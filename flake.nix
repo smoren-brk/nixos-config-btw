@@ -9,6 +9,11 @@
     raito.url = "github:smoren-brk/raito";
     oniri.url = "github:Antiz96/oniri";
 
+    disko = {
+      url = "github:nix-community/disko/latest";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     niri = {
       url = "github:niri-wm/niri";
       inputs.nixpkgs.follows = "nixpkgs";
