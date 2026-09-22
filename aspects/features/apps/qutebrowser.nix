@@ -11,12 +11,14 @@
       package = null;
 
       quickmarks = {
-        yt = "https://youtube.com";
-        pm = "https://mail.proton.me/u/0/inbox";
-        aa = "https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20";
         "13" = "https://1337x.to/";
+        aa = "https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20";
+        gpt = "https://chatgpt.com";
         mn = "https://mynixos.com/";
+        pm = "https://mail.proton.me/u/0/inbox";
+        re = "https://www.reddit.com/";
         wa = "https://web.whatsapp.com/";
+        yt = "https://youtube.com";
       };
 
       keyBindings = {
