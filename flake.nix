@@ -6,8 +6,10 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:denful/import-tree";
 
-    raito.url = "github:smoren-brk/raito";
-    oniri.url = "github:Antiz96/oniri";
+    neovim-nightly = {
+      url = "github:nix-community/neovim-nightly-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     disko = {
       url = "github:nix-community/disko/latest";
@@ -39,6 +41,9 @@
       url = "github:baairon/torlink";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    raito.url = "github:smoren-brk/raito";
+    oniri.url = "github:Antiz96/oniri";
   };
 
   outputs =

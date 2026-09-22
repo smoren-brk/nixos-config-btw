@@ -47,6 +47,8 @@
           bindkey "^[[1;5C" forward-word
           bindkey "^[[1;5D" backward-word
 
+          bindkey -s '^N' 'nvim .^M'
+
           eval "$(zoxide init zsh --cmd cd)"
           eval "$(fzf --zsh)"
         '';
