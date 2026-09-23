@@ -17,6 +17,11 @@
       enable = true;
       ly = {
         enable = true;
+        x11Support = false;
+        settings = {
+          auto_login_user = "jx";
+          auto_login_session = "niri";
+        };
       };
     };
 

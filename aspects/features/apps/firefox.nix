@@ -1,6 +1,6 @@
 {
   flake.modules.nixos.firefox = {
-    environment.variables.BROWSER = "firefox";
+    # environment.variables.BROWSER = "firefox";
 
     programs.firefox = {
       enable = true;
