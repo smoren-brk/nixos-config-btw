@@ -3,10 +3,15 @@
     programs.steam = {
       enable = true;
       gamescopeSession.enable = true;
+
+      extraCompatPackages = with pkgs; [
+        proton-ge-bin
+      ];
     };
 
-    environment.systemPackages = [
-      pkgs.gamescope
+    environment.systemPackages = with pkgs; [
+      gamescope
+      lutris
     ];
   };
 }
