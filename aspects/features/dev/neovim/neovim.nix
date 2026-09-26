@@ -2,27 +2,25 @@
 
 {
   flake.modules.nixos.neovim = { pkgs, ... }: {
-    programs.neovim = {
-      enable = true;
-      package = inputs.neovim-nightly.packages.${pkgs.stdenv.hostPlatform.system}.default;
+    imports = [
+      inputs.nixvim.nixosModules.nixvim
+    ];
 
+    programs.nixvim = {
+      enable = true;
       defaultEditor = true;
+      viAlias = true;
       vimAlias = true;
+
+      nixpkgs.source = inputs.nixpkgs;
     };
 
     environment.systemPackages = with pkgs; [
-      nil
       nixfmt
-      ols
       prettier
       ripgrep
       tree-sitter
     ];
 
-  };
-
-  flake.modules.homeManager.neovim = { config, ... }: {
-    xdg.configFile."nvim".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/config/aspects/features/dev/neovim/_config";
   };
 }

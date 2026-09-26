@@ -47,7 +47,7 @@
 
       settings = {
         font-family = "Hasklug Nerd Font";
-        theme = "jx";
+        theme = "Catppuccin Mocha";
         quit-after-last-window-closed = false;
         background-opacity = 0.7;
         window-padding-x = 20;
