@@ -1,6 +1,3 @@
-[submodule "aspects/dev/neovim/_config"]
-	path = aspects/features/dev/neovim/_config
-	url = git@github.com:smoren-brk/neovim-orthos.git
 [submodule "aspects/system/desktop/quickshell/_config"]
 	path = aspects/features/desktop/quickshell/_config
 	url = git@github.com:smoren-brk/quickshell-config.git

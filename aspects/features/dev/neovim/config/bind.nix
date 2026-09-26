@@ -28,8 +28,6 @@
           (keymap "n" "n" "nzzzv")
           (keymap "n" "N" "Nzzzv")
 
-          (keymap "n" "<leader>cc" "<cmd>CodexToggle<CR>")
-
           (keymap "n" "<leader>e" "<cmd>Oil<CR>")
           (keymap "n" "<leader>lf" (mkRaw "vim.lsp.buf.format"))
 

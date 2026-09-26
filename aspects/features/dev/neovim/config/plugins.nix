@@ -53,7 +53,6 @@
             "<leader>fh" = "help_tags";
             "<leader>fg" = "live_grep";
             "<leader>fs" = "git_status";
-            "<leader>ft" = "";
           };
         };
         web-devicons.enable = true;
