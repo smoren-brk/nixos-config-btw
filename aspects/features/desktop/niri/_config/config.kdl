@@ -25,11 +25,11 @@ input {
 }
 
 cursor {
-    xcursor-theme "breeze_cursors"
+    xcursor-theme "catppuccin-mocha-mauve-cursors"
     xcursor-size 24
 
     hide-when-typing
-    hide-after-inactive-ms 1000
+    hide-after-inactive-ms 5000
 }
 
 output "DP-1" {

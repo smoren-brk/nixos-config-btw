@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.neovim = {
+  flake.modules.nixos.neovim = { config, ... }: {
     programs.nixvim = {
       plugins = {
         diffview.enable = true;
@@ -15,6 +15,21 @@
           highlight.enable = true;
           indent.enable = true;
           folding.enable = true;
+          grammarPackages = with config.programs.nixvim.plugins.treesitter.package.builtGrammars; [
+            bash
+            c
+            c_sharp
+            cpp
+            json
+            lua
+            markdown
+            markdown_inline
+            nix
+            odin
+            python
+            rust
+            yaml
+          ];
         };
 
         lualine = {
