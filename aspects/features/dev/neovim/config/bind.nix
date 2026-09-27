@@ -16,6 +16,21 @@
           (keymap "n" "<leader>gd" (mkRaw "vim.lsp.buf.hover"))
           (keymap "n" "<leader>tw" (mkRaw "function() MiniTrailspace.trim() end"))
 
+          (keymap "n" "<leader>rn" ":IncRename ")
+          (
+            (keymap "n" "<leader>rr" (mkRaw ''
+              function()
+                return ":IncRename " .. vim.fn.expand("<cword>")
+              end
+            ''))
+            // {
+              options = {
+                noremap = true;
+                expr = true;
+              };
+            }
+          )
+
           (keymap "t" "<Esc>" "<C-\\><C-n>")
           (keymap "n" "<C-Space>" "<cmd>bprev<CR>")
 
