@@ -30,6 +30,16 @@
         audio-pitch-correction = true;
         volume-max = 150;
         volume = 100;
+
+        background-color = "#1e1e2e";
+        osd-back-color = "#11111b";
+        osd-border-color = "#11111b";
+        osd-color = "#cdd6f4";
+        osd-shadow-color = "#1e1e2e";
+
+        cache = "yes";
+        demuxer-max-bytes = "2G";
+        demuxer-max-back-bytes = "1G";
       };
 
     };
