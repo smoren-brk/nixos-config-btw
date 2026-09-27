@@ -19,14 +19,15 @@
       systemd.enable = false;
 
       settings = {
-        font-family = "Hasklug Nerd Font";
-        theme = "Catppuccin Mocha";
+        background-opacity = 0.55;
+        confirm-close-surface = false;
         cursor-color = "#fab387";
         cursor-text = "#1e1e2e";
+        font-family = "Hasklug Nerd Font";
+        quit-after-last-window-closed = false;
         selection-background = "#fab387";
         selection-foreground = "#1e1e2e";
-        quit-after-last-window-closed = false;
-        background-opacity = 0.7;
+        theme = "Catppuccin Mocha";
         window-padding-x = 20;
         window-padding-y = 20;
       };
