@@ -5,7 +5,12 @@
     ];
   };
 
-  flake.modules.homeManager.qutebrowser = {
+  flake.modules.homeManager.qutebrowser = { pkgs, ... }: {
+    xdg.configFile."qutebrowser/catppuccin.py".source = pkgs.fetchurl {
+      url = "https://raw.githubusercontent.com/catppuccin/qutebrowser/808adc3d7d5be6fc573d6be6e9c888cb96b5d6e6/setup.py";
+      hash = "sha256-4NEIbdp4ev3fdUj4gxQxI3NrK2mGps4IEoOw+Kr8K2w=";
+    };
+
     programs.qutebrowser = {
       enable = true;
       package = null;
@@ -55,9 +60,23 @@
         fonts.prompts = "default_size sans-serif";
         fonts.statusbar = "11pt Source Code Pro";
 
-        colors.webpage.bg = "#282828";
+        colors.webpage.bg = "#1e1e2e";
         colors.webpage.darkmode.enabled = true;
       };
+
+      extraConfig = ''
+        import catppuccin
+
+        catppuccin.setup(c, "mocha", True)
+        c.colors.completion.category.fg = "#fab387"
+        c.colors.completion.item.selected.fg = "#fab387"
+        c.colors.completion.item.selected.match.fg = "#fab387"
+        c.colors.completion.match.fg = "#fab387"
+        c.colors.prompts.selected.fg = "#fab387"
+        c.colors.statusbar.command.fg = "#fab387"
+        c.colors.tabs.selected.even.fg = "#fab387"
+        c.colors.tabs.selected.odd.fg = "#fab387"
+      '';
     };
   };
 }

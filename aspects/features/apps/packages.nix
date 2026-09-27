@@ -8,6 +8,7 @@
       discord
       imv
       spotify
+      superfile
       transmission_4-gtk
       yazi
       youtube-tui
