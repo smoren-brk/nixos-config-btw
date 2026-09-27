@@ -1,3 +1,5 @@
+{ inputs, ... }:
+
 {
   flake.modules.nixos.gaming = { pkgs, ... }: {
     programs.steam = {
@@ -7,6 +9,7 @@
 
     environment.systemPackages = with pkgs; [
       gamescope
+      inputs.hytale-launcher.packages.${pkgs.system}.default
     ];
   };
 }

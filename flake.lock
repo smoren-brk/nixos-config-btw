@@ -99,6 +99,26 @@
         "type": "github"
       }
     },
+    "hytale-launcher": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1790039709,
+        "narHash": "sha256-nYKK3nrkVPa9ZCeLI3+yFesoSGnubJb5EBIAjcNf01U=",
+        "owner": "JPyke3",
+        "repo": "hytale-launcher-nix",
+        "rev": "60a1474b369ded47198fefab1b200400a4c41bc5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "JPyke3",
+        "repo": "hytale-launcher-nix",
+        "type": "github"
+      }
+    },
     "import-tree": {
       "locked": {
         "lastModified": 1788467110,
@@ -337,6 +357,7 @@
         "disko": "disko",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
+        "hytale-launcher": "hytale-launcher",
         "import-tree": "import-tree",
         "niri": "niri",
         "nixpkgs": "nixpkgs",
