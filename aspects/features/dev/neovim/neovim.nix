@@ -13,7 +13,7 @@
       vimAlias = true;
       withRuby = false;
 
-      nixpkgs.source = inputs.nixpkgs;
+      nixpkgs.useGlobalPackages = true;
 
       globals = {
         loaded_node_provider = 0;

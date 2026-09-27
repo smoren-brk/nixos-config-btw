@@ -6,7 +6,6 @@
     ];
 
     nix.gc.automatic = false;
-
     nixpkgs.config.allowUnfree = true;
   };
 }

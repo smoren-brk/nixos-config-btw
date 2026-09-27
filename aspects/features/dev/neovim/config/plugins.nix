@@ -2,8 +2,11 @@
   flake.modules.nixos.neovim = { config, ... }: {
     programs.nixvim = {
       plugins = {
+        comfy-line-numbers.enable = true;
         diffview.enable = true;
+        eyeliner.enable = true;
         gitsigns.enable = true;
+        inc-rename.enable = true;
         markview.enable = true;
         mini-cursorword.enable = true;
         mini-starter.enable = true;
