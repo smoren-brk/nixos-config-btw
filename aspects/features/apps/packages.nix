@@ -9,6 +9,7 @@
       imv
       superfile
       transmission_4-gtk
+      libreoffice
       yazi
       youtube-tui
       yt-dlp

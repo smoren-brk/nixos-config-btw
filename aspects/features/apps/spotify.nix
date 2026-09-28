@@ -14,7 +14,15 @@
         enable = true;
 
         enabledExtensions = with spicePkgs.extensions; [
+          aiBandBlocker
+          spicyLyrics
+          coverAmbience
           hidePodcasts
+          keyboardShortcut
+          loopyLoop
+          powerBar
+          romajiConvert
+          sectionMarker
           shuffle
         ];
         enabledCustomApps = with spicePkgs.apps; [
@@ -22,7 +30,6 @@
           ncsVisualizer
         ];
         enabledSnippets = with spicePkgs.snippets; [
-          rotatingCoverart
           pointer
         ];
 
