@@ -47,6 +47,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     raito.url = "github:smoren-brk/raito";
     oniri.url = "github:Antiz96/oniri";
   };
