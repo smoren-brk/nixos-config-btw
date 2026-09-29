@@ -1,0 +1,19 @@
+colorscheme catppuccin
+set nativetheme=dark
+
+set adblocker=update
+set adblockernotifications=none
+
+set darkreader
+set darkreadermode=dark
+
+command tr  <:open https://1337x.to/>
+command gpt <:open https://chatgpt.com>
+command mn  <:open https://mynixos.com/>
+command pm  <:open https://mail.proton.me/u/0/inbox>
+command re  <:open https://www.reddit.com/>
+command wa  <:open https://web.whatsapp.com/>
+command yt  <:open https://youtube.com>
+
+set searchengine=https://www.google.com/search?q=%s
+set searchwords={"re":"https://www.reddit.com/r/%s","yt":"https://www.youtube.com/results?search_query=%s","tr":"https://1337x.to/search/%s/1/","mn":"https://mynixos.com/search?q=%s"}

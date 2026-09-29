@@ -52,6 +52,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    vieb-nix = {
+      url = "github:tejing1/vieb-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     raito.url = "github:smoren-brk/raito";
     oniri.url = "github:Antiz96/oniri";
   };

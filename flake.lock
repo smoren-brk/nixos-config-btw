@@ -367,7 +367,8 @@
         "quickshell": "quickshell",
         "raito": "raito",
         "spicetify-nix": "spicetify-nix",
-        "torlink": "torlink"
+        "torlink": "torlink",
+        "vieb-nix": "vieb-nix"
       }
     },
     "spicetify-nix": {
@@ -458,6 +459,26 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "vieb-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1789774383,
+        "narHash": "sha256-WtjwJSGfwPM0s5CJNYqjSFCN/i54A02vzVU5PvctSMk=",
+        "owner": "tejing1",
+        "repo": "vieb-nix",
+        "rev": "b31ba4bad2da47a26b74c048638d9170ee59edd9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tejing1",
+        "repo": "vieb-nix",
         "type": "github"
       }
     }
