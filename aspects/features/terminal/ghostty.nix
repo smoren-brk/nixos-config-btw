@@ -21,6 +21,8 @@
       settings = {
         background-opacity = 0.55;
         confirm-close-surface = false;
+        custom-shader = "${./shaders/cursor-stars.glsl}";
+        custom-shader-animation = "always";
         cursor-color = "#fab387";
         cursor-text = "#1e1e2e";
         font-family = "Hasklug Nerd Font";
