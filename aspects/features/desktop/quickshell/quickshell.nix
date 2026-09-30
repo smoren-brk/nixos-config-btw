@@ -7,12 +7,13 @@
     ];
   };
 
-  flake.modules.homeManager.quickshell = { ... }: {
+  flake.modules.homeManager.quickshell = { config, ... }: {
     programs.quickshell = {
       enable = true;
       package = null;
     };
 
-    xdg.configFile."quickshell".source = ./_config;
+    xdg.configFile."quickshell".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/config/aspects/features/desktop/quickshell/_config";
   };
 }
