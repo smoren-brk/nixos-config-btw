@@ -1,12 +1,17 @@
 colorscheme catppuccin
 set nativetheme=dark
 
+" Use Firefox's user agent to work around Google's sign-in browser check.
+set useragent=%firefox
+
 set adblocker=update
 set adblockernotifications=none
 
 set darkreader
 set darkreadermode=dark
 set darkreaderblocklist+=^https://chatgpt[.]com/
+set darkreaderblocklist+=^https://web[.]whatsapp[.]com/
+set darkreaderblocklist+=^https://github[.]com/
 
 command tr  <:open https://1337x.to/>
 command gpt <:open https://chatgpt.com>
