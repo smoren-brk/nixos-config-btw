@@ -28,7 +28,7 @@
 
   };
 
-  flake.modules.homeManager.niri = { config, ... }: {
+  flake.modules.homeManager.niri = { ... }: {
     wayland.windowManager.niri = {
       enable = true;
       package = null;
@@ -37,8 +37,7 @@
       systemd.enable = false;
     };
 
-    xdg.configFile."niri".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/config/aspects/features/desktop/niri/_config";
+    xdg.configFile."niri".source = ./_config;
 
   };
 }
