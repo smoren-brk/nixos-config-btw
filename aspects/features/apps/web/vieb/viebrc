@@ -6,6 +6,7 @@ set adblockernotifications=none
 
 set darkreader
 set darkreadermode=dark
+set darkreaderblocklist+=^https://chatgpt[.]com/
 
 command tr  <:open https://1337x.to/>
 command gpt <:open https://chatgpt.com>
