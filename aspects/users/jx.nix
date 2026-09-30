@@ -13,6 +13,7 @@
       ];
     };
 
+    home-manager.useGlobalPkgs = true;
     home-manager.users.jx.imports = builtins.attrValues config.flake.modules.homeManager;
   };
 
