@@ -1,9 +1,12 @@
 {
   flake.modules.nixos.jellyfin = { pkgs, ... }: {
-
     environment.systemPackages = with pkgs; [
-      jellyfin-tui
       jellyfin-mpv-shim
+    ];
+
+    systemd.tmpfiles.rules = [
+      "d /media 0777 root root - -"
+      "a+ /media - - - - d:u::rwx,d:g::rwx,d:m::rwx,d:o::rwx"
     ];
 
     services.jellyfin = {
