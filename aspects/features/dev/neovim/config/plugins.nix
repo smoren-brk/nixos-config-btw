@@ -6,7 +6,7 @@
         diffview.enable = true;
         eyeliner.enable = true;
         gitsigns.enable = true;
-        hardtime.enable = false;
+        hardtime.enable = true;
         inc-rename.enable = true;
         markview.enable = true;
         mini-cursorword.enable = true;
