@@ -26,8 +26,6 @@
       zsh-abbr = {
         enable = true;
         abbreviations = {
-          nixos-rebuild = "doas nixos-rebuild switch --flake .";
-          next-gen = "doas ~/bin/diff-generations";
           ff = "fastfetch";
         };
       };

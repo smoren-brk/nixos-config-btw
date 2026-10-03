@@ -21,7 +21,7 @@
     home = {
       stateVersion = "26.11";
 
-      file."bin/diff-generations".source = ./_scripts/diff-generations;
+      file."bin/flaek".source = ./_scripts/flaek;
     };
 
     manual.manpages.enable = false;
