@@ -1,5 +1,7 @@
 {
   flake.modules.nixos.ghostty = { pkgs, ... }: {
+    fonts.packages = [ pkgs.nerd-fonts.hasklug ];
+
     environment.systemPackages = [
       pkgs.ghostty
     ];

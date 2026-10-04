@@ -2,6 +2,8 @@
 
 {
   flake.modules.nixos.jx = { pkgs, ... }: {
+    programs.zsh.enable = true;
+
     users.users.jx = {
       isNormalUser = true;
       description = "JX";

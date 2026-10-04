@@ -13,8 +13,10 @@
       systemPackages = with pkgs; [
         inputs.oniri.packages.${pkgs.stdenv.hostPlatform.system}.default
         awww
+        catppuccin-cursors.mochaPeach
         grim
         slurp
+        superfile
         swappy
         wl-clipboard-rs
         xwayland-satellite

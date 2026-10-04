@@ -1,6 +1,7 @@
 {
-  flake.modules.nixos.audio = { pkgs, ... }: {
+  flake.modules.nixos.screenshare = { pkgs, ... }: {
     programs.obs-studio.enable = true;
+    services.pipewire.enable = true;
 
     xdg.portal = {
       enable = true;

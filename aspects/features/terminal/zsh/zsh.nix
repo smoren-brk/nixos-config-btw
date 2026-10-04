@@ -1,6 +1,11 @@
 {
   flake.modules.nixos.zsh = { pkgs, ... }: {
     environment.systemPackages = with pkgs; [
+      eza
+      fastfetch
+      fzf
+      nix-search-tv
+      zoxide
       zsh-powerlevel10k
     ];
 

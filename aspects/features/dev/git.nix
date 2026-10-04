@@ -1,6 +1,7 @@
 {
   flake.modules.nixos.git = { pkgs, ... }: {
     environment.systemPackages = with pkgs; [
+      delta
       git
     ];
   };

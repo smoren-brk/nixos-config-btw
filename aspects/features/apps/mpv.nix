@@ -1,5 +1,7 @@
 {
   flake.modules.nixos.mpv = { pkgs, ... }: {
+    hardware.graphics.enable = true;
+
     environment.systemPackages = with pkgs; [
       (mpv.override { scripts = [ mpvScripts.mpris ]; })
     ];

@@ -1,5 +1,7 @@
 {
   flake.modules.nixos.jellyfin = { pkgs, ... }: {
+    hardware.graphics.enable = true;
+
     environment.systemPackages = with pkgs; [
       jellyfin-mpv-shim
     ];
