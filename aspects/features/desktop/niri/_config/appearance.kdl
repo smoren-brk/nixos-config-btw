@@ -1,0 +1,87 @@
+cursor {
+    xcursor-theme "catppuccin-mocha-peach-cursors"
+    xcursor-size 24
+
+    hide-when-typing
+    hide-after-inactive-ms 5000
+}
+
+layout {
+    gaps 10
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    always-center-single-column
+
+    default-column-width { proportion 0.5; }
+
+    focus-ring {
+        off
+    }
+
+    border {
+        off
+    }
+
+    shadow {
+        on
+
+        draw-behind-window true
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#0007"
+    }
+
+    struts {
+        left 10
+        right 10
+        top 10
+        bottom 10
+    }
+}
+
+prefer-no-csd
+
+animations { }
+
+// Quickshell supplies rounded blur regions for its visible panels.
+layer-rule {
+    match namespace="^qqq-"
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id=r#"^com\.mitchellh\.ghostty$"#
+    background-effect {
+        blur true
+    }
+}
+
+// Open the Firefox picture-in-picture player as floating by default.
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+/-window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+
+    block-out-from "screen-capture"
+
+    // Use this instead if you want them visible on third-party screenshot tools.
+    // block-out-from "screencast"
+}
+
+window-rule {
+    geometry-corner-radius 20
+    clip-to-geometry true
+}
