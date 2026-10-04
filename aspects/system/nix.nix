@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.nix = { pkgs, ... }: {
+  flake.modules.nixos.nix = { config, pkgs, ... }: {
     nix.settings.experimental-features = [
       "nix-command"
       "flakes"
@@ -10,7 +10,7 @@
         nh
       ];
       sessionVariables = {
-        FLAKE = "/home/jx/config/";
+        NH_FLAKE = "${config.users.users.jx.home}/config/";
       };
     };
 
