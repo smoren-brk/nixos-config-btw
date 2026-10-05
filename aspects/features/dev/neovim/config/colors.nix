@@ -9,22 +9,22 @@
           custom_highlights = {
             Cursor = {
               fg = "#1e1e2e";
-              bg = "#a6e3a1";
+              bg = "#94e2d5";
             };
             CursorIM = {
               fg = "#1e1e2e";
-              bg = "#a6e3a1";
+              bg = "#94e2d5";
             };
-            CursorLineNr.fg = "#a6e3a1";
+            CursorLineNr.fg = "#94e2d5";
             lCursor = {
               fg = "#1e1e2e";
-              bg = "#a6e3a1";
+              bg = "#94e2d5";
             };
             TermCursor = {
               fg = "#1e1e2e";
-              bg = "#a6e3a1";
+              bg = "#94e2d5";
             };
-            FloatBorder.fg = "#a6e3a1";
+            FloatBorder.fg = "#94e2d5";
             Normal.bg = "none";
             NormalFloat.bg = "none";
             FloatBorder.bg = "none";

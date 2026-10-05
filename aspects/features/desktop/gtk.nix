@@ -5,26 +5,26 @@
       colorScheme = "dark";
 
       theme = {
-        name = "catppuccin-mocha-green-standard";
+        name = "catppuccin-mocha-teal-standard";
         package = pkgs.catppuccin-gtk.override {
           variant = "mocha";
-          accents = [ "green" ];
+          accents = [ "teal" ];
         };
       };
 
-      gtk4.extraConfig."gtk-theme-name" = "catppuccin-mocha-green-standard";
+      gtk4.extraConfig."gtk-theme-name" = "catppuccin-mocha-teal-standard";
 
       cursorTheme = {
-        name = "catppuccin-mocha-green-cursors";
-        package = pkgs.catppuccin-cursors.mochaGreen;
+        name = "catppuccin-mocha-teal-cursors";
+        package = pkgs.catppuccin-cursors.mochaTeal;
         size = 24;
       };
     };
 
     home.pointerCursor = {
       enable = true;
-      name = "catppuccin-mocha-green-cursors";
-      package = pkgs.catppuccin-cursors.mochaGreen;
+      name = "catppuccin-mocha-teal-cursors";
+      package = pkgs.catppuccin-cursors.mochaTeal;
       size = 24;
 
       gtk.enable = true;
