@@ -6,19 +6,14 @@
     ];
   };
 
-  flake.modules.homeManager.git = {
+  flake.modules.homeManager.git = { config, ... }: {
     programs.git = {
       enable = true;
       package = null;
 
       settings = {
-        user = {
-          email = "sumarac@protonmail.com";
-          name = "Jovan Djokic-Sumarac";
-        };
-
         safe = {
-          directory = "/home/jx/config/";
+          directory = "${config.home.homeDirectory}/config/";
         };
 
         core = {

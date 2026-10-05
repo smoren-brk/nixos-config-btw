@@ -29,6 +29,11 @@
     manual.manpages.enable = false;
     programs.man.enable = false;
 
+    programs.git.settings.user = {
+      email = "sumarac@protonmail.com";
+      name = "Jovan Djokic-Sumarac";
+    };
+
     xdg = {
       enable = true;
       binHome = "${config.home.homeDirectory}/bin/";

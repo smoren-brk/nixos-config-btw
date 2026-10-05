@@ -35,6 +35,5 @@ hotkey-overlay {
 
 screenshot-path "~/user/media/screenshots/%Y-%m-%d_%H-%M-%S.png"
 
-include "outputs.kdl"
 include "appearance.kdl"
 include "keybinds.kdl"

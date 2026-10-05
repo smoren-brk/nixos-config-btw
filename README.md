@@ -13,3 +13,9 @@ After the system is bootstrapped, use:
 nh os switch --upgrade
 ```
 
+
+## Structure
+
+`aspects/` contains reusable app, desktop, development, system, and terminal modules.
+`hosts/` contains each host's configuration, hardware, and users.
+
