@@ -33,11 +33,11 @@
         volume-max = 150;
         volume = 100;
 
-        background-color = "#000000";
-        osd-back-color = "#000000";
-        osd-border-color = "#000000";
-        osd-color = "#ffffff";
-        osd-shadow-color = "#000000";
+        background-color = "#1e1e2e";
+        osd-back-color = "#1e1e2e";
+        osd-border-color = "#1e1e2e";
+        osd-color = "#cdd6f4";
+        osd-shadow-color = "#1e1e2e";
 
         cache = "yes";
         demuxer-max-bytes = "2G";

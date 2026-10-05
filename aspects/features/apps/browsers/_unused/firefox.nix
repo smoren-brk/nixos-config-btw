@@ -36,7 +36,7 @@
       policies.ExtensionSettings = {
         "{1cd0d6ef-d4bf-4fd1-9d80-4a9811a84647}" = {
           installation_mode = "normal_installed";
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/catppuccin-mocha-peach/latest.xpi";
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/catppuccin-mocha-green/latest.xpi";
         };
         "uBlock0@raymondhill.net" = {
           installation_mode = "normal_installed";

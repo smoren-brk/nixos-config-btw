@@ -33,7 +33,13 @@
           pointer
         ];
 
-        theme = spicePkgs.themes.catppuccin;
+        theme = spicePkgs.themes.catppuccin // {
+          extraCommands = ''
+            crudini --set Themes/catppuccin/color.ini mocha button a6e3a1
+            crudini --set Themes/catppuccin/color.ini mocha button-active a6e3a1
+            crudini --set Themes/catppuccin/color.ini mocha selected-row a6e3a1
+          '';
+        };
         colorScheme = "mocha";
       };
 

@@ -68,14 +68,14 @@
         import catppuccin
 
         catppuccin.setup(c, "mocha", True)
-        c.colors.completion.category.fg = "#fab387"
-        c.colors.completion.item.selected.fg = "#fab387"
-        c.colors.completion.item.selected.match.fg = "#fab387"
-        c.colors.completion.match.fg = "#fab387"
-        c.colors.prompts.selected.fg = "#fab387"
-        c.colors.statusbar.command.fg = "#fab387"
-        c.colors.tabs.selected.even.fg = "#fab387"
-        c.colors.tabs.selected.odd.fg = "#fab387"
+        c.colors.completion.category.fg = "#a6e3a1"
+        c.colors.completion.item.selected.fg = "#a6e3a1"
+        c.colors.completion.item.selected.match.fg = "#a6e3a1"
+        c.colors.completion.match.fg = "#a6e3a1"
+        c.colors.prompts.selected.fg = "#a6e3a1"
+        c.colors.statusbar.command.fg = "#a6e3a1"
+        c.colors.tabs.selected.even.fg = "#a6e3a1"
+        c.colors.tabs.selected.odd.fg = "#a6e3a1"
       '';
     };
   };

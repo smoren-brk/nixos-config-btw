@@ -13,7 +13,7 @@
       systemPackages = with pkgs; [
         inputs.oniri.packages.${pkgs.stdenv.hostPlatform.system}.default
         awww
-        catppuccin-cursors.mochaPeach
+        catppuccin-cursors.mochaGreen
         grim
         slurp
         superfile
