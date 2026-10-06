@@ -9,6 +9,13 @@
           persist = true;
           runAs = "root";
         }
+        {
+          groups = [ "doas" ];
+          cmd = "nh";
+          noPass = true;
+          keepEnv = false;
+          runAs = "root";
+        }
       ];
     };
   };
