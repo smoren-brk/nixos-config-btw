@@ -1,6 +1,11 @@
 { inputs, ... }:
 
 {
+  flake-file.inputs.hytale-launcher = {
+    url = "github:JPyke3/hytale-launcher-nix";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+
   flake.modules.nixos.gaming = { pkgs, ... }: {
     programs.steam = {
       enable = true;

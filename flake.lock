@@ -55,6 +55,21 @@
         "type": "github"
       }
     },
+    "flake-file": {
+      "locked": {
+        "lastModified": 1791311177,
+        "narHash": "sha256-5ShQ10Jlfmge8emgwENj/1/2OXl8hN6mre05ZwxSkE8=",
+        "owner": "denful",
+        "repo": "flake-file",
+        "rev": "ef875de213a2f093ecb351c1e764797baa98e044",
+        "type": "github"
+      },
+      "original": {
+        "owner": "denful",
+        "repo": "flake-file",
+        "type": "github"
+      }
+    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": "nixpkgs-lib"
@@ -140,11 +155,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1791293500,
-        "narHash": "sha256-3hwJd2/vG/VYV1P/g7oDgdbNsWODhN5F//Od+hPMm2k=",
+        "lastModified": 1791306979,
+        "narHash": "sha256-KuLePuhwJM9NLt/gTLHzXaOoSZKGoB3m7NfXjiQ98HY=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "0e11b7bcba1d74ef8ea10bfdfb1e1a5811a21087",
+        "rev": "fae6e9e42c3b762ab47635cddcfaf6f52374a61b",
         "type": "github"
       },
       "original": {
@@ -200,11 +215,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1791290323,
-        "narHash": "sha256-TReQAY/j9qBy4p3ctKbMfeGBaG3AkeJXAyg/G7mygII=",
+        "lastModified": 1791309735,
+        "narHash": "sha256-SA3T4TFtXjxPi3YlH6QuVZGmMRmedAaKGESpyAriXS0=",
         "owner": "numtide",
         "repo": "llm-agents.nix",
-        "rev": "dd4c5b6a2ab072a51b350562e02cb520038ac068",
+        "rev": "43aaac9b2e412795369ed4db1b38e0cd5ed29310",
         "type": "github"
       },
       "original": {
@@ -434,6 +449,7 @@
     "root": {
       "inputs": {
         "disko": "disko",
+        "flake-file": "flake-file",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "hytale-launcher": "hytale-launcher",
@@ -447,8 +463,7 @@
         "quickshell": "quickshell",
         "raito": "raito",
         "spicetify-nix": "spicetify-nix",
-        "torlink": "torlink",
-        "vieb-nix": "vieb-nix"
+        "torlink": "torlink"
       }
     },
     "spicetify-nix": {
@@ -575,26 +590,6 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
-        "type": "github"
-      }
-    },
-    "vieb-nix": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1789774383,
-        "narHash": "sha256-WtjwJSGfwPM0s5CJNYqjSFCN/i54A02vzVU5PvctSMk=",
-        "owner": "tejing1",
-        "repo": "vieb-nix",
-        "rev": "b31ba4bad2da47a26b74c048638d9170ee59edd9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "tejing1",
-        "repo": "vieb-nix",
         "type": "github"
       }
     }

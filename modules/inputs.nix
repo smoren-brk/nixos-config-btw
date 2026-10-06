@@ -1,0 +1,20 @@
+{
+  flake-file.inputs = {
+    self.submodules = true;
+
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    flake-file.url = "github:denful/flake-file";
+    import-tree.url = "github:denful/import-tree";
+
+    disko = {
+      url = "github:nix-community/disko/latest";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    home-manager = {
+      url = "github:nix-community/home-manager/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
+}

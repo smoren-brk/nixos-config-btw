@@ -1,22 +1,11 @@
-{ inputs, ... }:
-
-let
-  aspects = inputs.flake-parts.lib.mkFlake { inherit inputs; } {
-    systems = [ ];
-    imports = [
-      inputs.flake-parts.flakeModules.modules
-      (inputs.import-tree ../../aspects/apps)
-      (inputs.import-tree ../../aspects/desktop)
-      (inputs.import-tree ../../aspects/dev)
-      (inputs.import-tree ../../aspects/system)
-      (inputs.import-tree ../../aspects/terminal)
-      ./hardware.nix
-      ./jx.nix
-    ];
-  };
-in
+{ inputs, config, ... }:
 
 {
+  imports = [
+    ./hardware.nix
+    ./jx.nix
+  ];
+
   flake.nixosConfigurations.geist = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
 
@@ -61,6 +50,6 @@ in
         system.stateVersion = "26.11";
       })
     ]
-    ++ builtins.attrValues aspects.modules.nixos;
+    ++ builtins.attrValues config.flake.modules.nixos;
   };
 }
