@@ -23,18 +23,16 @@
     ];
 
     environment.systemPackages = [
-      inputs.qml-niri.packages.${pkgs.stdenv.hostPlatform.system}.quickshell
+      (inputs.wrappers.lib.wrapPackage {
+        inherit pkgs;
+
+        package = inputs.qml-niri.packages.${pkgs.stdenv.hostPlatform.system}.quickshell;
+        binName = "quickshell";
+        aliases = [ "qs" ];
+        flags."--path" = "${./_config}";
+      })
       inputs.raito.packages.${pkgs.stdenv.hostPlatform.system}.default
       pkgs.python3
     ];
-  };
-
-  flake.modules.homeManager.quickshell = {
-    programs.quickshell = {
-      enable = true;
-      package = null;
-    };
-
-    xdg.configFile."quickshell".source = ./_config;
   };
 }

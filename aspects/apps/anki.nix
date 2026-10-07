@@ -4,8 +4,4 @@
       anki
     ];
   };
-
-  flake.modules.homeManager.anki = {
-
-  };
 }

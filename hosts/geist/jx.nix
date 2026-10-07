@@ -1,5 +1,8 @@
 { config, ... }:
 
+let
+  homeManagerModules = builtins.attrValues config.flake.modules.homeManager;
+in
 {
   flake.modules.wrapper.git = {
     settings.user = {
@@ -8,53 +11,57 @@
     };
   };
 
-  flake.modules.nixos.jx = { pkgs, ... }: {
-    programs.zsh.enable = true;
+  flake.modules.nixos.jx =
+    {
+      config,
+      lib,
+      pkgs,
+      ...
+    }:
+    let
+      homeDir = config.users.users.jx.home;
+      userDirs = {
+        XDG_DESKTOP_DIR = "${homeDir}/user/xdg/desktop/";
+        XDG_DOCUMENTS_DIR = "${homeDir}/user/docs/";
+        XDG_DOWNLOAD_DIR = "${homeDir}/user/dl/";
+        XDG_MUSIC_DIR = "${homeDir}/user/media/music/";
+        XDG_PICTURES_DIR = "${homeDir}/user/media/pics/";
+        XDG_PROJECTS_DIR = "${homeDir}/user/xdg/projects/";
+        XDG_PUBLICSHARE_DIR = "${homeDir}/user/xdg/public/";
+        XDG_TEMPLATES_DIR = "${homeDir}/user/xdg/templates/";
+        XDG_VIDEOS_DIR = "${homeDir}/user/media/vids/";
+      };
+      userDirsFile = pkgs.writeText "user-dirs.dirs" (
+        lib.generators.toKeyValue { } (lib.mapAttrs (_: value: ''"${value}"'') userDirs)
+      );
+      userDirsConf = pkgs.writeText "user-dirs.conf" "enabled=True";
+    in
+    {
+      users.users.jx = {
+        isNormalUser = true;
+        description = "JX";
+        home = "/home/jx";
+        shell = config.programs.zsh.package;
+        extraGroups = [
+          "wheel"
+          "doas"
+        ];
+      };
 
-    users.users.jx = {
-      isNormalUser = true;
-      description = "JX";
-      home = "/home/jx";
-      shell = pkgs.zsh;
-      extraGroups = [
-        "wheel"
-        "doas"
+      environment.systemPackages = [
+        pkgs.xdg-user-dirs
       ];
-    };
 
-    home-manager.useGlobalPkgs = true;
-    home-manager.users.jx.imports = builtins.attrValues config.flake.modules.homeManager;
-  };
+      home-manager.useGlobalPkgs = true;
+      home-manager.users.jx.imports = homeManagerModules;
+    };
 
   flake.modules.homeManager.jx = { config, ... }: {
     home = {
       stateVersion = "26.11";
-
-      file."bin/flaek".source = ./_scripts/flaek;
     };
 
     manual.manpages.enable = false;
     programs.man.enable = false;
-
-    xdg = {
-      enable = true;
-      binHome = "${config.home.homeDirectory}/bin/";
-      localBinInPath = true;
-
-      userDirs = {
-        enable = true;
-        package = null;
-        createDirectories = true;
-        desktop = "${config.home.homeDirectory}/user/xdg/desktop/";
-        documents = "${config.home.homeDirectory}/user/docs/";
-        download = "${config.home.homeDirectory}/user/dl/";
-        music = "${config.home.homeDirectory}/user/media/music/";
-        pictures = "${config.home.homeDirectory}/user/media/pics/";
-        projects = "${config.home.homeDirectory}/user/xdg/projects/";
-        publicShare = "${config.home.homeDirectory}/user/xdg/public/";
-        templates = "${config.home.homeDirectory}/user/xdg/templates/";
-        videos = "${config.home.homeDirectory}/user/media/vids/";
-      };
-    };
   };
 }
