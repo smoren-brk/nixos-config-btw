@@ -1,5 +1,8 @@
-{ inputs, ... }:
+{ inputs, config, ... }:
 
+let
+  gitModule = config.flake.modules.wrapper.git;
+in
 {
   flake.modules.nixos.git =
     {
@@ -12,6 +15,7 @@
       git =
         (inputs.wrappers.wrapperModules.git.apply {
           inherit pkgs;
+          imports = [ gitModule ];
 
           settings = {
             safe = {

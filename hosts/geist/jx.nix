@@ -1,6 +1,13 @@
 { config, ... }:
 
 {
+  flake.modules.wrapper.git = {
+    settings.user = {
+      email = "sumarac@protonmail.com";
+      name = "Jovan Djokic-Sumarac";
+    };
+  };
+
   flake.modules.nixos.jx = { pkgs, ... }: {
     programs.zsh.enable = true;
 
@@ -28,11 +35,6 @@
 
     manual.manpages.enable = false;
     programs.man.enable = false;
-
-    programs.git.settings.user = {
-      email = "sumarac@protonmail.com";
-      name = "Jovan Djokic-Sumarac";
-    };
 
     xdg = {
       enable = true;
