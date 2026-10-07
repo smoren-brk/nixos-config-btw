@@ -1,38 +1,35 @@
+{ inputs, ... }:
+
 {
-  flake.modules.nixos.ghostty = { pkgs, ... }: {
-    fonts.packages = [ pkgs.nerd-fonts.hasklug ];
+  flake.modules.nixos.ghostty =
+    { pkgs, ... }:
 
-    environment.systemPackages = [
-      pkgs.ghostty
-    ];
+    let
+      ghostty =
+        (inputs.wrappers.wrapperModules.ghostty.apply {
+          inherit pkgs;
 
-    environment.variables = {
-      TERM = "ghostty";
-      TERMINAL = "ghostty";
+          settings = {
+            background-opacity = 0.55;
+            confirm-close-surface = false;
+            cursor-color = "#94e2d5";
+            cursor-text = "#1e1e2e";
+            font-family = "Hasklug Nerd Font";
+            quit-after-last-window-closed = false;
+            selection-background = "#94e2d5";
+            selection-foreground = "#1e1e2e";
+            theme = "Catppuccin Mocha";
+            window-padding-x = 20;
+            window-padding-y = 20;
+          };
+
+        }).wrapper;
+    in
+    {
+      fonts.packages = [ pkgs.nerd-fonts.hasklug ];
+
+      environment.systemPackages = [
+        ghostty
+      ];
     };
-  };
-
-  flake.modules.homeManager.ghostty = {
-    programs.ghostty = {
-      enable = true;
-      package = null;
-
-      enableZshIntegration = true;
-      systemd.enable = false;
-
-      settings = {
-        background-opacity = 0.55;
-        confirm-close-surface = false;
-        cursor-color = "#94e2d5";
-        cursor-text = "#1e1e2e";
-        font-family = "Hasklug Nerd Font";
-        quit-after-last-window-closed = false;
-        selection-background = "#94e2d5";
-        selection-foreground = "#1e1e2e";
-        theme = "Catppuccin Mocha";
-        window-padding-x = 20;
-        window-padding-y = 20;
-      };
-    };
-  };
 }
