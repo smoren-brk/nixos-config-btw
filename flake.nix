@@ -54,5 +54,6 @@
       url = "github:baairon/torlink";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    wrappers.url = "github:lassulus/wrappers";
   };
 }
