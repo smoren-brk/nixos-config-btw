@@ -1,6 +1,6 @@
 {
-  flake.modules.homeManager.geist-hardware = {
-    wayland.windowManager.niri.extraConfig = ''
+  flake.modules.wrapper.niri = {
+    settings.extraConfig = ''
       include "${./desktop/niri/outputs.kdl}"
     '';
   };

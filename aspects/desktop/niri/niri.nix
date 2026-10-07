@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, config, ... }:
 
 {
   flake-file.inputs = {
@@ -10,45 +10,49 @@
     };
   };
 
-  flake.modules.nixos.niri = { pkgs, ... }: {
-    programs.niri = {
-      enable = true;
-      package = inputs.niri.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (_: {
-        doCheck = false;
-      });
-    };
+  flake.modules.wrapper.niri = {
+    settings.include = "${./_config}/config.kdl";
+  };
 
-    environment = {
-      systemPackages = with pkgs; [
-        inputs.oniri.packages.${pkgs.stdenv.hostPlatform.system}.default
-        awww
-        catppuccin-cursors.mochaGreen
-        grim
-        slurp
-        superfile
-        swappy
-        wl-clipboard-rs
-        xwayland-satellite
-      ];
+  flake.modules.nixos.niri =
+    { pkgs, lib, ... }:
+    let
+      niri =
+        (inputs.wrappers.wrapperModules.niri.apply {
+          inherit pkgs;
+          imports = [ config.flake.modules.wrapper.niri ];
 
-      variables = {
-        NIXOS_OZONE_WL = "1";
-        XDG_CURRENT_DESKTOP = "niri";
+          package = lib.mkForce (
+            inputs.niri.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (_: {
+              doCheck = false;
+            })
+          );
+        }).wrapper;
+    in
+    {
+      programs.niri = {
+        enable = true;
+        package = niri;
       };
-    };
 
-  };
+      environment = {
+        systemPackages = with pkgs; [
+          # inputs.oniri.packages.${pkgs.stdenv.hostPlatform.system}.default
+          awww
+          catppuccin-cursors.mochaGreen
+          grim
+          slurp
+          superfile
+          swappy
+          wl-clipboard-rs
+          xwayland-satellite
+        ];
 
-  flake.modules.homeManager.niri = {
-    wayland.windowManager.niri = {
-      enable = true;
-      package = null;
-      portalPackage = null;
-      xwaylandSatellitePackage = null;
-      systemd.enable = false;
-      extraConfig = ''
-        include "${./_config}/config.kdl"
-      '';
+        variables = {
+          NIXOS_OZONE_WL = "1";
+          XDG_CURRENT_DESKTOP = "niri";
+        };
+      };
+
     };
-  };
 }
