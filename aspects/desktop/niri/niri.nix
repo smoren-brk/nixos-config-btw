@@ -1,11 +1,13 @@
 { inputs, ... }:
 
 {
-  flake-file.inputs.oniri.url = "github:Antiz96/oniri";
+  flake-file.inputs = {
+    oniri.url = "github:Antiz96/oniri";
 
-  flake-file.inputs.niri = {
-    url = "github:niri-wm/niri";
-    inputs.nixpkgs.follows = "nixpkgs";
+    niri = {
+      url = "github:niri-wm/niri";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   flake.modules.nixos.niri = { pkgs, ... }: {

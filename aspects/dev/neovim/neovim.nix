@@ -2,10 +2,10 @@
 
 {
 
-    flake-file.inputs.nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+  flake-file.inputs.nixvim = {
+    url = "github:nix-community/nixvim";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
 
   flake.modules.nixos.neovim = { pkgs, ... }: {
     imports = [

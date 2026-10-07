@@ -1,5 +1,7 @@
+{ lib, ... }:
+
 {
-  flake.modules.nixos.access = {
+  flake.modules.nixos.access = { pkgs, ... }: {
     security.doas = {
       enable = true;
       extraRules = [
@@ -11,7 +13,7 @@
         }
         {
           groups = [ "doas" ];
-          cmd = "nh";
+          cmd = lib.getExe pkgs.nh;
           noPass = true;
           keepEnv = false;
           runAs = "root";
