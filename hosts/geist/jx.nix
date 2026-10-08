@@ -1,8 +1,3 @@
-{ config, ... }:
-
-let
-  homeManagerModules = builtins.attrValues config.flake.modules.homeManager;
-in
 {
   flake.modules.wrapper.git = {
     settings.user = {
@@ -14,27 +9,25 @@ in
   flake.modules.nixos.jx =
     {
       config,
-      lib,
       pkgs,
       ...
     }:
     let
       homeDir = config.users.users.jx.home;
-      userDirs = {
-        XDG_DESKTOP_DIR = "${homeDir}/user/xdg/desktop/";
-        XDG_DOCUMENTS_DIR = "${homeDir}/user/docs/";
-        XDG_DOWNLOAD_DIR = "${homeDir}/user/dl/";
-        XDG_MUSIC_DIR = "${homeDir}/user/media/music/";
-        XDG_PICTURES_DIR = "${homeDir}/user/media/pics/";
-        XDG_PROJECTS_DIR = "${homeDir}/user/xdg/projects/";
-        XDG_PUBLICSHARE_DIR = "${homeDir}/user/xdg/public/";
-        XDG_TEMPLATES_DIR = "${homeDir}/user/xdg/templates/";
-        XDG_VIDEOS_DIR = "${homeDir}/user/media/vids/";
-      };
-      userDirsFile = pkgs.writeText "user-dirs.dirs" (
-        lib.generators.toKeyValue { } (lib.mapAttrs (_: value: ''"${value}"'') userDirs)
-      );
-      userDirsConf = pkgs.writeText "user-dirs.conf" "enabled=True";
+      userDirsFile = pkgs.writeText "user-dirs.dirs" ''
+        XDG_DESKTOP_DIR="${homeDir}/user/xdg/desktop/"
+        XDG_DOCUMENTS_DIR="${homeDir}/user/docs/"
+        XDG_DOWNLOAD_DIR="${homeDir}/user/dl/"
+        XDG_MUSIC_DIR="${homeDir}/user/media/music/"
+        XDG_PICTURES_DIR="${homeDir}/user/media/pics/"
+        XDG_PROJECTS_DIR="${homeDir}/user/xdg/projects/"
+        XDG_PUBLICSHARE_DIR="${homeDir}/user/xdg/public/"
+        XDG_TEMPLATES_DIR="${homeDir}/user/xdg/templates/"
+        XDG_VIDEOS_DIR="${homeDir}/user/media/vids/"
+      '';
+      userDirsConf = pkgs.writeText "user-dirs.conf" ''
+        enabled=True
+      '';
     in
     {
       users.users.jx = {
@@ -52,16 +45,10 @@ in
         pkgs.xdg-user-dirs
       ];
 
-      home-manager.useGlobalPkgs = true;
-      home-manager.users.jx.imports = homeManagerModules;
+      systemd.tmpfiles.rules = [
+        "d ${homeDir}/.config 0755 jx ${config.users.users.jx.group} - -"
+        "L+ ${homeDir}/.config/user-dirs.dirs - jx ${config.users.users.jx.group} - ${userDirsFile}"
+        "L+ ${homeDir}/.config/user-dirs.conf - jx ${config.users.users.jx.group} - ${userDirsConf}"
+      ];
     };
-
-  flake.modules.homeManager.jx = { config, ... }: {
-    home = {
-      stateVersion = "26.11";
-    };
-
-    manual.manpages.enable = false;
-    programs.man.enable = false;
-  };
 }

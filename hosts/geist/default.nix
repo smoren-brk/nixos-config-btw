@@ -10,8 +10,6 @@
     system = "x86_64-linux";
 
     modules = [
-      inputs.home-manager.nixosModules.home-manager
-
       ({ pkgs, ... }: {
         boot = {
           loader = {

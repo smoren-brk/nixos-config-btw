@@ -10,7 +10,6 @@
       fastfetch
       fzf
       gnutar
-      home-manager
       killall
       nix-search-tv
       tealdeer
