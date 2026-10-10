@@ -4,7 +4,6 @@
       enable = true;
       ly = {
         enable = true;
-        x11Support = false;
       };
     };
   };

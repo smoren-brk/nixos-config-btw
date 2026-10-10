@@ -42,7 +42,6 @@
           catppuccin-cursors.mochaGreen
           grim
           slurp
-          superfile
           swappy
           wl-clipboard-rs
           xwayland-satellite
