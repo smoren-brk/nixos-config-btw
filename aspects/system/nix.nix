@@ -1,5 +1,3 @@
-{ inputs, ... }:
-
 {
   flake.modules.nixos.nix = { pkgs, config, ... }: {
     nixpkgs.config.allowUnfree = true;
@@ -26,11 +24,7 @@
     };
 
     environment.systemPackages = [
-      (inputs.wrappers.lib.wrapPackage {
-        inherit pkgs;
-        package = pkgs.nh;
-        env.NH_FLAKE = "${config.users.users.jx.home}/config/";
-      })
+        pkgs.nh
     ];
   };
 }
