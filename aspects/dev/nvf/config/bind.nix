@@ -1,36 +1,13 @@
 {
   flake.modules.nixos.neovim =
-    { config, ... }:
     let
-      inherit (config.lib.nixvim) mkRaw;
-      keymap = mode: key: action: {
-        inherit mode key action;
-        options.noremap = true;
-      };
+      keymap = mode: key: action: { inherit mode key action; };
     in
     {
-      programs.nixvim = {
+      programs.nvf.settings.vim = {
         globals.mapleader = " ";
-
         keymaps = [
-          (keymap "n" "<leader>gd" (mkRaw "vim.lsp.buf.hover"))
-          (keymap "n" "<leader>tw" (mkRaw "function() MiniTrailspace.trim() end"))
-
-          (keymap "n" "<leader>rn" ":IncRename ")
-          (
-            (keymap "n" "<leader>rr" (mkRaw ''
-              function()
-                return ":IncRename " .. vim.fn.expand("<cword>")
-              end
-            ''))
-            // {
-              options = {
-                noremap = true;
-                expr = true;
-              };
-            }
-          )
-
+          (keymap "n" "<leader>tw" "<cmd>lua MiniTrailspace.trim()<CR>")
           (keymap "t" "<Esc>" "<C-\\><C-n>")
           (keymap "n" "<C-Space>" "<cmd>bprev<CR>")
 
@@ -44,7 +21,6 @@
           (keymap "n" "N" "Nzzzv")
 
           (keymap "n" "<leader>e" "<cmd>Oil<CR>")
-          (keymap "n" "<leader>lf" (mkRaw "vim.lsp.buf.format"))
 
           (keymap "n" "<leader>o" "<cmd>update<CR> <cmd>source<CR>")
           (keymap "n" "<leader>w" "<cmd>write<CR>")

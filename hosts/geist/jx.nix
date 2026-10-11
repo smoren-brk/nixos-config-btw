@@ -46,11 +46,10 @@
         pkgs.xdg-user-dirs
       ];
 
-    environment.variables = {
-        NH_FLAKE = config.users.users.jx.home;
-        NH_OS_FLAKE = config.users.users.jx.home;
-        NH_ELEVATION_STRATEGY = lib.getExe pkgs.doas;
-    };
+      environment.variables = {
+        NH_FLAKE = "${config.users.users.jx.home}/config";
+        NH_OS_FLAKE = "${config.users.users.jx.home}/config";
+      };
 
       systemd.tmpfiles.rules = [
         "d ${homeDir}/.config 0755 jx ${config.users.users.jx.group} - -"

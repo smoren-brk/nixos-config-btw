@@ -24,7 +24,7 @@
     };
 
     environment.systemPackages = [
-        pkgs.nh
+      pkgs.nh
     ];
   };
 }
