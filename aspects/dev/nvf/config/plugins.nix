@@ -14,6 +14,10 @@
         trailspace.enable = true;
       };
 
+      navigation = {
+        harpoon.enable = true;
+      };
+
       visuals = {
         nvim-web-devicons.enable = true;
         twilight-nvim.enable = true;
