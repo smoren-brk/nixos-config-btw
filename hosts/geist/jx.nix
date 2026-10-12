@@ -39,7 +39,7 @@
         extraGroups = [
           "wheel"
           "doas"
-        ];
+        ] ++ lib.optional config.services.displayManager.lemurs.enable config.services.seatd.group;
       };
 
       environment.systemPackages = [
