@@ -14,7 +14,11 @@
         trailspace.enable = true;
       };
 
-      visuals.nvim-web-devicons.enable = true;
+      visuals = {
+        nvim-web-devicons.enable = true;
+        twilight-nvim.enable = true;
+        rainbow-delimiters.enable = true;
+      };
 
       languages.markdown = {
         enable = true;
@@ -82,6 +86,11 @@
           liveGrep = "<leader>fg";
           gitStatus = "<leader>fs";
         };
+      };
+
+      ui = {
+        noice.enable = true;
+        # ui2.enable = true;
       };
     };
   };
