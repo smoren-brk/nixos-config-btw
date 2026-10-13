@@ -19,15 +19,15 @@
       url = "github:numtide/llm-agents.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    neovf = {
+      url = "github:smoren-brk/neovf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     niri = {
       url = "github:niri-wm/niri";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nvf = {
-      url = "github:notashelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     oniri.url = "github:Antiz96/oniri";
     qml-niri = {
       url = "github:imiric/qml-niri/main";

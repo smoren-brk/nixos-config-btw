@@ -73,11 +73,11 @@
     },
     "flake-file": {
       "locked": {
-        "lastModified": 1791835944,
-        "narHash": "sha256-5Ug7uEHQZrlraxfKnB4ObmtA/3auyVkiw/BOFKQ3ni8=",
+        "lastModified": 1791840448,
+        "narHash": "sha256-u10FOsDRA1GMRcn1+hYf2eD1K+LP/F9/+AeErkKraPg=",
         "owner": "denful",
         "repo": "flake-file",
-        "rev": "a494f1cee26bf63c0fca9dbb756d938c500ab5de",
+        "rev": "d3600508b0b031221459f7358ab88c438a81ac83",
         "type": "github"
       },
       "original": {
@@ -189,11 +189,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1791836435,
-        "narHash": "sha256-YKw8ry/22z0M4p6Z0sJ0/g+pMo2LnTrYvksmHa34t5I=",
+        "lastModified": 1791850605,
+        "narHash": "sha256-KRreUYxKpyjm8nWQtO2RIGQRKqW8TGAEr85HdhMKDFc=",
         "owner": "numtide",
         "repo": "llm-agents.nix",
-        "rev": "9c2860c168ad1d4686c89e7c6f3355ff62d1d921",
+        "rev": "e24ec0b66cf0601cb42e21d3f1f90591c536aec5",
         "type": "github"
       },
       "original": {
@@ -214,6 +214,27 @@
       "original": {
         "owner": "Gerg-L",
         "repo": "mnw",
+        "type": "github"
+      }
+    },
+    "neovf": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "nvf": "nvf"
+      },
+      "locked": {
+        "lastModified": 1791850781,
+        "narHash": "sha256-CBGNtRcus6sbNH3Dj9MUTSNUqHiFHrZR+/YFTOXlbsw=",
+        "owner": "smoren-brk",
+        "repo": "neovf",
+        "rev": "e3bdcbcba185ac3ac15b106e6a727733592a80f1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "smoren-brk",
+        "repo": "neovf",
         "type": "github"
       }
     },
@@ -352,6 +373,7 @@
         "flake-compat": "flake-compat",
         "mnw": "mnw",
         "nixpkgs": [
+          "neovf",
           "nixpkgs"
         ]
       },
@@ -459,9 +481,9 @@
         "hytale-launcher": "hytale-launcher",
         "import-tree": "import-tree",
         "llm-agents": "llm-agents",
+        "neovf": "neovf",
         "niri": "niri",
         "nixpkgs": "nixpkgs",
-        "nvf": "nvf",
         "oniri": "oniri",
         "qml-niri": "qml-niri",
         "quickshell": "quickshell",
