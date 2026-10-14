@@ -19,9 +19,9 @@
                 wallpapers = [ ];
                 backdrop = "1e1e2e";
                 interface = {
-                  brandingColor = "a6e3a1";
-                  helpColor = "a6e3a1";
-                  helpColorBright = "a6e3a1";
+                  brandingColor = "f38ba8";
+                  helpColor = "f38ba8";
+                  helpColorBright = "f38ba8";
                 };
                 graphicalTerminal = {
                   palette = "1e1e2e;f38ba8;a6e3a1;f9e2af;89b4fa;f5c2e7;94e2d5;cdd6f4";

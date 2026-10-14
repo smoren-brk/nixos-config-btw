@@ -17,7 +17,7 @@
             default-fg = "#cdd6f4";
             completion-bg = "#313244";
             completion-fg = "#cdd6f4";
-            completion-highlight-bg = "#94e2d5";
+            completion-highlight-bg = "#f38ba8";
             completion-highlight-fg = "#1e1e2e";
             completion-group-bg = "#181825";
             completion-group-fg = "#cdd6f4";
@@ -33,10 +33,10 @@
             notification-warning-fg = "#f9e2af";
             index-bg = "#1e1e2e";
             index-fg = "#cdd6f4";
-            index-active-bg = "#94e2d5";
+            index-active-bg = "#f38ba8";
             index-active-fg = "#1e1e2e";
             highlight-color = "rgba(147,153,178,0.3)";
-            highlight-active-color = "rgba(250,179,135,0.3)";
+            highlight-active-color = "rgba(243,139,168,0.3)";
             highlight-fg = "#cdd6f4";
 
             scroll-page-aware = true;

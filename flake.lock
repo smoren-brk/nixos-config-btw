@@ -73,11 +73,11 @@
     },
     "flake-file": {
       "locked": {
-        "lastModified": 1791840448,
-        "narHash": "sha256-u10FOsDRA1GMRcn1+hYf2eD1K+LP/F9/+AeErkKraPg=",
+        "lastModified": 1791921652,
+        "narHash": "sha256-IunIcPxJCww7NqKxRMANF7G9lOWdrCX03upD5LWVMTI=",
         "owner": "denful",
         "repo": "flake-file",
-        "rev": "d3600508b0b031221459f7358ab88c438a81ac83",
+        "rev": "9da57b7af20b60011178b70ff660fddae69506db",
         "type": "github"
       },
       "original": {
@@ -189,11 +189,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1791914952,
-        "narHash": "sha256-qNRooeA8qSVoSgGNlCkoS9Lwa9xKoUXjOO+4mNf72Jw=",
+        "lastModified": 1791932383,
+        "narHash": "sha256-9XIIlEn0VnudFT+LvHSHbD6pLD+YqvAX6mbUbrUe0M0=",
         "owner": "numtide",
         "repo": "llm-agents.nix",
-        "rev": "d058453d8128aaeaba2c02275bac259913a0dd3e",
+        "rev": "c643221512459e849ac762ead83c6620d15be90e",
         "type": "github"
       },
       "original": {
@@ -396,11 +396,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1791788431,
-        "narHash": "sha256-jTPey31iJAPZBk8TGGkMCXMV7qygggQVD1DcSguQOUM=",
+        "lastModified": 1791931836,
+        "narHash": "sha256-ccCElShYWf6MBo6OuV4rXw0r5S6wncVl6m7o4GLlCiY=",
         "owner": "Antiz96",
         "repo": "oniri",
-        "rev": "618022bcdd69b64fa3312f1035fda66d183258df",
+        "rev": "c9027b764085f6a8612047e91b7f5d293e4ef150",
         "type": "github"
       },
       "original": {

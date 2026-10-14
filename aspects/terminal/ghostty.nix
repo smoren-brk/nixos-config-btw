@@ -12,11 +12,11 @@
           settings = {
             background-opacity = 0.55;
             confirm-close-surface = false;
-            cursor-color = "#94e2d5";
+            cursor-color = "#f38ba8";
             cursor-text = "#1e1e2e";
             font-family = "Hasklug Nerd Font";
             quit-after-last-window-closed = false;
-            selection-background = "#94e2d5";
+            selection-background = "#f38ba8";
             selection-foreground = "#1e1e2e";
             theme = "Catppuccin Mocha";
             window-padding-x = 20;

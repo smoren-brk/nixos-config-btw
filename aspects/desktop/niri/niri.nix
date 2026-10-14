@@ -39,7 +39,7 @@
         systemPackages = with pkgs; [
           # inputs.oniri.packages.${pkgs.stdenv.hostPlatform.system}.default
           awww
-          catppuccin-cursors.mochaGreen
+          catppuccin-cursors.mochaRed
           grim
           slurp
           swappy

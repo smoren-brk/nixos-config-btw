@@ -40,9 +40,9 @@
 
         theme = spicePkgs.themes.catppuccin // {
           extraCommands = ''
-            crudini --set Themes/catppuccin/color.ini mocha button a6e3a1
-            crudini --set Themes/catppuccin/color.ini mocha button-active a6e3a1
-            crudini --set Themes/catppuccin/color.ini mocha selected-row a6e3a1
+            crudini --set Themes/catppuccin/color.ini mocha button f38ba8
+            crudini --set Themes/catppuccin/color.ini mocha button-active f38ba8
+            crudini --set Themes/catppuccin/color.ini mocha selected-row f38ba8
           '';
         };
         colorScheme = "mocha";
