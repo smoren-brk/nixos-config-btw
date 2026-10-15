@@ -17,19 +17,19 @@
               enable = true;
               style = {
                 wallpapers = [ ];
-                backdrop = "1e1e2e";
+                backdrop = "1a1b26";
                 interface = {
-                  brandingColor = "f38ba8";
-                  helpColor = "f38ba8";
-                  helpColorBright = "f38ba8";
+                  brandingColor = "7aa2f7";
+                  helpColor = "7aa2f7";
+                  helpColorBright = "7aa2f7";
                 };
                 graphicalTerminal = {
-                  palette = "1e1e2e;f38ba8;a6e3a1;f9e2af;89b4fa;f5c2e7;94e2d5;cdd6f4";
-                  brightPalette = "585b70;f38ba8;a6e3a1;f9e2af;89b4fa;f5c2e7;94e2d5;cdd6f4";
-                  background = "1e1e2e";
-                  foreground = "cdd6f4";
-                  brightBackground = "585b70";
-                  brightForeground = "cdd6f4";
+                  palette = "1a1b26;f7768e;9ece6a;e0af68;7aa2f7;bb9af7;73daca;c0caf5";
+                  brightPalette = "414868;f7768e;9ece6a;e0af68;7aa2f7;bb9af7;73daca;c0caf5";
+                  background = "1a1b26";
+                  foreground = "c0caf5";
+                  brightBackground = "414868";
+                  brightForeground = "c0caf5";
                 };
               };
             };

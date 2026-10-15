@@ -1,4 +1,4 @@
-colorscheme catppuccin
+colorscheme tokyonight
 set nativetheme=dark
 
 " Use Firefox's user agent to work around Google's sign-in browser check.

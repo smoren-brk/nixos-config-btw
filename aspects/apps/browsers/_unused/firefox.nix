@@ -13,7 +13,7 @@
         "browser.download.folderList" = 2;
         "browser.download.useDownloadDir" = false;
 
-        "extensions.activeThemeID" = "{e4c06efe-4936-4ca0-87e2-4a47dc5fa5ee}";
+        "extensions.activeThemeID" = "{24f19060-f309-4f8e-a5f1-7a12a83c3c99}";
         "browser.theme.content-theme" = 0;
         "browser.theme.toolbar-theme" = 0;
         "layout.css.prefers-color-scheme.content-override" = 0;
@@ -34,9 +34,9 @@
       '';
 
       policies.ExtensionSettings = {
-        "{e4c06efe-4936-4ca0-87e2-4a47dc5fa5ee}" = {
+        "{24f19060-f309-4f8e-a5f1-7a12a83c3c99}" = {
           installation_mode = "normal_installed";
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/catppuccin-mocha-red/latest.xpi";
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/tokyo-night-night/latest.xpi";
         };
         "uBlock0@raymondhill.net" = {
           installation_mode = "normal_installed";

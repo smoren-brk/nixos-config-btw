@@ -26,7 +26,7 @@ input {
 
 spawn-at-startup "qs"
 spawn-at-startup "awww-daemon"
-spawn-sh-at-startup "sleep 1 && awww img ~/code/misc/catppuccin-wallpapers/landscapes/tropic_island_night.jpg"
+spawn-sh-at-startup "sleep 1 && awww clear 1a1b26"
 // spawn-sh-at-startup "oniri"
 
 hotkey-overlay {

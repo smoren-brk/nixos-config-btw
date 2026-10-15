@@ -27,11 +27,11 @@
           demuxer-max-bytes=2G
           demuxer-max-back-bytes=1G
 
-          background-color=#1e1e2e
-          osd-back-color=#1e1e2e
-          osd-border-color=#1e1e2e
-          osd-color=#cdd6f4
-          osd-shadow-color=#1e1e2e
+          background-color=#1a1b26
+          osd-back-color=#1a1b26
+          osd-border-color=#1a1b26
+          osd-color=#c0caf5
+          osd-shadow-color=#1a1b26
 
           slang=enm,en,eng,de,deu,ger
           alang=ja,jp,jpn,en,eng,de,deu,ger

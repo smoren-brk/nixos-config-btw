@@ -12,13 +12,9 @@
           settings = {
             background-opacity = 0.55;
             confirm-close-surface = false;
-            cursor-color = "#f38ba8";
-            cursor-text = "#1e1e2e";
             font-family = "Hasklug Nerd Font";
             quit-after-last-window-closed = false;
-            selection-background = "#f38ba8";
-            selection-foreground = "#1e1e2e";
-            theme = "Catppuccin Mocha";
+            theme = "TokyoNight Night";
             window-padding-x = 20;
             window-padding-y = 20;
           };
