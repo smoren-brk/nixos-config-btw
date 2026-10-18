@@ -189,11 +189,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1792315957,
-        "narHash": "sha256-LzC5I1T+RoNzolKqp2xYk1x/SraHlmYnJzK27PU+ewg=",
+        "lastModified": 1792364010,
+        "narHash": "sha256-Vzc9DUzqIr2wESUQGrLPrck/2C6SFbniWPgOC9tf7XU=",
         "owner": "numtide",
         "repo": "llm-agents.nix",
-        "rev": "14f2728181ecf9f5da168b72799bc9f42ae51803",
+        "rev": "5b79ec59c0b1ca0e7022406f457a8cfe4e2d98ec",
         "type": "github"
       },
       "original": {
@@ -489,7 +489,8 @@
         "quickshell": "quickshell",
         "raito": "raito",
         "spicetify-nix": "spicetify-nix",
-        "wrappers": "wrappers"
+        "wrappers": "wrappers",
+        "zen-browser": "zen-browser"
       }
     },
     "spicetify-nix": {
@@ -597,6 +598,26 @@
       "original": {
         "owner": "lassulus",
         "repo": "wrappers",
+        "type": "github"
+      }
+    },
+    "zen-browser": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792140224,
+        "narHash": "sha256-TEDD0EgSDKOl9hGNlEaINfd2Y4PFhyh4czw4lb1AGak=",
+        "owner": "youwen5",
+        "repo": "zen-browser-flake",
+        "rev": "5a0d21f99706b231df9ff35ab95dbccda88414d8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "youwen5",
+        "repo": "zen-browser-flake",
         "type": "github"
       }
     }

@@ -47,5 +47,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     wrappers.url = "github:lassulus/wrappers";
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake/refs/pull/23/head";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 }
