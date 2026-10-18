@@ -46,10 +46,6 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    torlink = {
-      url = "github:baairon/torlink";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     wrappers.url = "github:lassulus/wrappers";
   };
 }

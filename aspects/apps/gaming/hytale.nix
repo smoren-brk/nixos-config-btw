@@ -6,14 +6,8 @@
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  flake.modules.nixos.gaming = { pkgs, ... }: {
-    programs.steam = {
-      enable = true;
-      gamescopeSession.enable = true;
-    };
-
-    environment.systemPackages = with pkgs; [
-      gamescope
+  flake.modules.nixos.hytale = { pkgs, ... }: {
+    environment.systemPackages = [
       inputs.hytale-launcher.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
   };

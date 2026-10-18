@@ -67,7 +67,6 @@
         eza
         fastfetch
         fzf
-        nix-search-tv
         zoxide
         zsh-powerlevel10k
       ];

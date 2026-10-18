@@ -3,12 +3,8 @@
     environment.systemPackages = with pkgs; [
       bat
       bitwarden-cli
-      broot
       btop
       btrfs-progs
-      eza
-      fastfetch
-      fzf
       gnutar
       killall
       nix-search-tv
@@ -17,7 +13,6 @@
       unzip
       vifm
       xdg-user-dirs
-      zoxide
     ];
   };
 }
