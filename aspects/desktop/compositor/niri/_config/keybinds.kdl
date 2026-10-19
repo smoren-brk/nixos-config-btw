@@ -3,7 +3,7 @@ binds {
 
     Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+D hotkey-overlay-title="Toggle the Launcher" { spawn "qs" "ipc" "call" "launcher" "toggle"; }
-    Mod+W hotkey-overlay-title="Open browser" { spawn "brave"; }
+    Mod+W hotkey-overlay-title="Open browser" { spawn "zen"; }
     Mod+Y hotkey-overlay-title="Open file manager" { spawn "ghostty" "-e" "xplr"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "qs" "ipc" "call" "volume" "raise"; }

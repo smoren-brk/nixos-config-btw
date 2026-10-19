@@ -6,7 +6,7 @@
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  flake.modules.nixos.spotify = { pkgs, ... }: {
+  flake.modules.nixos.spotify = { pkgs, theme, ... }: {
     imports = [
       inputs.spicetify-nix.nixosModules.default
     ];
@@ -38,8 +38,25 @@
           pointer
         ];
 
-        theme = spicePkgs.themes.tokyoNight;
-        colorScheme = "Night";
+        # Use Spicetify's stock layout with our shared palette.
+        theme = spicePkgs.themes.default;
+        customColorScheme = with theme.raw; {
+          text = foreground;
+          subtext = secondary;
+          main = background;
+          sidebar = bg0;
+          player = background;
+          card = surface;
+          shadow = bg0;
+          selected-row = secondary;
+          button = accent;
+          button-active = cyan;
+          button-disabled = muted;
+          tab-active = selection;
+          notification = surface;
+          notification-error = red;
+          misc = border;
+        };
       };
 
   };

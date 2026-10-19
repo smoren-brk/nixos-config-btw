@@ -2,7 +2,7 @@
 
 {
   flake.modules.nixos.ghostty =
-    { pkgs, ... }:
+    { pkgs, theme, ... }:
 
     let
       ghostty =
@@ -10,11 +10,11 @@
           inherit pkgs;
 
           settings = {
-            background-opacity = 0.55;
+            theme = theme.ghostty;
+            background-opacity = 0.75;
             confirm-close-surface = false;
             font-family = "Hasklug Nerd Font";
             quit-after-last-window-closed = false;
-            theme = "TokyoNight Night";
             window-padding-x = 20;
             window-padding-y = 20;
           };
