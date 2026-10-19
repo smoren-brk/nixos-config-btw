@@ -11,8 +11,11 @@
 
     qml-niri = {
       url = "github:imiric/qml-niri/main";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.quickshell.follows = "quickshell";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        quickshell.follows = "quickshell";
+        flake-parts.follows = "flake-parts";
+      };
     };
   };
 

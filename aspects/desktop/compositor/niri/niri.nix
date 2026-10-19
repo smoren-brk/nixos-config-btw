@@ -2,7 +2,7 @@
 
 {
   flake-file.inputs = {
-    oniri.url = "github:Antiz96/oniri";
+    # oniri.url = "github:Antiz96/oniri";
 
     niri = {
       url = "github:niri-wm/niri";
