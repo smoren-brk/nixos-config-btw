@@ -9,6 +9,8 @@
   flake.modules.nixos.neovim = { pkgs, ... }: {
     environment.systemPackages = with pkgs; [
       inputs.neovf.packages.${pkgs.stdenv.hostPlatform.system}.default
+
+      gh
       nixfmt
       ripgrep
       tree-sitter
