@@ -20,6 +20,7 @@ let
     "media.av1.enabled" = true;
     "media.ffmpeg.vaapi.enabled" = true;
     "media.hardware-video-decoding.enabled" = true;
+    "zen.window-sync.enabled" = false;
   };
 
   extensions = [

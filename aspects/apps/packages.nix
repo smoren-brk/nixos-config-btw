@@ -5,6 +5,7 @@
       imv
       libreoffice
       transmission_4-gtk
+      pcmanfm
       xplr
       yazi
       yt-dlp
