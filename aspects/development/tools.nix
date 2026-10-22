@@ -3,7 +3,6 @@
     environment.systemPackages = with pkgs; [
       cargo
       gcc
-      odin
       pkgconf
       python3
     ];
