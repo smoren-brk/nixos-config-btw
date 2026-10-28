@@ -10,13 +10,9 @@ in
     inputs.flake-parts.flakeModules.modules
 
     ./inputs.nix
-    ../hosts/geist
+    ./hosts/geist
 
-    (inputs.import-tree ../aspects/apps)
-    (inputs.import-tree ../aspects/desktop)
-    (inputs.import-tree ../aspects/development)
-    (inputs.import-tree ../aspects/system)
-    (inputs.import-tree ../aspects/terminal)
+    (inputs.import-tree ./aspects)
   ];
 
   systems = [ system ];
