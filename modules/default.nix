@@ -1,4 +1,9 @@
 { inputs, ... }:
+
+let
+  system = "x86_64-linux";
+  pkgs = inputs.nixpkgs.legacyPackages.${system};
+in
 {
   imports = [
     inputs.flake-file.flakeModules.default
@@ -14,6 +19,7 @@
     (inputs.import-tree ../aspects/terminal)
   ];
 
-  systems = [ "x86_64-linux" ];
+  systems = [ system ];
   flake-file.outputs = "flake-parts";
+  flake.formatter.${system} = pkgs.nixfmt-tree;
 }
