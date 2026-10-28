@@ -18,13 +18,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     import-tree.url = "github:denful/import-tree";
-    llm-agents = {
-      url = "github:numtide/llm-agents.nix";
-      inputs = {
-        flake-parts.follows = "flake-parts";
-        nixpkgs.follows = "nixpkgs";
-      };
-    };
+    llm-agents.url = "github:numtide/llm-agents.nix";
     neovf = {
       url = "github:smoren-brk/neovf";
       inputs.nixpkgs.follows = "nixpkgs";
