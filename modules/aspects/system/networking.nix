@@ -1,5 +1,14 @@
 {
   flake.modules.nixos.networking = {
-    networking.networkmanager.enable = true;
+    networking = {
+      stevenblack = {
+        enable = true;
+        block = [
+          "fakenews"
+          "gambling"
+          "porn"
+        ];
+      };
+    };
   };
 }
