@@ -1,7 +1,6 @@
 {
   flake.modules.nixos.terminal-tools = { pkgs, ... }: {
     environment.systemPackages = with pkgs; [
-      bat
       bitwarden-cli
       btop
       btrfs-progs
@@ -11,7 +10,6 @@
       tealdeer
       tree
       unzip
-      vifm
       xdg-user-dirs
     ];
   };
