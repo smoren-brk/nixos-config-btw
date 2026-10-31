@@ -27,6 +27,7 @@
             hwdec = "vaapi";
             gpu-context = "waylandvk";
 
+            ao = "pulse";
             volume-max = 150;
             volume = 100;
 
