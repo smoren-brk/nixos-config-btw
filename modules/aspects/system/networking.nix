@@ -2,7 +2,7 @@
   flake.modules.nixos.networking = {
     networking = {
       stevenblack = {
-        enable = true;
+        enable = false;
         block = [
           "fakenews"
           "gambling"

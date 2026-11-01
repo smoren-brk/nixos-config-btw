@@ -2,8 +2,6 @@
 
 {
   flake-file.inputs = {
-    # oniri.url = "github:Antiz96/oniri";
-
     niri = {
       url = "github:niri-wm/niri";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -33,16 +31,13 @@
       programs.niri = {
         enable = true;
         package = niri;
+        useNautilus = false;
       };
 
       environment = {
         systemPackages = with pkgs; [
-          # inputs.oniri.packages.${pkgs.stdenv.hostPlatform.system}.default
           awww
           bibata-cursors
-          grim
-          slurp
-          swappy
           wl-clipboard-rs
           xwayland-satellite
         ];
