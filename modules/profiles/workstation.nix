@@ -11,6 +11,7 @@
       screenshare
       brightness
       ghostty
+      fastfetch
       apps
       zen
       spotify

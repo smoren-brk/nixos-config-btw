@@ -66,7 +66,6 @@
     {
       environment.systemPackages = with pkgs; [
         eza
-        fastfetch
         fzf
         zoxide
         zsh-powerlevel10k
