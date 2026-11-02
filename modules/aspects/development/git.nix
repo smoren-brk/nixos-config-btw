@@ -1,8 +1,5 @@
-{ inputs, config, ... }:
+{ inputs, ... }:
 
-let
-  gitModule = config.flake.modules.wrapper.git;
-in
 {
   flake.modules.nixos.git =
     {
@@ -15,13 +12,11 @@ in
       git =
         (inputs.wrappers.wrapperModules.git.apply {
           inherit pkgs;
-          imports = [ gitModule ];
+          imports = [
+            (config.local.wrappers.git or { })
+          ];
 
           settings = {
-            safe = {
-              directory = "${config.users.users.jx.home}/config/";
-            };
-
             core = {
               compression = 9;
               editor = "nvim";

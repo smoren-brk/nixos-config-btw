@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.networking = {
+  flake.modules.nixos.host-loki = {
     networking = {
       networkmanager.enable = false;
       useDHCP = true;

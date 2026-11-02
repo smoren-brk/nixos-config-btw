@@ -10,9 +10,11 @@ in
     inputs.flake-parts.flakeModules.modules
 
     ./inputs.nix
-    ./hosts/geist
 
     (inputs.import-tree ./aspects)
+    (inputs.import-tree ./profiles)
+    (inputs.import-tree ./users)
+    (inputs.import-tree ./hosts)
   ];
 
   systems = [ system ];

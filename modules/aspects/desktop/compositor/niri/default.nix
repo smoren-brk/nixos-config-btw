@@ -1,4 +1,4 @@
-{ inputs, config, ... }:
+{ inputs, ... }:
 
 {
   flake-file.inputs = {
@@ -8,17 +8,22 @@
     };
   };
 
-  flake.modules.wrapper.niri = {
-    settings.include = "${./_config}/config.kdl";
-  };
-
   flake.modules.nixos.niri =
-    { pkgs, lib, ... }:
+    {
+      pkgs,
+      lib,
+      config,
+      ...
+    }:
     let
       niri =
         (inputs.wrappers.wrapperModules.niri.apply {
           inherit pkgs;
-          imports = [ config.flake.modules.wrapper.niri ];
+          imports = [
+            (config.local.wrappers.niri or { })
+          ];
+
+          settings.include = "${./_config}/config.kdl";
 
           package = lib.mkForce (
             inputs.niri.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs (_: {

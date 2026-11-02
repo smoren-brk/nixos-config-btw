@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.eumlation = { pkgs, ... }: {
+  flake.modules.nixos.emulation = { pkgs, ... }: {
     environment.systemPackages = with pkgs; [
       azahar
       melonds

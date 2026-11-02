@@ -1,33 +1,16 @@
-# geist
+# NixOS hosts
 
-Run from this directory:
+Hosts:
 
-```sh
-nix flake update
-sudo nixos-rebuild switch --flake .
-```
-
-After the system is bootstrapped, use:
-
-```sh
-nh os switch --upgrade
-```
-
-## Flake inputs
-
-Inputs are to be added the module's declaration, or inside `modules/inputs.nix`.
-
-Regenerate the flake file after each input addition.
-
-```sh
-nix run .#write-flake
-```
+- `loki`: the desktop (formerly `geist`)
+- `hela`: a skeleton for the VPS, not yet configured
 
 ## Structure
 
-`aspects/` contains reusable app, desktop, development, system, and terminal modules.
-
-`modules` contains flake-file declarations.
-
-`hosts/` contains each host's configuration, hardware, and users.
+- `modules/aspects/`: reusable capabilities registered under `flake.modules.nixos`.
+- `modules/profiles/`: explicit groups of capabilities (`base`, `workstation`,
+  `development`, `gaming`).
+- `modules/users/`: explicitly selected accounts and personal preferences.
+- `modules/hosts/<name>/`: host composition, hardware, and host-specific settings.
+- `modules/inputs.nix`: shared flake input declarations.
 

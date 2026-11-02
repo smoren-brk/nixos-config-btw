@@ -1,16 +1,7 @@
 {
-  flake.modules.wrapper.git = {
-    settings.user = {
-      email = "sumarac@protonmail.com";
-      name = "Jovan Djokic-Sumarac";
-    };
-  };
-
-  flake.modules.nixos.jx =
+  flake.modules.nixos.user-jx =
     {
       config,
-      pkgs,
-      lib,
       ...
     }:
 
@@ -18,6 +9,16 @@
       homeDir = config.users.users.jx.home;
     in
     {
+      # These wrappers and environment variables apply to the whole host.
+      # This profile is intended for machines whose primary user is jx.
+      local.wrappers.git.settings = {
+        user = {
+          email = "sumarac@protonmail.com";
+          name = "Jovan Djokic-Sumarac";
+        };
+        safe.directory = "${homeDir}/config/";
+      };
+
       users.users.jx = {
         description = "usual main user";
         home = "/home/jx";
