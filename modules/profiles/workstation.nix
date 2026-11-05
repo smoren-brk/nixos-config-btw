@@ -17,7 +17,7 @@
       spotify
       mpv
       zathura
-      anki
+      # anki
     ];
   };
 }
