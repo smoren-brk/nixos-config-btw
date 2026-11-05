@@ -10,11 +10,8 @@
     environment.systemPackages = with pkgs; [
       inputs.neovf.packages.${pkgs.stdenv.hostPlatform.system}.default
 
-      gh
-      nixfmt
       ripgrep
       tree-sitter
-      wl-clipboard-rs
     ];
   };
 }
