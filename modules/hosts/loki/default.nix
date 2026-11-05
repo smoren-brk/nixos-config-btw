@@ -20,5 +20,7 @@
     time.timeZone = "Europe/Belgrade";
     services.xserver.xkb.layout = "us";
     system.stateVersion = "26.11";
+
+    services.speechd.enable = false;
   };
 }
