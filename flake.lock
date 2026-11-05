@@ -340,11 +340,11 @@
         "nvf": "nvf"
       },
       "locked": {
-        "lastModified": 1793276616,
-        "narHash": "sha256-iWEOOuHQpbn3XR8WInBEVUcbTekMxBo8NigQcyZvogE=",
+        "lastModified": 1793912332,
+        "narHash": "sha256-IE+A634WiW+B/krzG8R3ouIpwL+qSCSrdGpLuznEmCI=",
         "owner": "smoren-brk",
         "repo": "neovf",
-        "rev": "0a22b9d7e96e9ac48ca998abb5d3f0cbc72cfd36",
+        "rev": "1361e54f9e2060f5db805ed04b2df4eddabcc60a",
         "type": "github"
       },
       "original": {
