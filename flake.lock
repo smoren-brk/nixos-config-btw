@@ -283,11 +283,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793899714,
-        "narHash": "sha256-M6RcyjJTuPY6f+jkzYkRbHM3mwLyp7sYGIwnxBhdJT0=",
+        "lastModified": 1793951375,
+        "narHash": "sha256-YuF8QN1vucoF6hgMc8PE8w3SYO4jmNuJdnCOaWrZiDc=",
         "owner": "niri-wm",
         "repo": "niri",
-        "rev": "bc6d4ec00fa422bce3043ba30faefda694c13024",
+        "rev": "2c0b311be3004b1376ea8086dc58766f58b709a4",
         "type": "github"
       },
       "original": {
