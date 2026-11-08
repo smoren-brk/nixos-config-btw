@@ -14,7 +14,15 @@
     # };
 
     environment.systemPackages = with pkgs; [
-      codex
+      (codex.overrideAttrs (old: {
+        # Backport https://github.com/NixOS/nixpkgs/pull/584667.
+        buildInputs = (old.buildInputs or []) ++ [
+          pkgs.aws-lc
+          pkgs.oniguruma
+          pkgs.sqlite
+          pkgs.zstd
+        ];
+      }))
       ripgrep
     ];
   };
