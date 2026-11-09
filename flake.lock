@@ -263,11 +263,11 @@
         "nvf": "nvf"
       },
       "locked": {
-        "lastModified": 1793912332,
-        "narHash": "sha256-IE+A634WiW+B/krzG8R3ouIpwL+qSCSrdGpLuznEmCI=",
+        "lastModified": 1794240514,
+        "narHash": "sha256-mFumPEPwPIfTwFZ/I46Q5czaF/fXMae8RWsc5XLlcPI=",
         "owner": "smoren-brk",
         "repo": "neovf",
-        "rev": "1361e54f9e2060f5db805ed04b2df4eddabcc60a",
+        "rev": "efc7be0c5998de526ec568867d8aeff46f4d607d",
         "type": "github"
       },
       "original": {
@@ -283,11 +283,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794142091,
-        "narHash": "sha256-yyY6yKRasttZ8GKTqfyDGdlWtqHPVE19ZMrJ5dmHGnY=",
+        "lastModified": 1794203352,
+        "narHash": "sha256-Olv3oXpH+E2AicKSb0Ggem1AW5hDEJEt7J/HDu1IGgk=",
         "owner": "niri-wm",
         "repo": "niri",
-        "rev": "90d5c1bf7381a81c953cb8b3f26c5ddcaa3f48cb",
+        "rev": "5935130029941411d9c00784a974a77f244ea3b5",
         "type": "github"
       },
       "original": {
