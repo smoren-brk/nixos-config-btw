@@ -16,7 +16,7 @@
     environment.systemPackages = with pkgs; [
       (codex.overrideAttrs (old: {
         # Backport https://github.com/NixOS/nixpkgs/pull/584667.
-        buildInputs = (old.buildInputs or []) ++ [
+        buildInputs = (old.buildInputs or [ ]) ++ [
           pkgs.aws-lc
           pkgs.oniguruma
           pkgs.sqlite

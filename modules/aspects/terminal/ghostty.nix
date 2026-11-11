@@ -11,7 +11,7 @@
 
           settings = {
             theme = theme.ghostty;
-            background-opacity = 0.85;
+            background-opacity = 1.0;
             confirm-close-surface = false;
             font-family = "Hasklug Nerd Font";
             quit-after-last-window-closed = false;

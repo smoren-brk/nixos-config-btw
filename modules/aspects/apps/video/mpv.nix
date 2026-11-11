@@ -17,6 +17,13 @@
 
           scripts = [ pkgs.mpvScripts.mpris ];
 
+          patchHook = ''
+            source ${pkgs.makeWrapper}/nix-support/setup-hook
+            rm "$out/bin/umpv"
+            makeWrapper ${pkgs.mpv.unwrapped}/bin/umpv "$out/bin/umpv" \
+              --set MPV "$out/bin/mpv"
+          '';
+
           "input.conf".content = ''
             LEFT no-osd seek -2 exact
             RIGHT no-osd seek 2 exact
