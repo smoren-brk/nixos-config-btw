@@ -6,7 +6,6 @@
     environment.systemPackages = with pkgs; [
       gamescope
       mangohud
-      proton-ge-bin
     ];
   };
 }
