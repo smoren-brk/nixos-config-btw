@@ -304,11 +304,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1794602798,
-        "narHash": "sha256-/kvz1Xw5jcFfEssBYDz3rUwBKilvlkYlBnKSHfsPjDM=",
+        "lastModified": 1794619472,
+        "narHash": "sha256-SICsHL74YPFiGtkMC2EQp9aCpeoOCEDr+RU2xRThsOE=",
         "owner": "numtide",
         "repo": "llm-agents.nix",
-        "rev": "09eaa868611f616917224e273ffe3329cfc9f977",
+        "rev": "804dc21fef4053047e804c205f619e3f7a308994",
         "type": "github"
       },
       "original": {
@@ -393,26 +393,6 @@
       "original": {
         "type": "tarball",
         "url": "https://flakehub.com/f/DeterminateSystems/nix-src/%2A"
-      }
-    },
-    "nix-proton-cachyos": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1738731353,
-        "narHash": "sha256-opfBquff3X73DhLC4io2FqzhSrlnDOBLWrnBpGqLAHU=",
-        "owner": "kimjongbing",
-        "repo": "nix-proton-cachyos",
-        "rev": "bad753f8f8d19aecd753bef3f764562ad15d6a9b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "kimjongbing",
-        "repo": "nix-proton-cachyos",
-        "type": "github"
       }
     },
     "nixpkgs": {
@@ -639,7 +619,6 @@
         "llm-agents": "llm-agents",
         "neovf": "neovf",
         "niri": "niri",
-        "nix-proton-cachyos": "nix-proton-cachyos",
         "nixpkgs": "nixpkgs_4",
         "qml-niri": "qml-niri",
         "quickshell": "quickshell",
