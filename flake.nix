@@ -20,15 +20,15 @@
     };
     import-tree.url = "github:denful/import-tree";
     llm-agents.url = "github:numtide/llm-agents.nix";
-    neovf = {
-      url = "github:smoren-brk/neovf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     niri = {
       url = "github:niri-wm/niri";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     qml-niri = {
       url = "github:imiric/qml-niri/main";
       inputs = {

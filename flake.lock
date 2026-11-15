@@ -332,27 +332,6 @@
         "type": "github"
       }
     },
-    "neovf": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "nvf": "nvf"
-      },
-      "locked": {
-        "lastModified": 1794240514,
-        "narHash": "sha256-mFumPEPwPIfTwFZ/I46Q5czaF/fXMae8RWsc5XLlcPI=",
-        "owner": "smoren-brk",
-        "repo": "neovf",
-        "rev": "efc7be0c5998de526ec568867d8aeff46f4d607d",
-        "type": "github"
-      },
-      "original": {
-        "owner": "smoren-brk",
-        "repo": "neovf",
-        "type": "github"
-      }
-    },
     "niri": {
       "inputs": {
         "nixpkgs": [
@@ -524,7 +503,6 @@
         "flake-compat": "flake-compat_2",
         "mnw": "mnw",
         "nixpkgs": [
-          "neovf",
           "nixpkgs"
         ]
       },
@@ -617,9 +595,9 @@
         "hytale-launcher": "hytale-launcher",
         "import-tree": "import-tree",
         "llm-agents": "llm-agents",
-        "neovf": "neovf",
         "niri": "niri",
         "nixpkgs": "nixpkgs_4",
+        "nvf": "nvf",
         "qml-niri": "qml-niri",
         "quickshell": "quickshell",
         "raito": "raito",
