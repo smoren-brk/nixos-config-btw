@@ -7,7 +7,7 @@
       hytale
       emulation
       supertux
-      overclock-undervolt
+      performance
     ];
   };
 }
