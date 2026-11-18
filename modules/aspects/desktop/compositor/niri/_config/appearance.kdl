@@ -38,10 +38,10 @@ layout {
     }
 
     struts {
-        left 3
-        right 3
-        top 3
-        bottom 3
+        left 10
+        right 10
+        top 10
+        bottom 10
     }
 }
 
@@ -82,6 +82,6 @@ window-rule {
 }
 
 window-rule {
-    geometry-corner-radius 5
+    geometry-corner-radius 10
     clip-to-geometry true
 }
