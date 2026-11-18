@@ -49,12 +49,11 @@ prefer-no-csd
 
 animations { }
 
-// Quickshell supplies rounded blur regions for its visible panels.
+// Keep all shell surfaces crisp, including transparent panel margins.
 layer-rule {
-    match namespace="^qqq-"
+    match namespace="^(qqq-|wisp-)"
     background-effect {
-        blur true
-        xray false
+        blur false
     }
 }
 
