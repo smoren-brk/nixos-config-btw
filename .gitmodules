@@ -1,3 +1,0 @@
-[submodule "aspects/desktop/desktop-shell/quickshell/_config"]
-	path = modules/aspects/desktop/desktop-shell/quickshell/_config
-	url = ssh://git@github.com/smoren-brk/quickshell-config.git

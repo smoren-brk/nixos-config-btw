@@ -36,6 +36,7 @@
       })
       inputs.raito.packages.${pkgs.stdenv.hostPlatform.system}.default
       pkgs.python3
+      pkgs.playerctl
     ];
   };
 }
