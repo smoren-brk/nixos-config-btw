@@ -4,6 +4,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+D hotkey-overlay-title="Toggle the Launcher" { spawn "hel" "ipc" "call" "drawers" "toggle" "launcher"; }
     Mod+B hotkey-overlay-title="Cycle Status Bar Mode" { spawn "hel" "ipc" "call" "bar" "cycle"; }
+    Mod+Shift+D hotkey-overlay-title="Toggle Dashboard" { spawn "hel" "ipc" "call" "drawers" "toggle" "dashboard"; }
     Mod+W hotkey-overlay-title="Open browser" { spawn "zen"; }
     Mod+Y hotkey-overlay-title="Open file manager" { spawn "ghostty" "-e" "yazi"; }
 
