@@ -24,9 +24,7 @@ input {
     focus-follows-mouse
 }
 
-spawn-at-startup "qs"
 spawn-at-startup "awww-daemon"
-spawn-sh-at-startup "sleep 1 && awww img ~/code/misc/catppuccin-wallpapers/landscapes/tropic_island_evening.jpg"
 
 hotkey-overlay {
     skip-at-startup
