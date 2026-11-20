@@ -288,11 +288,11 @@
         "quickshell": "quickshell"
       },
       "locked": {
-        "lastModified": 1795136648,
-        "narHash": "sha256-5dJRmsDqPCBLNTdJEU/f/TSoJt0OQ/Be8k6D5DgZfpk=",
+        "lastModified": 1795138793,
+        "narHash": "sha256-TarQAGCJ0VX2Y8xzMybFgkxbZuRqGV5W3QKTr3z9REs=",
         "owner": "smoren-brk",
         "repo": "hel",
-        "rev": "dd241f520c331b1d0069702a7c14744b60ca3cbd",
+        "rev": "a4bb229a2543d4d8c1cefda804a108c9a460e8f3",
         "type": "github"
       },
       "original": {
