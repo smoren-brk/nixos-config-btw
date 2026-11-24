@@ -9,12 +9,12 @@ output "DP-1" {
     }
 }
 
-output "DP-2" {
-    mode "1920x1080@165.003"
-    scale 1
-    transform "normal"
-    position x=3440 y=0
-    hot-corners {
-        off
-    }
-}
+// output "DP-2" {
+//     mode "1920x1080@165.003"
+//     scale 1
+//     transform "normal"
+//     position x=3440 y=0
+//     hot-corners {
+//         off
+//     }
+// }
