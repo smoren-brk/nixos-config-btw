@@ -1,0 +1,35 @@
+window.background {
+    background: transparent;
+}
+
+#bar {
+    background-color: alpha(@surface, 0.96);
+    border-radius: 10px;
+    color: @foreground;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 14px;
+}
+
+#workspaces {
+    margin: 7px 12px;
+    padding: 0 12px;
+    border-radius: 8px;
+    background-color: @workspace_bg;
+    color: @secondary;
+    font-feature-settings: "tnum";
+}
+
+#network {
+    font-family: "0xProto Nerd Font";
+    font-size: 18px;
+    font-weight: normal;
+    margin-right: 18px;
+}
+
+#bar .clock {
+    all: unset;
+    color: @foreground;
+    font-feature-settings: "tnum";
+}

@@ -14,15 +14,15 @@
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
-    hel = {
-      url = "github:smoren-brk/hel";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     hytale-launcher = {
       url = "github:JPyke3/hytale-launcher-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     import-tree.url = "github:denful/import-tree";
+    ironbar = {
+      url = "github:JakeStanger/ironbar";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     llm-agents.url = "github:numtide/llm-agents.nix";
     niri = {
       url = "github:niri-wm/niri";

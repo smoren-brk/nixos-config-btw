@@ -3,7 +3,9 @@ binds {
 
     Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+D hotkey-overlay-title="Toggle the Launcher" { spawn "hel" "ipc" "call" "drawers" "toggle" "launcher"; }
-    Mod+B hotkey-overlay-title="Cycle Status Bar Mode" { spawn "hel" "ipc" "call" "bar" "cycle"; }
+    Mod+B repeat=false hotkey-overlay-title="Toggle Ironbar" {
+        spawn "busctl" "--user" "call" "dev.jstanger.ironbar" "/dev/jstanger/ironbar" "org.freedesktop.Application" "ActivateAction" "sava{sv}" "toggle-bar" "0" "0"
+    }
     Mod+Shift+D hotkey-overlay-title="Toggle Dashboard" { spawn "hel" "ipc" "call" "drawers" "toggle" "dashboard"; }
     Mod+W hotkey-overlay-title="Open browser" { spawn "zen"; }
     Mod+Y hotkey-overlay-title="Open file manager" { spawn "ghostty" "-e" "yazi"; }
