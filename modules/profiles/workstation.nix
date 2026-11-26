@@ -4,7 +4,7 @@
     imports = with config.flake.modules.nixos; [
       theme
       niri
-      ironbar
+      quickshell
       audio
       fonts
       ly
